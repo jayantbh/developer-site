@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby RSS feed]]></title><description><![CDATA[This is about me, my blog, and what I'm up to.]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 28 Feb 2020 10:04:59 GMT</lastBuildDate><item><title><![CDATA[TIL - The HTML Dialog element]]></title><link>https://jayant.dev/til-html-dialog-element/</link><guid isPermaLink="false">https://jayant.dev/til-html-dialog-element/</guid><pubDate>Fri, 28 Feb 2020 00:00:00 GMT</pubDate><content:encoded>function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i &lt; sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i &lt; sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; target[key] = source[key]; } return target; }
+
+/* @jsx mdx */
+var _frontmatter = {
+  &quot;title&quot;: &quot;TIL - The HTML Dialog element&quot;,
+  &quot;date&quot;: &quot;2020-02-28&quot;
+};
+
+var makeShortcode = function makeShortcode(name) {
+  return function MDXDefaultShortcode(props) {
+    console.warn(&quot;Component &quot; + name + &quot; was not imported, exported, or provided by MDXProvider as global scope&quot;);
+    return mdx(&quot;div&quot;, props);
+  };
+};
+
+var layoutProps = {
+  _frontmatter: _frontmatter
+};
+var MDXLayout = &quot;wrapper&quot;;
+return function MDXContent(_ref) {
+  var components = _ref.components,
+      props = _objectWithoutProperties(_ref, [&quot;components&quot;]);
+
+  return mdx(MDXLayout, _extends({}, layoutProps, props, {
+    components: components,
+    mdxType: &quot;MDXLayout&quot;
+  }), mdx(&quot;p&quot;, null, &quot;The &quot;, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;p&quot;
+  }, {
+    &quot;href&quot;: &quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog&quot;
+  }), &quot;Dialog\nElement&quot;), &quot; is\nbasically a dialog (duh) all with backdrop support and everything, so in many\ncases you may not need a third party lib to make a dialog. It has native JS APIs\ntoo for opening and closing it. &quot;, mdx(&quot;em&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;Note: Browser Support is a little hairy.&quot;)), mdx(&quot;p&quot;, null, &quot;Here\u2019s a hosted example on glitch.me (though you have an example right on this page too):\n&quot;, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;p&quot;
+  }, {
+    &quot;href&quot;: &quot;https://peaceful-meowing-yogurt.glitch.me/&quot;
+  }), &quot;https://peaceful-meowing-yogurt.glitch.me/&quot;), &quot;.&quot;), mdx(&quot;blockquote&quot;, null, mdx(&quot;p&quot;, {
+    parentName: &quot;blockquote&quot;
+  }, &quot;NOTE: Check the MDN Docs linked above to see if your browser supports this.&quot;)), mdx(&quot;p&quot;, null, &quot;All you need to do to toggle a dialog is:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-js&quot;,
+    &quot;metastring&quot;: &quot;live&quot;,
+    &quot;live&quot;: true
+  }), &quot;const toggle = () =&gt; {\n  let dialog = document.querySelector(&apos;dialog#d--1&apos;);\n\n  if (!dialog.hasAttribute(&apos;open&apos;)) {\n    dialog.showModal();\n  } else {\n    dialog.removeAttribute(&apos;open&apos;);\n  }\n}\n\nconst Dialog = styled.dialog`\n  color: red;\n\n  &amp;::backdrop {\n    background: rgba(255, 200, 200, 0.6);\n  }\n`;\n\nrender(\n  &lt;div&gt;\n    &lt;button onClick={toggle}&gt;Toggle Dialog&lt;/button&gt;\n    &lt;Dialog id=&apos;d--1&apos; onClick={toggle}&gt;Default Dialog&lt;/Dialog&gt;\n  &lt;/div&gt;\n)\n&quot;)), mdx(&quot;p&quot;, null, &quot;When the dialog is triggered to be open, the &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;open&quot;), &quot; attribute is automatically\nadded to it, which can be used to detect if it\u2019s open or not.&quot;), mdx(&quot;p&quot;, null, &quot;And as you see, you can format the backdrop of the dialog using CSS!&quot;), mdx(&quot;hr&quot;, null), mdx(&quot;p&quot;, null, &quot;When I was writing this, I faced an issue that I do not yet know how to solve.\nWhen you open and close the dialog, user selection or text editing on the page\nstops working. If you figure it out, &quot;, mdx(ExternalLink, {
+    to: &quot;https://twitter.com/jayantbhawal&quot;,
+    mdxType: &quot;ExternalLink&quot;
+  }, &quot;tweet&quot;), &quot; at me.&quot;));
+}
+;
+MDXContent.isMDXComponent = true;</content:encoded></item><item><title><![CDATA[Optional Chaining is ❤]]></title><link>https://jayant.dev/optional-chaining/</link><guid isPermaLink="false">https://jayant.dev/optional-chaining/</guid><pubDate>Tue, 24 Dec 2019 00:00:00 GMT</pubDate><content:encoded>function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i &lt; sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i &lt; sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; target[key] = source[key]; } return target; }
+
+/* @jsx mdx */
+var _frontmatter = {
+  &quot;title&quot;: &quot;Optional Chaining is ❤&quot;,
+  &quot;date&quot;: &quot;2019-12-24&quot;
+};
+
+var makeShortcode = function makeShortcode(name) {
+  return function MDXDefaultShortcode(props) {
+    console.warn(&quot;Component &quot; + name + &quot; was not imported, exported, or provided by MDXProvider as global scope&quot;);
+    return mdx(&quot;div&quot;, props);
+  };
+};
+
+var layoutProps = {
+  _frontmatter: _frontmatter
+};
+var MDXLayout = &quot;wrapper&quot;;
+return function MDXContent(_ref) {
+  var components = _ref.components,
+      props = _objectWithoutProperties(_ref, [&quot;components&quot;]);
+
+  return mdx(MDXLayout, _extends({}, layoutProps, props, {
+    components: components,
+    mdxType: &quot;MDXLayout&quot;
+  }), mdx(&quot;p&quot;, null, &quot;Let\u2019s look at a use-case that\u2019s not too uncommon:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-js&quot;
+  }), &quot;const definition = dictionary.words &amp;&amp;\n                  dictionary.words.apple &amp;&amp;\n                  dictionary.words.apple.definition;\n&quot;)), mdx(&quot;p&quot;, null, &quot;Oh my, that\u2019s an eyeful. All I wanted to get was the definition of apple, if\npresent, in a user-created dictionary, meaning that the initial state of this\ndictionary could possibly be completely empty.&quot;), mdx(&quot;p&quot;, null, &quot;This has been a little painful, and has been a thing since years.&quot;), mdx(&quot;h2&quot;, null, &quot;We\u2019ve had \u201Csolutions\u201D since long too&quot;), mdx(&quot;p&quot;, null, &quot;The fine creators of &quot;, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;p&quot;
+  }, {
+    &quot;href&quot;: &quot;https://coffeescript.org/&quot;
+  }), &quot;coffeescript&quot;), &quot; did indeed solve\nthis issue in a way. They introduced the &quot;, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;p&quot;
+  }, {
+    &quot;href&quot;: &quot;https://coffeescript.org/#existential-operator&quot;
+  }), mdx(&quot;em&quot;, {
+    parentName: &quot;a&quot;
+  }, &quot;Existential\nOperator&quot;)), &quot;, and this is how that\nlooked like:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-coffeescript&quot;
+  }), &quot;solipsism = true if mind? and not world?\n\nspeed = 0\nspeed ?= 15\n\nfootprints = yeti ? \&quot;bear\&quot;\n\nzip = lottery.drawWinner?().address?.zipcode\n&quot;)), mdx(&quot;p&quot;, null, &quot;Amazing right? Though a lot of this stuff has come into JS, it didn\u2019t make an\nas-is introduction. In fact, many other languages too had the optional chaining\noperator with them, and a lot of discussion was had before they arrived on the\nbest solution that would play nice in JS. A lot of the stuff from the\ncoffeescript example doesn\u2019t exist nicely in JS.&quot;), mdx(&quot;p&quot;, null, &quot;That exact example would look like this in JS:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-js&quot;
+  }), &quot;// solipsism = true if mind? and not world?\n\n// speed = 0\n// speed ?= 15\n\nfootprints = yeti ?? \&quot;bear\&quot; // nullish coalescing\n\nzip = lottery.drawWinner?().address?.zipcode // optional chaining\n\n// Hence, the first example would look like:\nconst definition = dictionary.words?.apple?.definition;\n&quot;)), mdx(&quot;p&quot;, null, &quot;I am a straight up fan of this thing, and I\u2019ve been tracking progress of this\nsince a year before it released!&quot;), mdx(&quot;p&quot;, null, &quot;Optional Chaining and Nullish Coalescing are now in Stage 4, and released into\nsome major browsers. It was added to TypeScript 3.7 a week after it was moved to\nStage 3. Soon afterwards, it was added to &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;react-scripts 3.3.0-next.62&quot;), &quot; (with\nTS), and was released in the stable 3.3 build of react-scripts.&quot;));
+}
+;
+MDXContent.isMDXComponent = true;</content:encoded></item><item><title><![CDATA[Hello World]]></title><link>https://jayant.dev/hello-world/</link><guid isPermaLink="false">https://jayant.dev/hello-world/</guid><pubDate>Thu, 19 Dec 2019 00:00:00 GMT</pubDate><content:encoded>function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i &lt; sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i &lt; sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; target[key] = source[key]; } return target; }
+
+/* @jsx mdx */
+var _frontmatter = {
+  &quot;title&quot;: &quot;Hello World&quot;,
+  &quot;date&quot;: &quot;2019-12-19&quot;
+};
+
+var makeShortcode = function makeShortcode(name) {
+  return function MDXDefaultShortcode(props) {
+    console.warn(&quot;Component &quot; + name + &quot; was not imported, exported, or provided by MDXProvider as global scope&quot;);
+    return mdx(&quot;div&quot;, props);
+  };
+};
+
+var layoutProps = {
+  _frontmatter: _frontmatter
+};
+var MDXLayout = &quot;wrapper&quot;;
+return function MDXContent(_ref) {
+  var components = _ref.components,
+      props = _objectWithoutProperties(_ref, [&quot;components&quot;]);
+
+  return mdx(MDXLayout, _extends({}, layoutProps, props, {
+    components: components,
+    mdxType: &quot;MDXLayout&quot;
+  }), mdx(&quot;p&quot;, null, &quot;Here we go again\u2026&quot;), mdx(&quot;p&quot;, null, &quot;I\u2019ve made an attempt at a blog over 4 times so far. Twice at &quot;, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;p&quot;
+  }, {
+    &quot;href&quot;: &quot;blog.jayantbhawal.in&quot;
+  }), &quot;blog.jayantbhawal.in&quot;), &quot;,\ntwice at &quot;, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;p&quot;
+  }, {
+    &quot;href&quot;: &quot;ideabuster.jayantbhawal.in&quot;
+  }), &quot;ideabuster.jayantbhawal.in&quot;), &quot;.&quot;), mdx(&quot;p&quot;, null, &quot;The first 3 times, it was more for a \u201Clet\u2019s see how this is done\u201D reason.\nThe 4th or so time, it was that, plus to actually add some content, which is\nthere on &quot;, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;p&quot;
+  }, {
+    &quot;href&quot;: &quot;blog.jayantbhawal.in&quot;
+  }), &quot;blog.jayantbhawal.in&quot;), &quot;.&quot;), mdx(&quot;p&quot;, null, &quot;However, the blog hosted on the current link is\u2026 kinda slow. It\u2019s Wordpress based, so it\u2019s pretty easy to use and\npublish content from, but&quot;));
+}
+;
+MDXContent.isMDXComponent = true;</content:encoded></item></channel></rss>
