@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby RSS feed]]></title><description><![CDATA[This is about me, my blog, and what I'm up to.]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 28 Feb 2020 12:42:33 GMT</lastBuildDate><item><title><![CDATA[TIL - The HTML Dialog element]]></title><link>https://jayant.dev/til-html-dialog-element/</link><guid isPermaLink="false">https://jayant.dev/til-html-dialog-element/</guid><pubDate>Fri, 28 Feb 2020 00:00:00 GMT</pubDate><content:encoded>function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby RSS feed]]></title><description><![CDATA[This is about me, my blog, and what I'm up to.]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 28 Feb 2020 12:54:19 GMT</lastBuildDate><item><title><![CDATA[TIL - The HTML Dialog element]]></title><link>https://jayant.dev/til-html-dialog-element/</link><guid isPermaLink="false">https://jayant.dev/til-html-dialog-element/</guid><pubDate>Fri, 28 Feb 2020 00:00:00 GMT</pubDate><content:encoded>function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i &lt; sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
@@ -141,19 +141,23 @@ return function MDXContent(_ref) {
   return mdx(MDXLayout, _extends({}, layoutProps, props, {
     components: components,
     mdxType: &quot;MDXLayout&quot;
-  }), mdx(&quot;p&quot;, null, &quot;Here we go again\u2026&quot;), mdx(&quot;p&quot;, null, &quot;I\u2019ve made an attempt at a blog over 4 times so far. Twice at &quot;, mdx(&quot;a&quot;, _extends({
+  }), mdx(&quot;p&quot;, null, &quot;Here we go again\u2026&quot;), mdx(&quot;p&quot;, null, &quot;I\u2019ve made an attempt at a blog over 4 times so far. Twice at\n&quot;, mdx(&quot;a&quot;, _extends({
     parentName: &quot;p&quot;
   }, {
     &quot;href&quot;: &quot;https://blog.jayantbhawal.in&quot;
-  }), &quot;blog.jayantbhawal.in&quot;), &quot;,\ntwice at &quot;, mdx(&quot;a&quot;, _extends({
+  }), &quot;blog.jayantbhawal.in&quot;), &quot;, twice at\n&quot;, mdx(&quot;a&quot;, _extends({
     parentName: &quot;p&quot;
   }, {
     &quot;href&quot;: &quot;https://ideabuster.jayantbhawal.in&quot;
-  }), &quot;ideabuster.jayantbhawal.in&quot;), &quot;.&quot;), mdx(&quot;p&quot;, null, &quot;The first 3 times, it was more for a \u201Clet\u2019s see how this is done\u201D reason.\nThe 4th or so time, it was that, plus to actually add some content, which is\nthere on &quot;, mdx(&quot;a&quot;, _extends({
+  }), &quot;ideabuster.jayantbhawal.in&quot;), &quot;.&quot;), mdx(&quot;p&quot;, null, &quot;The first 3 times, it was more for a \u201Clet\u2019s see how this is done\u201D reason. The\n4th or so time, it was that, plus to actually add some content, which is there\non &quot;, mdx(&quot;a&quot;, _extends({
     parentName: &quot;p&quot;
   }, {
     &quot;href&quot;: &quot;https://blog.jayantbhawal.in&quot;
-  }), &quot;blog.jayantbhawal.in&quot;), &quot;.&quot;), mdx(&quot;p&quot;, null, &quot;However, the blog hosted on the current link is\u2026 kinda slow. It\u2019s Wordpress based, so it\u2019s pretty easy to use and\npublish content from, but&quot;));
+  }), &quot;blog.jayantbhawal.in&quot;), &quot;.&quot;), mdx(&quot;p&quot;, null, &quot;However, the blog hosted on the current link is\u2026 kinda slow. It\u2019s Wordpress\nbased, so it\u2019s pretty easy to use and publish content from, but it can be\npainfully slow to load on not-excellent networks. Doesn\u2019t look too good for a\nfrontend developer now, does it?&quot;), mdx(&quot;p&quot;, null, &quot;So here\u2019s my\u2026 5th attempt at this?&quot;, mdx(&quot;br&quot;, {
+    parentName: &quot;p&quot;
+  }), &quot;\n&quot;, &quot;A gatsby based blog site! All the cool kids are doing it!&quot;, mdx(&quot;br&quot;, {
+    parentName: &quot;p&quot;
+  }), &quot;\n&quot;, &quot;It allows me great extensibility though, like, you\u2019ll find posts where you can\nwrite, edit, and preview React examples right on the page itself, and interact\nwith it too! Who needs codepen or jsfiddle for these things? (Probably me, for\nmore complex examples.)&quot;), mdx(&quot;p&quot;, null, &quot;This is great though. It\u2019s fast, it\u2019s simple, basically no bloat, etc. Needs a\nbit more work, and I\u2019m looking forward to it. :)&quot;));
 }
 ;
 MDXContent.isMDXComponent = true;</content:encoded></item></channel></rss>
