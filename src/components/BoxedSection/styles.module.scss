@@ -1,0 +1,16 @@
+@import 'globals/variables';
+
+.boxed-section {
+  padding: $grid-base-4x;
+  margin: 0 (-$grid-base-4x);
+  margin-bottom: 2em;
+  border: 1px solid;
+
+  h2 {
+    margin-top: 0;
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,60 @@
+---
+title: TIL - The HTML Dialog element
+date: '2020-02-28'
+---
+
+import styled from 'styled-components';
+
+import ExternalLink from '../../src/components/ExternalLink'
+
+The [Dialog
+Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog) is
+basically a dialog (duh) all with backdrop support and everything, so in many
+cases you may not need a third party lib to make a dialog. It has native JS APIs
+too for opening and closing it. _Note: Browser Support is a little hairy._
+
+Here's a hosted example on glitch.me (though you have an example right on this page too):
+[https://peaceful-meowing-yogurt.glitch.me/](https://peaceful-meowing-yogurt.glitch.me/).
+
+> NOTE: Check the MDN Docs linked above to see if your browser supports this.
+
+All you need to do to toggle a dialog is:
+
+```js live
+const toggle = () => {
+  let dialog = document.querySelector('dialog#d--1');
+
+  if (!dialog.hasAttribute('open')) {
+    dialog.showModal();
+  } else {
+    dialog.removeAttribute('open');
+  }
+}
+
+const Dialog = styled.dialog`
+  color: red;
+
+  &::backdrop {
+    background: rgba(255, 200, 200, 0.6);
+  }
+`;
+
+render(
+  <div>
+    <button onClick={toggle}>Toggle Dialog</button>
+    <Dialog id='d--1' onClick={toggle}>Default Dialog</Dialog>
+  </div>
+)
+```
+
+When the dialog is triggered to be open, the `open` attribute is automatically
+added to it, which can be used to detect if it's open or not.
+
+And as you see, you can format the backdrop of the dialog using CSS!
+
+---
+
+When I was writing this, I faced an issue that I do not yet know how to solve.
+When you open and close the dialog, user selection or text editing on the page
+stops working. If you figure it out, <ExternalLink
+to='https://twitter.com/jayantbhawal'>tweet</ExternalLink> at me.

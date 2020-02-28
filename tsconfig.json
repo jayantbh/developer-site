@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "module": "esnext",
+    "target": "es5",
+    "sourceMap": true,
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "jsx": "preserve",
+    "downlevelIteration": true,
+    "lib": [
+      "esnext",
+      "es2018",
+      "dom"
+    ],
+    "isolatedModules": true,
+    "sourceRoot": "/",
+    "rootDirs": [
+      "src"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "node_modules/@date-io",
+    "src/**/*.test.tsx"
+  ],
+  "include": [
+    "src",
+    "./*.tsx"
+  ]
+}

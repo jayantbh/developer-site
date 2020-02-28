@@ -1,0 +1,90 @@
+@import 'globals/mixins';
+
+$color-1: #eee940;
+$color-1-alpha: #{$color-1}55;
+$color-2: #ff898a;
+$color-3: darken(#ff898a, 65%);
+
+$initial-text-shadow: 0 0 $color-2, 0 0 $color-3;
+$initial-transform: rotateX(59deg) rotateZ(19deg) translate(40px, 80px);
+
+$final-text-shadow: 20px 40px $color-2, 40px 80px $color-3;
+$final-transform: rotateX(59deg) rotateZ(19deg) translate(0, 0);
+
+%initial-state-text-effect {
+  text-shadow: $initial-text-shadow;
+  transform: $initial-transform;
+}
+
+%final-state-text-effect {
+  text-shadow: $final-text-shadow;
+  transform: $final-transform;
+}
+
+.container {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  @include centered(true);
+}
+
+.navigation {
+  margin-bottom: $grid-base-Ax * 2;
+
+  a {
+    margin: 0 $grid-base;
+  }
+}
+
+.h1 {
+  margin: $grid-base-2x 0 $grid-base-4x;
+}
+
+.effect {
+  width: fit-content;
+  font-size: 360px;
+  margin-bottom: $grid-base-Ax;
+  line-height: 1;
+
+  &.small {
+    font-size: 200px;
+  }
+}
+
+.effect-wrapper {
+  @include centered;
+  position: relative;
+  user-select: none;
+  cursor: default;
+}
+
+@media screen and (max-height: 700px) {
+  .effect {
+    margin-bottom: -$grid-base-2x;
+    margin-top: -$grid-base-Ax;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .effect {
+    font-size: 220px;
+
+    &.small {
+      font-size: 110px;
+    }
+  }
+
+  @media screen and (max-height: 700px) {
+    .effect {
+      margin-bottom: $grid-base-2x;
+      margin-top: -$grid-base-4x;
+    }
+  }
+}
+
+.effect-1 {
+  svg {
+    width: 280px;
+    height: 160px;
+  }
+}
