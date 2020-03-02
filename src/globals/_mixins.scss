@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
 
-  @if($column) {
+  @if ($column) {
     flex-direction: column;
   }
 }
@@ -41,7 +41,7 @@
   path:not([fill='none']) {
     fill: $color;
 
-    @if($has-transition) {
+    @if ($has-transition) {
       transition: fill $quick-ease-out;
     }
   }
@@ -50,7 +50,7 @@
 @mixin path-stroke($stroke, $stroke-width: false) {
   path:not([fill='none']) {
     stroke: $stroke;
-    @if($stroke-width) {
+    @if ($stroke-width) {
       stroke-width: $stroke-width;
     }
   }
@@ -71,7 +71,8 @@
   filter: grayscale(0);
   transition: background-position-x $animation-standard, filter $animation-standard;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background-position-x: 50%;
   }
 
@@ -89,7 +90,7 @@
 }
 
 @mixin animated-background-bars($color1: $cyan-light-5, $color2: $cyan-light-4) {
-  background: repeating-linear-gradient(60deg, $color1, $color1 50px, $color2 50px,  $color2 100px);
+  background: repeating-linear-gradient(60deg, $color1, $color1 50px, $color2 50px, $color2 100px);
   background-position-x: 0;
   background-size: 2000px;
   animation-name: background-bars;
@@ -116,7 +117,8 @@
   @include tri-color-background-gradient($cyan-light-2, $cyan-light-1, $cyan-dark-2);
   @include common-background-styles;
 
-  &[data-processing='true'], &:global(.mixin-loader) {
+  &[data-processing='true'],
+  &:global(.mixin-loader) {
     @include animated-background-bars-primary;
   }
 }
@@ -126,7 +128,8 @@
   @include tri-color-background-gradient($red-light-4, $red-light-3, lighten($red-light-2, 5%));
   @include common-background-styles;
 
-  &[data-processing='true'], &:global(.mixin-loader) {
+  &[data-processing='true'],
+  &:global(.mixin-loader) {
     @include animated-background-bars-secondary;
   }
 }
@@ -136,7 +139,8 @@
   @include tri-color-background-gradient($yellow-light-3, $yellow-light-2, $yellow-standard);
   @include common-background-styles;
 
-  &[data-processing='true'], &:global(.mixin-loader) {
+  &[data-processing='true'],
+  &:global(.mixin-loader) {
     @include animated-background-bars-tertiary;
   }
 }

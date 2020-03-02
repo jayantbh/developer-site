@@ -22,11 +22,13 @@ $code-preview-selector: 'code[class*="language-"], pre[class*="language-"]';
   -ms-hyphens: none;
   hyphens: none;
 
-  &::-moz-selection, & ::-moz-selection {
+  &::-moz-selection,
+  & ::-moz-selection {
     background: #363636;
   }
 
-  &::selection, & ::selection {
+  &::selection,
+  & ::selection {
     background: #363636;
   }
 }
