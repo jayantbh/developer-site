@@ -40,8 +40,8 @@ const AboutPlay: FC<{ location: Location }> = ({ location }) => {
       <section>
         <h2>Play</h2>
         <p>
-          I'm am what you'll call a <em>casual</em> gamer. I play a ton of different games, but nothing very little
-          grinding, and no competitives.
+          I'm am what you'll call a <em>casual</em> gamer. I play a ton of different games, though I tend to avoid ones
+          with much grinding, and any competitive gameplay.
         </p>
         <p>
           During this time, I've played with people like{' '}
