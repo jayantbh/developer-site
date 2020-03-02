@@ -1,0 +1,10 @@
+@import 'globals/variables';
+
+.container {
+  display: flex;
+  align-items: flex-start;
+
+  &:empty {
+    display: none;
+  }
+}
