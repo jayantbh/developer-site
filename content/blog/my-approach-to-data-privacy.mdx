@@ -5,6 +5,7 @@ date: '2020-03-02'
 
 import BoxedSection from '../../src/components/BoxedSection';
 import InlineImages from '../../src/components/InlineImages';
+import AdGuardImage from '../../content/assets/adguard-windows.png';
 
 Like most people, I used to not care about what happens with my data. And I was
 all too willing and enthusiastic about sharing everything.
@@ -89,16 +90,17 @@ multiple of these need to be used together to ensure maximum effectiveness. I
 started with browser extensions.
 
 ## Browser extensions
+
 - [AdBlock](https://chrome.google.com/webstore/detail/adblock-%E2%80%94-best-ad-blocker/gighmmpiobklfepjocnamgkkbiglidom)
 - [Privacy Badger](https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp)
 - [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
 
-*AdBlock* stops almost all ads for me anywhere on the internet. Ads are a
+_AdBlock_ stops almost all ads for me anywhere on the internet. Ads are a
 massive source of information on you for third parties. It does kill one source
 of revenue for a lot of websites on the internet as well, so you may want to
 think about how you use this extension.
 
-*Privacy Badger* helps get rid of all these "social" buttons and other shareable
+_Privacy Badger_ helps get rid of all these "social" buttons and other shareable
 stuff on websites. The presence of these buttons often indicates that these
 social sites and all may be running some scripts on that very page. Don't want
 that. It does quite a bit more than that too. It will also block requests to
@@ -106,11 +108,14 @@ known trackers, or trackers that exist on 3 or more sites. It can also block
 certain requests from setting cookies, and you can control these settings for
 requests from specific domains too.
 
+<InlineImages
+  images={[
+    'https://i.imgur.com/RlqauzF.png',
+    'https://i.imgur.com/H8Kj8X8.png',
+  ]}
+/>
 
-<InlineImages images={["https://i.imgur.com/RlqauzF.png", "https://i.imgur.com/H8Kj8X8.png"]} />
-
-
-*Tampermonkey* runs [userscripts](https://en.wikipedia.org/wiki/Userscript), and
+_Tampermonkey_ runs [userscripts](https://en.wikipedia.org/wiki/Userscript), and
 there exist userscripts that can run custom logic to stamp out "adblocker
 blockers" or other tracking entities.
 
@@ -162,14 +167,28 @@ following subreddits:
 - https://www.reddit.com/r/privacy/
 
 The tools themselves are:
+
 - [Blokada](https://blokada.org/index.html)
 - [AdGuard](https://adguard.com/en/welcome.html)
 
-I'm sure there was one more, but can't remember that for now.
+I used Blokada v3 for a while. It works by creating a local VPN that intercepts
+all your traffic and implements certain rules on them to block any undesirable
+requests, and it made it easier to manage than a hosts file.
+
+It was not quite sufficient for me, and nor was it cross-platform.
+
+Here comes AdGuard. It did everything Blokada did, and more. It could be used on
+multiple devices (based on your license), had easy to understand metrics, extremely configurable settings, and an exceptionally functional filtering log.
+
+<InlineImages images={[AdGuardImage]} />
 
 ---
+This might seem abrupt, but I'm ending this post here.
 
-## TODO:
-- Continue describing what I learnt after using Blokada and AdGuard, and how
-I configured them further.
-- Android 10, location when app in use permission update.
+I've been using AdGuard since a while now, and I've been very happy with it. I use it on all of my devices, so it definitely works very well for me.
+
+Depending on the use-case, I often use Tor or Brave browsers for some stuff that may either be region locked, or potentially politically "risky". Or sometimes to just search some stuff for which I can expect results completely free from my location or shadow profiling.
+
+I've also set every app on my phone (Android 10+) to use location only when it's actively in use (if it needs location at all).
+
+That's all! Thanks for staying till the end if you did!
