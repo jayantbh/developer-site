@@ -4,7 +4,7 @@ import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import cls from 'classnames';
 import { useMDXScope } from 'gatsby-plugin-mdx/context';
 
-import css from './styles.module.scss';
+import * as css from './styles.module.scss';
 
 type Props = {
   codeString: string;
@@ -17,13 +17,13 @@ export const Code: FC<Props> = ({ codeString, language, live }) => {
   if (live) {
     return (
       <LiveProvider code={codeString} noInline={true} scope={components}>
-        <div className={css['live-editor-container']}>
-          <div className={css['language-bar-live']}>{language} → editable</div>
+        <div className={css.liveEditorContainer}>
+          <div className={css.languageBarLive}>{language} → editable</div>
           <LiveEditor className={'live-editor'} />
         </div>
         <LiveError />
-        <div className={css['preview-window']}>
-          <div className={css['language-bar-live']}>{language} → preview</div>
+        <div className={css.previewWindow}>
+          <div className={css.languageBarLive}>{language} → preview</div>
           <LivePreview />
         </div>
       </LiveProvider>
@@ -33,16 +33,16 @@ export const Code: FC<Props> = ({ codeString, language, live }) => {
   return (
     <Highlight {...defaultProps} code={codeString} language={language} theme={undefined}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <pre className={cls(className, css['code-container'])} style={style}>
-          <div className={css['language-bar']}>{language}</div>
-          <div className={css['code-content']}>
+        <pre className={cls(className, css.codeContainer)} style={style}>
+          <div className={css.languageBar}>{language}</div>
+          <div className={css.codeContent}>
             {tokens.map((line, i) => {
               const lineProps = getLineProps({ line, key: i });
 
               return (
-                <div {...lineProps} className={cls(lineProps.className, css['line-container'])}>
-                  <div className={css['line-number']}>{i + 1}</div>
-                  <div className={css['line-content']}>
+                <div {...lineProps} className={cls(lineProps.className, css.lineContainer)}>
+                  <div className={css.lineNumber}>{i + 1}</div>
+                  <div className={css.lineContent}>
                     {line.map((token, key) => (
                       <span {...getTokenProps({ token, key })} />
                     ))}

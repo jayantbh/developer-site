@@ -1,7 +1,7 @@
 import React, { DOMAttributes, FC, HTMLAttributes, SVGAttributes, useLayoutEffect, useRef } from 'react';
 
 import HiSvg from 'assets/components/hi.svg';
-import css from './styles.module.scss';
+import * as css from './styles.module.scss';
 
 const getNumAttr = (el: SVGElement, attr: keyof SVGAttributes<any>) => parseInt(el.getAttribute(attr) as string, 10);
 

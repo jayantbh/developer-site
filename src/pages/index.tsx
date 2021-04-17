@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import cls from 'classnames';
 
 import SEO from 'components/SEO';
-import css from './index.module.scss';
+import * as css from './index.module.scss';
 import ExternalLink from 'components/ExternalLink';
 import AnimatedHi from 'components/AnimatedHi';
 
@@ -24,8 +24,8 @@ const Home: FC<{}> = () => {
   return (
     <div className={css.container}>
       <SEO title='Welcome' keywords={[`jayant bhawal`, `frontend`, `javascript`, `react`, `typescript`, `gatsby`]} />
-      <div className={css['effect-wrapper']}>
-        <Effect className={cls(css['effect-1'], css.small, expanded && css['triggered-effect-1'])}>
+      <div className={css.effectWrapper}>
+        <Effect className={cls(css.effect1, css.small)}>
           <AnimatedHi />
         </Effect>
       </div>

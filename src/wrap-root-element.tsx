@@ -4,6 +4,7 @@ import { Code } from 'components/Code';
 import { preToCodeBlock } from 'mdx-utils';
 
 import './globals/prism-theme.scss';
+import './globals/overrides.scss';
 
 const components = {
   pre: (preProps: any) => {

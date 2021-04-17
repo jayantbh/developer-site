@@ -33,7 +33,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sass`,
       options: {
-        includePaths: ['src'],
+        sassOptions: {
+          includePaths: ['src'],
+        },
         cssLoaderOptions: {
           camelCase: false,
         },
@@ -91,7 +93,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: "G-Q9R4YK563X",
+        head: false,
+        anonymize: true,
+        respectDNT: true,
+        exclude: [],
+        pageTransitionDelay: 0,
+        defer: true,
       },
     },
     {
