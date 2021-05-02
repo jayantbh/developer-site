@@ -1,54 +1,40 @@
-import React, { FC, HTMLAttributes, useState, useCallback, ReactEventHandler } from 'react';
-import map from 'ramda/es/mapObjIndexed';
+import { Lightbox } from 'components/Lightbox';
+import React, { FC, HTMLAttributes, useState, useEffect, useRef } from 'react';
 
 import * as css from './styles.module.scss';
 
 type URL = string;
-
-type Props = {
-  images: URL[];
-} & HTMLAttributes<HTMLElement>;
-
-type ImageSize = {
-  width: string;
-  actualWidth: number;
+type ImgRes = {
+  url: URL;
+  caption?: string;
 };
 
-type ImageSizeMap = Record<URL, ImageSize>;
+type Props = {
+  height: number;
+  images: (URL | ImgRes)[];
+} & HTMLAttributes<HTMLElement>;
 
-const InlineImages: FC<Props> = ({ images, ...props }) => {
-  const [imageWidthMap, setImageWidthMap] = useState<ImageSizeMap>({});
-  const updateImageMap = useCallback(
-    ((e) => {
-      const target = e.currentTarget;
-      const totalWidth = Object.values(imageWidthMap).reduce((acc, entry) => acc + entry.actualWidth, 0) + target.width;
-      console.log(target.width, target.src, totalWidth);
-
-      const _map = map<ImageSize, ImageSize>(
-        (entry) => ({
-          width: (entry.actualWidth / totalWidth) * 100 + '%',
-          actualWidth: entry.actualWidth,
-        }),
-        {
-          ...imageWidthMap,
-          [target.src]: {
-            width: String(target.width),
-            actualWidth: target.width,
-          },
-        }
-      );
-
-      setImageWidthMap(_map);
-    }) as ReactEventHandler<HTMLImageElement>,
-    [imageWidthMap]
-  );
-
+const InlineImages: FC<Props> = ({ images, height, ...props }) => {
+  const [lightboxedImg, setLightboxedImg] = useState<ImgRes | void>();
   return (
-    <section {...props} className={`${css.container} ${props.className}`}>
-      {images.map((src) => (
-        <img key={src} src={src} width={imageWidthMap[src]?.width || undefined} onLoad={updateImageMap} />
-      ))}
-    </section>
+    <>
+      {lightboxedImg && (
+        <Lightbox src={lightboxedImg.url} caption={lightboxedImg.caption} onClose={() => setLightboxedImg()} />
+      )}
+      <section {...props} className={`${css.container} ${props.className || ''}`}>
+        {images.map((img) => {
+          const url = typeof img === 'string' ? img : img.url;
+          const caption = typeof img === 'string' ? undefined : img.caption;
+
+          return (
+            <div key={url} className={caption && css.captionImg}>
+              <img src={url} height={height} onClick={() => setLightboxedImg({ url, caption })} />
+              {caption && <span className={css.caption}>{caption}</span>}
+            </div>
+          );
+        })}
+      </section>
+    </>
   );
 };
 
