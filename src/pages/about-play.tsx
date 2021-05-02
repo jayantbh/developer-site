@@ -32,7 +32,7 @@ const AboutPlay: FC<{ location: Location }> = ({ location }) => {
       <BoxedSection>
         <h2>tl;dr</h2>
         <p>
-          2500+ hours on Steam (many more elsewhere). Eat out ~ thrice a week. 4K Gaming PC + Xbox + PS, and PC VR. 12
+          2500+ hours on Steam (many more elsewhere). Eat out ~ thrice a week. 4K Gaming PC + Xbox + PS, and PC VR. 15
           smart lights. 2 smart assistants.
         </p>
         <p>I can rank almost all the best burgers in Gurgaon.</p>
@@ -42,27 +42,6 @@ const AboutPlay: FC<{ location: Location }> = ({ location }) => {
         <p>
           I'm am what you'll call a <em>casual</em> gamer. I play a ton of different games, though I tend to avoid ones
           with much grinding, and any competitive gameplay.
-        </p>
-        <p>
-          During this time, I've played with people like{' '}
-          <ExternalLink to='https://steamcommunity.com/id/susobhang70' CustomIcon={SteamIcon}>
-            <Titled title={'Data science prodigy, IIIT-H gold medalist'}>Susobhan Ghosh</Titled>
-          </ExternalLink>
-          ,{' '}
-          <ExternalLink to='https://steamcommunity.com/id/jareddunn' CustomIcon={SteamIcon}>
-            <Titled title={'Preparing for IAS. Knows more about our world than pretty much anyone else I know.'}>
-              Soumajeet Basu
-            </Titled>
-          </ExternalLink>
-          ,{' '}
-          <ExternalLink to='https://steamcommunity.com/id/jaredwithaj' CustomIcon={SteamIcon}>
-            <Titled
-              title={'Data science engineer, and web application developer. Amazing at quickly picking up new stuff.'}
-            >
-              Ayush Shaw
-            </Titled>
-          </ExternalLink>
-          , and quite a few more.
         </p>
         <p>
           There's hardly any genre of game that I've not played, except the Anime style ones. Not that I hate anime, I
