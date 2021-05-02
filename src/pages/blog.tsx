@@ -16,7 +16,7 @@ const BlogIndex: FC<Props> = ({ data, location }) => {
   const posts = data.allMdx.edges;
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={`${siteTitle} → Blog`}>
       <SEO title='All posts' keywords={[`blog`, `gatsby`, `javascript`, `react`, `typescript`]} />
       <Bio />
       {posts.map(({ node }: { node: any }) => {
@@ -28,7 +28,7 @@ const BlogIndex: FC<Props> = ({ data, location }) => {
                 marginBottom: rhythm(1 / 4),
               }}
             >
-              <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+              <Link style={{ boxShadow: `none` }} to={'/blog' + node.fields.slug}>
                 {title}
               </Link>
             </h3>

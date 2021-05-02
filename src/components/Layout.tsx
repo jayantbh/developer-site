@@ -4,9 +4,23 @@ import { Link } from 'gatsby';
 import { rhythm, scale } from 'utils/typography';
 import ExternalLink from 'components/ExternalLink';
 
+const getPathParts = (pathname: string) => pathname.split('/').filter(Boolean);
+
+const getPreviousPath = (pathname: string) => {
+  const parts = getPathParts(pathname);
+  if (parts.length > 1) return parts[parts.length - 2];
+  else return '';
+};
+
+const getPreviousUrl = (location: Location) => {
+  if (!location.href) return '/';
+  const url = new URL('/' + getPreviousPath(location.pathname), location.href);
+  return url.pathname;
+};
+
 type Props = { location: Location; title?: string };
 
-const Layout: FC<Props> = ({ location, title, children }) => {
+const Layout: FC<Props> = ({ location, title, children, ...props }) => {
   const rootPath = `${process.env.PUBLIC_URL}/`;
   let header: ReactNode;
 
@@ -45,7 +59,7 @@ const Layout: FC<Props> = ({ location, title, children }) => {
             textDecoration: `none`,
             color: `inherit`,
           }}
-          to={`/`}
+          to={getPreviousUrl(location)}
         >
           {title}
         </Link>

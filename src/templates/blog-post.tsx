@@ -20,7 +20,7 @@ const BlogPostTemplate: FC<Props> = ({ data, pageContext, location }) => {
   const { previous, next } = pageContext;
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={`${siteTitle} → Blog → Post`}>
       <SEO title={post.frontmatter.title} description={post.excerpt} />
       <h1>{post.frontmatter.title}</h1>
       <PageDate>{post.frontmatter.date}</PageDate>
