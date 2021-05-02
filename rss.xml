@@ -1,22 +1,212 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby RSS feed]]></title><description><![CDATA[This is about me, my blog, and what I'm up to.]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 02 Mar 2020 11:11:37 GMT</lastBuildDate><item><title><![CDATA[My approach to data privacy]]></title><link>https://jayant.dev/my-approach-to-data-privacy/</link><guid isPermaLink="false">https://jayant.dev/my-approach-to-data-privacy/</guid><pubDate>Mon, 02 Mar 2020 00:00:00 GMT</pubDate><content:encoded>function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby RSS feed]]></title><description><![CDATA[This is about me, my blog, and what I'm up to.]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 02 May 2021 14:45:02 GMT</lastBuildDate><item><title><![CDATA[How does Windows compare with MacOS or Linux for Dev Experience now?]]></title><link>https://jayant.dev/windows-dev-exp/</link><guid isPermaLink="false">https://jayant.dev/windows-dev-exp/</guid><pubDate>Sat, 17 Apr 2021 00:00:00 GMT</pubDate><content:encoded>function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i &lt; sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i &lt; sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; target[key] = source[key]; } return target; }
+
+/* @jsxRuntime classic */
+
+/* @jsx mdx */
+var _frontmatter = {
+  &quot;title&quot;: &quot;How does Windows compare with MacOS or Linux for Dev Experience now?&quot;,
+  &quot;date&quot;: &quot;2021-04-17&quot;
+};
+var layoutProps = {
+  _frontmatter: _frontmatter
+};
+var MDXLayout = &quot;wrapper&quot;;
+return function MDXContent(_ref) {
+  var components = _ref.components,
+      props = _objectWithoutProperties(_ref, [&quot;components&quot;]);
+
+  return mdx(MDXLayout, _extends({}, layoutProps, props, {
+    components: components,
+    mdxType: &quot;MDXLayout&quot;
+  }), mdx(&quot;p&quot;, null, &quot;Till pretty recently, if I had to write some code, I wouldn\u2019t touch Windows with\na 6 foot pole. I\u2019ve written code on MacOS or Ubuntu most of my brief-so-far\ncareer, but I\u2019ve given windows a serious shot, and, it\u2019s just not worked out for\nme. The Command Prompt, or even Powershell, are just miles and miles away from\nwhat iTerm 2 on MacOS can offer. Or similar Ubuntu terminals. And then there\u2019s\nshells like &quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
+    &quot;href&quot;: &quot;https://en.wikipedia.org/wiki/Z_shell&quot;
+  }, &quot;Zsh&quot;), &quot; (especially with\n&quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
+    &quot;href&quot;: &quot;https://ohmyz.sh/&quot;
+  }, &quot;oh-my-zsh&quot;), &quot;!) or &quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
+    &quot;href&quot;: &quot;https://fishshell.com/&quot;
+  }, &quot;Fish&quot;), &quot; that are just\nso amazing! Not to mention tht Ubuntu\u2019s apt, or &quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
+    &quot;href&quot;: &quot;https://snapcraft.io/&quot;
+  }, &quot;snap&quot;), &quot;,\nand MacOS\u2019s &quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
+    &quot;href&quot;: &quot;https://brew.sh/&quot;
+  }, &quot;Homebrew&quot;), &quot; (also on Ubuntu now) are exceptionally\nloaded package-managers. &quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
+    &quot;href&quot;: &quot;https://chocolatey.org/&quot;
+  }, &quot;Chocolatey&quot;), &quot; on Windows really\ndoesn\u2019t come close.&quot;), mdx(&quot;p&quot;, null, &quot;But, &quot;, mdx(&quot;strong&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;what do I exactly mean by that?&quot;), &quot; Why is CMD or Powershell miles away?\nWhy do I like Z-Shell over the Windows shell? And is my mind changed with the\nintroduction of the\n&quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
+    &quot;href&quot;: &quot;https://www.microsoft.com/p/windows-terminal-preview/9n0dx20hk701&quot;
+  }, &quot;Windows Terminal&quot;), &quot;?&quot;), mdx(&quot;p&quot;, null, &quot;I\u2019ll try to elaborate on that, and you can reach out to me on &quot;, mdx(ExternalLink, {
+    to: &apos;https://twitter.com/jayantbhawal&apos;,
+    mdxType: &quot;ExternalLink&quot;
+  }, &quot;Twitter&quot;), &quot; with questions,\ncomplaints, or corrections.&quot;), mdx(&quot;hr&quot;, null), mdx(&quot;h2&quot;, null, &quot;First, the terminal&quot;), mdx(&quot;p&quot;, null, &quot;I\u2019ve used about half a dozen terminals so far. On MacOS, it\u2019s been Apple\nTerminal, and then iTerm2 for most of my time.&quot;), mdx(&quot;p&quot;, null, &quot;The level of customization that they offer is incredible, they allow you to\nexport/import themes, keybindings, and they support an incredible number of\nsettings and tweaks to make the terminal truly your own.&quot;), mdx(&quot;p&quot;, null, &quot;iTerm2 goes far beyond the capabilities of Apple Terminal by introducing\nfeatures like Window Splitting, more powerful theming, built-in\nautocompletion(!!!), open links or files from URLs in the terminal, really solid\nintegration with &quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
+    &quot;href&quot;: &quot;https://en.wikipedia.org/wiki/Z_shell&quot;
+  }, &quot;Z Shell&quot;), &quot;, etc.&quot;), mdx(InlineImages, {
+    height: 250,
+    images: [{
+      url: iterm2,
+      caption: mdx(&quot;a&quot;, {
+        href: &quot;https://iterm2.com/features.html&quot;
+      }, &quot;iTerm 2&quot;)
+    }, {
+      url: appleTerm,
+      caption: mdx(&quot;a&quot;, {
+        href: &quot;https://en.wikipedia.org/wiki/Terminal_(macOS)&quot;
+      }, &quot;Apple Terminal&quot;)
+    }],
+    mdxType: &quot;InlineImages&quot;
+  }), mdx(&quot;p&quot;, null, &quot;Command Prompt does not offer any of that! You have some absolute barebones\ntheming with a handful of colours, but, it\u2019s extremely barebones!&quot;), mdx(&quot;p&quot;, null, &quot;There\u2019s &quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
+    &quot;href&quot;: &quot;https://cmder.net/&quot;
+  }, &quot;Cmder&quot;), &quot;, which is honestly quite decent, but, it\ntries to build on top of the existing CMD stuff, which feels very obvious when\nyou use it, and, it\u2019s just not as smooth an experience.&quot;), mdx(&quot;p&quot;, null, &quot;Now,\n&quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
+    &quot;href&quot;: &quot;https://www.microsoft.com/p/windows-terminal-preview/9n0dx20hk701&quot;
+  }, &quot;Windows Terminal&quot;), &quot;\nis worth talking about. It\u2019s quite configurable, works really well with\n&quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
+    &quot;href&quot;: &quot;https://docs.microsoft.com/en-us/windows/wsl/install-win10&quot;
+  }, &quot;WSL&quot;), &quot;, has many of\nthe iTerm2 features, including importable themes, window splitting, and a few\nother things, supports custom fonts or ligatures well enough for me, it\u2019s a\npretty great experience. Never going back to CMD or Cmder after this. And, this\nis probably the biggest difference in recent times that I\u2019ve experienced\nregarding being able to develop on windows.&quot;), mdx(&quot;p&quot;, null, &quot;It does help that it works really well with WSL, so my zsh profiles that I was\nusing on Ubuntu or MacOS, can be used as-is on Windows, and any fancy symbols\nand stuff that I used will work mostly the same way. It really has gotten much\nbetter.&quot;), mdx(InlineImages, {
+    height: 250,
+    images: [{
+      url: winTerm,
+      caption: mdx(&quot;a&quot;, {
+        href: &quot;https://www.microsoft.com/p/windows-terminal-preview/9n0dx20hk701&quot;
+      }, &quot;Windows Terminal&quot;)
+    }],
+    mdxType: &quot;InlineImages&quot;
+  }), mdx(&quot;h2&quot;, null, &quot;Then, the shell&quot;), mdx(&quot;p&quot;, null, &quot;While the bash shell is quite good, the ecosystem of Z Shell is straight-up\n&quot;, mdx(&quot;strong&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;incredible!&quot;), &quot;. Have you seen &quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
+    &quot;href&quot;: &quot;https://ohmyz.sh/&quot;
+  }, &quot;oh-my-zsh&quot;), &quot;? It has its own\nplugin and theming system which is just so crazy! Here, take a look at some of\nthe &quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
+    &quot;href&quot;: &quot;https://github.com/ohmyzsh/ohmyzsh/wiki/Themes&quot;
+  }, &quot;prompt themes&quot;), &quot; with\noh-my-zsh that require almost zero configuration.&quot;), mdx(InlineImages, {
+    height: 250,
+    images: [{
+      url: prompts,
+      caption: &apos;Several oh-my-zsh themed prompts&apos;
+    }],
+    mdxType: &quot;InlineImages&quot;
+  }), mdx(&quot;br&quot;, null), mdx(&quot;p&quot;, null, &quot;This plugin is my favorite:\n&quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
+    &quot;href&quot;: &quot;https://github.com/romkatv/powerlevel10k&quot;
+  }, &quot;Powerlevel10k&quot;)), mdx(&quot;p&quot;, null, &quot;Your prompt can change depending on what commands you\u2019re running, what project\ndirectory you are in, etc.&quot;), mdx(&quot;p&quot;, null, &quot;For example: If you were in a node or npm/yarn based project directory, the\nright side of the prompt may show you the current node/npm/yarn version.&quot;), mdx(&quot;p&quot;, null, &quot;There\u2019s also &quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
+    &quot;href&quot;: &quot;https://fishshell.com/&quot;
+  }, &quot;Fish shell&quot;), &quot; that has a ton of advanced\nfeatures, a lot of them being present in Zsh too, but I\u2019ve not used it in a\nwhile, not since most of the features that I personally cared about were brought\nto Zsh as well.&quot;), mdx(&quot;p&quot;, null, &quot;You can do a very limited version of any of this in CMD. Though, if you\u2019re\nrunning Windows Terminal, a lot more is possible when you\u2019re inside WSL, but,\nnot so much within Windows itself. CMD inside WSL doesn\u2019t handle all the\nfanciness well enough.&quot;), mdx(&quot;h2&quot;, null, &quot;Lastly, the ecosystem&quot;), mdx(&quot;p&quot;, null, &quot;Now, one of the major factors for folks working on any platform is, availability\nand ease-of-install of tools or packages.&quot;), mdx(&quot;p&quot;, null, &quot;You want to be able to install apache, node, or cowsay as painlessly and quickly\nas possible. You want the same ease of install even if your package happens to\nbe a bit more obscure, and that\u2019s only possible if your desired package is in\nthe package registry at all.&quot;), mdx(&quot;p&quot;, null, &quot;Here\u2019s a list of the popular package managers for each OS with their package\ncounts (May 2021):&quot;), mdx(&quot;ul&quot;, null, mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, &quot;apt: 78406&quot;), mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, &quot;macports: 26381&quot;), mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, &quot;brew: 5700&quot;), mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, &quot;chocolatey: 8459&quot;)), mdx(&quot;p&quot;, null, &quot;Here, apt is miles head. MacOS has macports and brew, for a total of ~32k\npackages. Chocolatey used to be the only package manager on Windows, and with\n8.5k packages, it\u2019s a bit limited, but honestly, it\u2019ll have most packages that\nsomeone needs.&quot;), mdx(&quot;p&quot;, null, &quot;Windows is already getting a first-party package manager called\n&quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
+    &quot;href&quot;: &quot;https://devblogs.microsoft.com/commandline/windows-package-manager-preview/&quot;
+  }, &quot;Winget&quot;), &quot;,\nbut it\u2019s new, and time will tell how well it flies. I\u2019m hoping pretty well.&quot;), mdx(&quot;p&quot;, null, &quot;As of today, the situation with packages on windows is much better than it used\nto be. There was a time when you had to install things using installers, for\nsoftware that you\u2019d use a package manager for in other systems, it wasn\u2019t a very\nuniform experience.&quot;), mdx(&quot;h2&quot;, null, &quot;Final notes&quot;), mdx(&quot;p&quot;, null, &quot;Today, I think that Windows works pretty well for software development as far as\nmy use-cases go, which is Web Development. WSL has been a game-changer since it\ncame out, and Windows terminal removes the last pain point with achieving the\nLinux experience on Windows to a great extent.&quot;), mdx(&quot;p&quot;, null, &quot;Windows itself needs a little more polish to be as smooth an experience as\nMacOS, but folks who haven\u2019t used MacOS won\u2019t really be bothered.&quot;));
+}
+;
+MDXContent.isMDXComponent = true;</content:encoded></item><item><title><![CDATA[Windows Powertoys - Did you know it was a thing?]]></title><link>https://jayant.dev/windows-powertoys/</link><guid isPermaLink="false">https://jayant.dev/windows-powertoys/</guid><pubDate>Fri, 02 Apr 2021 00:00:00 GMT</pubDate><content:encoded>function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i &lt; sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i &lt; sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; target[key] = source[key]; } return target; }
+
+/* @jsxRuntime classic */
+
+/* @jsx mdx */
+var _frontmatter = {
+  &quot;title&quot;: &quot;Windows Powertoys - Did you know it was a thing?&quot;,
+  &quot;date&quot;: &quot;2021-04-02&quot;
+};
+var layoutProps = {
+  _frontmatter: _frontmatter
+};
+var MDXLayout = &quot;wrapper&quot;;
+return function MDXContent(_ref) {
+  var components = _ref.components,
+      props = _objectWithoutProperties(_ref, [&quot;components&quot;]);
+
+  return mdx(MDXLayout, _extends({}, layoutProps, props, {
+    components: components,
+    mdxType: &quot;MDXLayout&quot;
+  }), mdx(&quot;p&quot;, null, &quot;Recently I discovered &quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
+    &quot;href&quot;: &quot;https://github.com/microsoft/PowerToys&quot;
+  }, &quot;PowerToys&quot;), &quot;. If\nyou don\u2019t know about this, then congratulations because you should totally\ninstall this right now. It surely has something you can make use of!&quot;), mdx(&quot;p&quot;, null, &quot;PowerToys is basically a set of tools that are &quot;, mdx(&quot;em&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;nice-to-have&quot;), &quot;s for most people.\nIt\u2019s things like a Color Picker, Window Zones, Spotlight (from MacOS), Bulk\nRename, etc. As of this date, there are 9 tools in total.&quot;), mdx(&quot;details&quot;, null, mdx(&quot;summary&quot;, null, &quot;Click to see the list of all the tools&quot;), mdx(&quot;div&quot;, {
+    style: {
+      paddingLeft: &apos;1em&apos;
+    }
+  }, mdx(&quot;details&quot;, null, mdx(&quot;summary&quot;, null, &quot;Color Picker&quot;), &quot;Literally a system-wide color picker that supports Hex, RGB, and HSL!&quot;, mdx(InlineImages, {
+    images: [&apos;https://docs.microsoft.com/en-in/windows/images/pt-colorpicker-hex-editor.png&apos;],
+    mdxType: &quot;InlineImages&quot;
+  })), mdx(&quot;details&quot;, null, mdx(&quot;summary&quot;, null, &quot;Fancy Zones&quot;), &quot;Windows already had some seriously solid window tiling, but fancy zones takes it to the next level!&quot;, mdx(InlineImages, {
+    images: [&apos;https://docs.microsoft.com/en-in/windows/images/pt-fancyzones-grideditor.png&apos;],
+    mdxType: &quot;InlineImages&quot;
+  })), mdx(&quot;details&quot;, null, mdx(&quot;summary&quot;, null, &quot;File Explorer add-ons (Preview Pane)&quot;), &quot;Now you can preview SVGs and Markdown files in the preview pane!&quot;, mdx(InlineImages, {
+    images: [&apos;https://docs.microsoft.com/en-in/windows/images/powertoys-fileexplorer.gif&apos;],
+    mdxType: &quot;InlineImages&quot;
+  })), mdx(&quot;details&quot;, null, mdx(&quot;summary&quot;, null, &quot;Image Resizer&quot;), &quot;Bulk Image resizing. It&apos;s not something I would use often, but there have been times when I had to use [IrfanView](https://www.irfanview.com/) to achieve this functionality.&quot;, mdx(InlineImages, {
+    images: [&apos;https://docs.microsoft.com/en-in/windows/images/powertoys-resize-images.gif&apos;],
+    mdxType: &quot;InlineImages&quot;
+  })), mdx(&quot;details&quot;, null, mdx(&quot;summary&quot;, null, &quot;Keyboard Manager&quot;), &quot;I&apos;ll probably not use this much either, but again, it&apos;s a great feature by itself!&quot;, mdx(InlineImages, {
+    images: [&apos;https://docs.microsoft.com/en-in/windows/images/powertoys-keyboard-remap.png&apos;],
+    mdxType: &quot;InlineImages&quot;
+  })), mdx(&quot;details&quot;, null, mdx(&quot;summary&quot;, null, &quot;Power Rename&quot;), &quot;There were a few times when I had to use third-party tools to do this.&quot;, mdx(InlineImages, {
+    images: [&apos;https://docs.microsoft.com/en-in/windows/images/powerrename-demo.gif&apos;],
+    mdxType: &quot;InlineImages&quot;
+  })), mdx(&quot;details&quot;, null, mdx(&quot;summary&quot;, null, &quot;PowerToys Run (Spotlight)&quot;), &quot;SO MUCH YES! This is basically MacOS&apos;s Spotlight, though slightly limited in functionality. But this is so good nonetheless!&quot;, mdx(InlineImages, {
+    images: [&apos;https://docs.microsoft.com/en-in/windows/images/pt-powerrun-demo.gif&apos;],
+    mdxType: &quot;InlineImages&quot;
+  })), mdx(&quot;details&quot;, null, mdx(&quot;summary&quot;, null, &quot;Shortcut Guide&quot;), &quot;It&apos;s useful sometimes... sometimes.&quot;, mdx(InlineImages, {
+    images: [&apos;https://docs.microsoft.com/en-in/windows/images/pt-shortcut-guide-large.png&apos;],
+    mdxType: &quot;InlineImages&quot;
+  })), mdx(&quot;details&quot;, null, mdx(&quot;summary&quot;, null, &quot;Video Conference Mute&quot;), &quot;I guess it&apos;s handy if you can&apos;t disable mic/cam by other means.&quot;, mdx(InlineImages, {
+    images: [&apos;https://docs.microsoft.com/en-in/windows/images/pt-video-conference-mute-settings.png&apos;],
+    mdxType: &quot;InlineImages&quot;
+  })))), mdx(&quot;p&quot;, null, &quot;My favorites are Fancy Zones, and PowerToys Run.&quot;), mdx(&quot;p&quot;, null, mdx(&quot;strong&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;Fancy Zones&quot;), &quot; allows me to create custom layout grids that I can snap windows\nto using hotkeys (Win + Left/Right). It\u2019s exceptionally useful when I want a\ndashboard like setup going on with multiple windows. For example: I\u2019m writing\nsome code, but I don\u2019t need the whole screen for that. So the top half of the\nremaining half of the screen is taken up by Slack, and the bottom half by\nDiscord or something!&quot;), mdx(InlineImages, {
+    images: [&apos;https://docs.microsoft.com/en-in/windows/images/pt-fancyzones-quickswap.gif&apos;],
+    mdxType: &quot;InlineImages&quot;
+  }), mdx(&quot;p&quot;, null, mdx(&quot;strong&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;PowerToys Run&quot;), &quot; is just so good for when I want to launch an app, or do quick\nmath. I don\u2019t need to pin a dozen things to my taskbar anymore, or find an icon\non the desktop, or start menu. You know, basically do Spotlight things!&quot;), mdx(&quot;p&quot;, null, &quot;I can\u2019t however, do currency conversions in it yet.&quot;), mdx(InlineImages, {
+    images: [&apos;https://docs.microsoft.com/en-in/windows/images/pt-powerrun-demo.gif&apos;],
+    mdxType: &quot;InlineImages&quot;
+  }), mdx(&quot;p&quot;, null, &quot;Here\u2019s the &quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
+    &quot;href&quot;: &quot;https://github.com/microsoft/PowerToys/releases/&quot;
+  }, &quot;link&quot;), &quot; to the\nreleases page if you\u2019re interested!&quot;));
+}
+;
+MDXContent.isMDXComponent = true;</content:encoded></item><item><title><![CDATA[My approach to data privacy]]></title><link>https://jayant.dev/my-approach-to-data-privacy/</link><guid isPermaLink="false">https://jayant.dev/my-approach-to-data-privacy/</guid><pubDate>Mon, 02 Mar 2020 00:00:00 GMT</pubDate><content:encoded>function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i &lt; sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i &lt; sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; target[key] = source[key]; } return target; }
+
+/* @jsxRuntime classic */
 
 /* @jsx mdx */
 var _frontmatter = {
   &quot;title&quot;: &quot;My approach to data privacy&quot;,
   &quot;date&quot;: &quot;2020-03-02&quot;
 };
-
-var makeShortcode = function makeShortcode(name) {
-  return function MDXDefaultShortcode(props) {
-    console.warn(&quot;Component &quot; + name + &quot; was not imported, exported, or provided by MDXProvider as global scope&quot;);
-    return mdx(&quot;div&quot;, props);
-  };
-};
-
 var layoutProps = {
   _frontmatter: _frontmatter
 };
@@ -36,138 +226,115 @@ return function MDXContent(_ref) {
     parentName: &quot;em&quot;
   }, &quot;everything&quot;), &quot;, was just something that everyone should know about!&quot;)), mdx(&quot;hr&quot;, null), mdx(&quot;p&quot;, null, &quot;Yeah. How naive that was. I was very very active on Facebook, Instagram, and\nthe like. And, now I\u2019m not on any Facebook product, and I\u2019ve started taking some\nmeasures to try and stop tracking of my information or internet behavior as far\nas possible. What changed?&quot;), mdx(BoxedSection, {
     mdxType: &quot;BoxedSection&quot;
-  }, mdx(&quot;details&quot;, null, mdx(&quot;summary&quot;, null, &quot;This is what happened with Facebook&quot;), mdx(&quot;p&quot;, null, mdx(&quot;a&quot;, _extends({
-    parentName: &quot;p&quot;
-  }, {
+  }, mdx(&quot;details&quot;, null, mdx(&quot;summary&quot;, null, &quot;This is what happened with Facebook&quot;), mdx(&quot;p&quot;, null, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
     &quot;href&quot;: &quot;https://www.techrepublic.com/article/facebook-data-privacy-scandal-a-cheat-sheet/&quot;
-  }), &quot;techrepublic.com/article/facebook-data-privacy-s\u2026&quot;), mdx(&quot;br&quot;, {
+  }, &quot;techrepublic.com/article/facebook-data-privacy-s\u2026&quot;), mdx(&quot;br&quot;, {
     parentName: &quot;p&quot;
-  }), &quot;\n&quot;, mdx(&quot;a&quot;, _extends({
-    parentName: &quot;p&quot;
-  }, {
+  }), &quot;\n&quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
     &quot;href&quot;: &quot;theguardian.com/technology/2018/dec/14/facebook-privacy-problems-roundup&quot;
-  }), &quot;theguardian.com/techology/2018/dec/14\u2026&quot;), mdx(&quot;br&quot;, {
+  }, &quot;theguardian.com/techology/2018/dec/14\u2026&quot;), mdx(&quot;br&quot;, {
     parentName: &quot;p&quot;
-  }), &quot;\n&quot;, mdx(&quot;a&quot;, _extends({
-    parentName: &quot;p&quot;
-  }, {
+  }), &quot;\n&quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
     &quot;href&quot;: &quot;https://www.digitaltrends.com/news/facebook-data-leak-267-million-users-affected/&quot;
-  }), &quot;digitaltrends.com/news/facebook-data-leak-267-million\u2026/&quot;), mdx(&quot;br&quot;, {
+  }, &quot;digitaltrends.com/news/facebook-data-leak-267-million\u2026/&quot;), mdx(&quot;br&quot;, {
     parentName: &quot;p&quot;
-  }), &quot;\n&quot;, mdx(&quot;a&quot;, _extends({
-    parentName: &quot;p&quot;
-  }, {
+  }), &quot;\n&quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
     &quot;href&quot;: &quot;https://www.businessinsider.in/tech/facebook-admits-that-it-allowed-netflix-and-spotify-to-access-your-private-messages/articleshow/67161041.cms&quot;
-  }), &quot;businessinsider.in/tech/facebook-admits-that-it-allowed-\u2026&quot;), mdx(&quot;br&quot;, {
+  }, &quot;businessinsider.in/tech/facebook-admits-that-it-allowed-\u2026&quot;), mdx(&quot;br&quot;, {
     parentName: &quot;p&quot;
-  }), &quot;\n&quot;, mdx(&quot;a&quot;, _extends({
-    parentName: &quot;p&quot;
-  }, {
+  }), &quot;\n&quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
     &quot;href&quot;: &quot;https://www.nytimes.com/2018/12/18/technology/facebook-privacy.html&quot;
-  }), &quot;nytimes.com/2018/12/18/technology/facebook-privacy&quot;))), mdx(&quot;details&quot;, null, mdx(&quot;summary&quot;, null, &quot;And here&apos;s some about Cambridge Analytica, remember that one?&quot;), mdx(&quot;p&quot;, null, mdx(&quot;a&quot;, _extends({
-    parentName: &quot;p&quot;
-  }, {
+  }, &quot;nytimes.com/2018/12/18/technology/facebook-privacy&quot;))), mdx(&quot;details&quot;, null, mdx(&quot;summary&quot;, null, &quot;And here&apos;s some about Cambridge Analytica, remember that one?&quot;), mdx(&quot;p&quot;, null, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
     &quot;href&quot;: &quot;https://www.theguardian.com/uk-news/2018/mar/23/leaked-cambridge-analyticas-blueprint-for-trump-victory&quot;
-  }), &quot;theguardian.com/uk-news/2018/mar/23/leaked-cambridge-\u2026&quot;), mdx(&quot;br&quot;, {
+  }, &quot;theguardian.com/uk-news/2018/mar/23/leaked-cambridge-\u2026&quot;), mdx(&quot;br&quot;, {
     parentName: &quot;p&quot;
-  }), &quot;\n&quot;, mdx(&quot;a&quot;, _extends({
-    parentName: &quot;p&quot;
-  }, {
+  }), &quot;\n&quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
     &quot;href&quot;: &quot;https://www.vox.com/policy-and-politics/2018/3/23/17151916/facebook-cambridge-analytica-trump-diagram&quot;
-  }), &quot;vox.com/policy-and-politics/2018/3/23/17151916\u2026&quot;))), mdx(&quot;details&quot;, null, mdx(&quot;summary&quot;, null, &quot;Oh, and they were in India too&quot;), mdx(&quot;p&quot;, null, mdx(&quot;a&quot;, _extends({
-    parentName: &quot;p&quot;
-  }, {
+  }, &quot;vox.com/policy-and-politics/2018/3/23/17151916\u2026&quot;))), mdx(&quot;details&quot;, null, mdx(&quot;summary&quot;, null, &quot;Oh, and they were in India too&quot;), mdx(&quot;p&quot;, null, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
     &quot;href&quot;: &quot;https://theprint.in/politics/exclusive-inside-story-cambridge-analytica-actually-india/44012/&quot;
-  }), &quot;theprint.in/politics/exclusive-inside-story-cambridge-\u2026&quot;), mdx(&quot;br&quot;, {
+  }, &quot;theprint.in/politics/exclusive-inside-story-cambridge-\u2026&quot;), mdx(&quot;br&quot;, {
     parentName: &quot;p&quot;
-  }), &quot;\n&quot;, mdx(&quot;a&quot;, _extends({
-    parentName: &quot;p&quot;
-  }, {
+  }), &quot;\n&quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
     &quot;href&quot;: &quot;https://qz.com/1239561/cambridge-analyticas-parent-firm-proposed-a-massive-political-machine-for-indias-2014-elections/&quot;
-  }), &quot;qz.com/1239561/cambridge-analyticas-parent-firm-\u2026&quot;)))), mdx(&quot;p&quot;, null, &quot;All of this made me realize one thing. My data can be used in more ways than I\ncan ever comprehend, and it can be gathered from more sources than I can imagine\nto know more about me than I will ever realize. So what do I do?&quot;), mdx(&quot;p&quot;, null, &quot;I can not achieve zero-visibility into me on day 1 of my realization. I am too\ningrained into services and other stuff that are a part of my daily workflow.\nBut, I can do this bits and pieces at a time. If I am so concerned with\nFacebook, maybe I can stop using that first. That cuts of one entity trying to\nget my data.\n&quot;, mdx(&quot;a&quot;, _extends({
-    parentName: &quot;p&quot;
-  }, {
+  }, &quot;qz.com/1239561/cambridge-analyticas-parent-firm-\u2026&quot;)))), mdx(&quot;p&quot;, null, &quot;All of this made me realize one thing. My data can be used in more ways than I\ncan ever comprehend, and it can be gathered from more sources than I can imagine\nto know more about me than I will ever realize. So what do I do?&quot;), mdx(&quot;p&quot;, null, &quot;I can not achieve zero-visibility into me on day 1 of my realization. I am too\ningrained into services and other stuff that are a part of my daily workflow.\nBut, I can do this bits and pieces at a time. If I am so concerned with\nFacebook, maybe I can stop using that first. That cuts of one entity trying to\nget my data.\n&quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
     &quot;href&quot;: &quot;https://www.cnet.com/news/shadow-profiles-facebook-has-information-you-didnt-hand-over/&quot;
-  }), &quot;Or&quot;), &quot;\n&quot;, mdx(&quot;a&quot;, _extends({
-    parentName: &quot;p&quot;
-  }, {
+  }, &quot;Or&quot;), &quot;\n&quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
     &quot;href&quot;: &quot;https://www.theverge.com/2018/4/11/17225482/facebook-shadow-profiles-zuckerberg-congress-data-privacy&quot;
-  }), &quot;does&quot;), &quot;\n&quot;, mdx(&quot;a&quot;, _extends({
-    parentName: &quot;p&quot;
-  }, {
+  }, &quot;does&quot;), &quot;\n&quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
     &quot;href&quot;: &quot;https://www.vox.com/2018/4/20/17254312/facebook-shadow-profiles-data-collection-non-users-mark-zuckerberg&quot;
-  }), &quot;it?&quot;)), mdx(&quot;p&quot;, null, &quot;No, not fully. Not yet. If you followed any of the links above, you know that\nFacebook can build \u201Cshadow profiles\u201D of you even if you don\u2019t have a Facebook\naccount at all. Well, that sucks. Sure, the amount of data I was giving away has\nnot cut down by a lot, but I want them to have basically no data on me anymore\n(beyond what they already have). How do I do that?&quot;), mdx(&quot;p&quot;, null, &quot;We\u2019ll, there\u2019s a few approaches, and not all are equally effective. And often,\nmultiple of these need to be used together to ensure maximum effectiveness. I\nstarted with browser extensions.&quot;), mdx(&quot;h2&quot;, null, &quot;Browser extensions&quot;), mdx(&quot;ul&quot;, null, mdx(&quot;li&quot;, {
+  }, &quot;it?&quot;)), mdx(&quot;p&quot;, null, &quot;No, not fully. Not yet. If you followed any of the links above, you know that\nFacebook can build \u201Cshadow profiles\u201D of you even if you don\u2019t have a Facebook\naccount at all. Well, that sucks. Sure, the amount of data I was giving away has\nnot cut down by a lot, but I want them to have basically no data on me anymore\n(beyond what they already have). How do I do that?&quot;), mdx(&quot;p&quot;, null, &quot;We\u2019ll, there\u2019s a few approaches, and not all are equally effective. And often,\nmultiple of these need to be used together to ensure maximum effectiveness. I\nstarted with browser extensions.&quot;), mdx(&quot;h2&quot;, null, &quot;Browser extensions&quot;), mdx(&quot;ul&quot;, null, mdx(&quot;li&quot;, {
     parentName: &quot;ul&quot;
-  }, mdx(&quot;a&quot;, _extends({
-    parentName: &quot;li&quot;
-  }, {
+  }, mdx(&quot;a&quot;, {
+    parentName: &quot;li&quot;,
     &quot;href&quot;: &quot;https://chrome.google.com/webstore/detail/adblock-%E2%80%94-best-ad-blocker/gighmmpiobklfepjocnamgkkbiglidom&quot;
-  }), &quot;AdBlock&quot;)), mdx(&quot;li&quot;, {
+  }, &quot;AdBlock&quot;)), mdx(&quot;li&quot;, {
     parentName: &quot;ul&quot;
-  }, mdx(&quot;a&quot;, _extends({
-    parentName: &quot;li&quot;
-  }, {
+  }, mdx(&quot;a&quot;, {
+    parentName: &quot;li&quot;,
     &quot;href&quot;: &quot;https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp&quot;
-  }), &quot;Privacy Badger&quot;)), mdx(&quot;li&quot;, {
+  }, &quot;Privacy Badger&quot;)), mdx(&quot;li&quot;, {
     parentName: &quot;ul&quot;
-  }, mdx(&quot;a&quot;, _extends({
-    parentName: &quot;li&quot;
-  }, {
+  }, mdx(&quot;a&quot;, {
+    parentName: &quot;li&quot;,
     &quot;href&quot;: &quot;https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo&quot;
-  }), &quot;Tampermonkey&quot;))), mdx(&quot;p&quot;, null, mdx(&quot;em&quot;, {
+  }, &quot;Tampermonkey&quot;))), mdx(&quot;p&quot;, null, mdx(&quot;em&quot;, {
     parentName: &quot;p&quot;
   }, &quot;AdBlock&quot;), &quot; stops almost all ads for me anywhere on the internet. Ads are a\nmassive source of information on you for third parties. It does kill one source\nof revenue for a lot of websites on the internet as well, so you may want to\nthink about how you use this extension.&quot;), mdx(&quot;p&quot;, null, mdx(&quot;em&quot;, {
     parentName: &quot;p&quot;
   }, &quot;Privacy Badger&quot;), &quot; helps get rid of all these \u201Csocial\u201D buttons and other shareable\nstuff on websites. The presence of these buttons often indicates that these\nsocial sites and all may be running some scripts on that very page. Don\u2019t want\nthat. It does quite a bit more than that too. It will also block requests to\nknown trackers, or trackers that exist on 3 or more sites. It can also block\ncertain requests from setting cookies, and you can control these settings for\nrequests from specific domains too.&quot;), mdx(InlineImages, {
-    images: [&quot;https://i.imgur.com/RlqauzF.png&quot;, &quot;https://i.imgur.com/H8Kj8X8.png&quot;],
+    images: [&apos;https://i.imgur.com/RlqauzF.png&apos;, &apos;https://i.imgur.com/H8Kj8X8.png&apos;],
     mdxType: &quot;InlineImages&quot;
   }), mdx(&quot;p&quot;, null, mdx(&quot;em&quot;, {
     parentName: &quot;p&quot;
-  }, &quot;Tampermonkey&quot;), &quot; runs &quot;, mdx(&quot;a&quot;, _extends({
-    parentName: &quot;p&quot;
-  }, {
+  }, &quot;Tampermonkey&quot;), &quot; runs &quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
     &quot;href&quot;: &quot;https://en.wikipedia.org/wiki/Userscript&quot;
-  }), &quot;userscripts&quot;), &quot;, and\nthere exist userscripts that can run custom logic to stamp out \u201Cadblocker\nblockers\u201D or other tracking entities.&quot;), mdx(&quot;p&quot;, null, &quot;These things together do a pretty great job\u2026 on my browser, which is Chrome at\nthe moment.&quot;), mdx(&quot;p&quot;, null, &quot;What happens when I switch to another browser for some time? Or a native or\nnon-browser application? On any browser or application on my phone? Things are\ntrying to hit tens of thousands of requests in total for ad, tracking, and\nanalytics purposes all day, every day. Other than the obvious privacy concerns\nit also burns my battery capacity, and my data cap. If you\u2019ve not cared too much\nabout your privacy, surely you hate your data running out, or for the unlimited\ndata folks, your battery running out.&quot;), mdx(&quot;h2&quot;, null, &quot;Requests Blocking&quot;), mdx(&quot;p&quot;, null, &quot;Most of what the previously mentioned tools do, is block any requests to known\nor custom hosts. They block all requests to\n&quot;, mdx(&quot;a&quot;, _extends({
-    parentName: &quot;p&quot;
-  }, {
+  }, &quot;userscripts&quot;), &quot;, and\nthere exist userscripts that can run custom logic to stamp out \u201Cadblocker\nblockers\u201D or other tracking entities.&quot;), mdx(&quot;p&quot;, null, &quot;These things together do a pretty great job\u2026 on my browser, which is Chrome at\nthe moment.&quot;), mdx(&quot;p&quot;, null, &quot;What happens when I switch to another browser for some time? Or a native or\nnon-browser application? On any browser or application on my phone? Things are\ntrying to hit tens of thousands of requests in total for ad, tracking, and\nanalytics purposes all day, every day. Other than the obvious privacy concerns\nit also burns my battery capacity, and my data cap. If you\u2019ve not cared too much\nabout your privacy, surely you hate your data running out, or for the unlimited\ndata folks, your battery running out.&quot;), mdx(&quot;h2&quot;, null, &quot;Requests Blocking&quot;), mdx(&quot;p&quot;, null, &quot;Most of what the previously mentioned tools do, is block any requests to known\nor custom hosts. They block all requests to\n&quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
     &quot;href&quot;: &quot;https://en.wikipedia.org/wiki/DoubleClick&quot;
-  }), &quot;doubleclick&quot;), &quot; or google analytics,\namong maybe 40-50 thousand other hosts, just that they are limited to the\nbrowser, and my internet activities obviously go beyond that.&quot;), mdx(&quot;h3&quot;, null, &quot;Hosts File Managers&quot;), mdx(&quot;p&quot;, null, &quot;I considered &quot;, mdx(&quot;strong&quot;, {
+  }, &quot;doubleclick&quot;), &quot; or google analytics,\namong maybe 40-50 thousand other hosts, just that they are limited to the\nbrowser, and my internet activities obviously go beyond that.&quot;), mdx(&quot;h3&quot;, null, &quot;Hosts File Managers&quot;), mdx(&quot;p&quot;, null, &quot;I considered &quot;, mdx(&quot;strong&quot;, {
     parentName: &quot;p&quot;
   }, &quot;alternative approaches&quot;), &quot;, like using a tool to block requests\nthrough the hosts file, but those can usually be tedious to maintain, and it\u2019s\nnot very cross-platform. As in, it\u2019s a good option, but I wanted to see if I\ncould look for a tool paid or free that would offer more convenience. Also, I\ndidn\u2019t want to root my phone if convenient alternatives were present.&quot;), mdx(&quot;h3&quot;, null, &quot;Local VPN based network interception&quot;), mdx(&quot;p&quot;, null, &quot;I thought to myself, a VPN picks up requests going somewhere starting right on\nmy device, and after a lot of jumping around, it takes the response and feeds it\nback to whatever triggered the request. So, a VPN technically could take the\nrequest right as it was about to fly, and then do something with it, such as\nremove headers or block the request altogether. Such a thing should also me more\ncustomizable than a hosts file, and it could also provide me local analytics on\nblocking and interception, in theory, because as of now I didn\u2019t know if such a\nthing was actually possible.&quot;), mdx(&quot;p&quot;, null, &quot;One quick search for \u201Cvpn based ad blockers\u201D led me to a multitude of such\ntools. I tried two of them, and one of them was a cross-platform one. I\u2019ve\ncross-checked some community feedback on these things by looking stuff up on the\nfollowing subreddits:&quot;), mdx(&quot;ul&quot;, null, mdx(&quot;li&quot;, {
     parentName: &quot;ul&quot;
-  }, mdx(&quot;a&quot;, _extends({
-    parentName: &quot;li&quot;
-  }, {
+  }, mdx(&quot;a&quot;, {
+    parentName: &quot;li&quot;,
     &quot;href&quot;: &quot;https://www.reddit.com/r/privacytoolsIO/&quot;
-  }), &quot;https://www.reddit.com/r/privacytoolsIO/&quot;)), mdx(&quot;li&quot;, {
+  }, &quot;https://www.reddit.com/r/privacytoolsIO/&quot;)), mdx(&quot;li&quot;, {
     parentName: &quot;ul&quot;
-  }, mdx(&quot;a&quot;, _extends({
-    parentName: &quot;li&quot;
-  }, {
+  }, mdx(&quot;a&quot;, {
+    parentName: &quot;li&quot;,
     &quot;href&quot;: &quot;https://www.reddit.com/r/Infosec/&quot;
-  }), &quot;https://www.reddit.com/r/Infosec/&quot;)), mdx(&quot;li&quot;, {
+  }, &quot;https://www.reddit.com/r/Infosec/&quot;)), mdx(&quot;li&quot;, {
     parentName: &quot;ul&quot;
-  }, mdx(&quot;a&quot;, _extends({
-    parentName: &quot;li&quot;
-  }, {
+  }, mdx(&quot;a&quot;, {
+    parentName: &quot;li&quot;,
     &quot;href&quot;: &quot;https://www.reddit.com/r/privacy/&quot;
-  }), &quot;https://www.reddit.com/r/privacy/&quot;))), mdx(&quot;p&quot;, null, &quot;The tools themselves are:&quot;), mdx(&quot;ul&quot;, null, mdx(&quot;li&quot;, {
+  }, &quot;https://www.reddit.com/r/privacy/&quot;))), mdx(&quot;p&quot;, null, &quot;The tools themselves are:&quot;), mdx(&quot;ul&quot;, null, mdx(&quot;li&quot;, {
     parentName: &quot;ul&quot;
-  }, mdx(&quot;a&quot;, _extends({
-    parentName: &quot;li&quot;
-  }, {
+  }, mdx(&quot;a&quot;, {
+    parentName: &quot;li&quot;,
     &quot;href&quot;: &quot;https://blokada.org/index.html&quot;
-  }), &quot;Blokada&quot;)), mdx(&quot;li&quot;, {
+  }, &quot;Blokada&quot;)), mdx(&quot;li&quot;, {
     parentName: &quot;ul&quot;
-  }, mdx(&quot;a&quot;, _extends({
-    parentName: &quot;li&quot;
-  }, {
+  }, mdx(&quot;a&quot;, {
+    parentName: &quot;li&quot;,
     &quot;href&quot;: &quot;https://adguard.com/en/welcome.html&quot;
-  }), &quot;AdGuard&quot;))), mdx(&quot;p&quot;, null, &quot;I\u2019m sure there was one more, but can\u2019t remember that for now.&quot;), mdx(&quot;hr&quot;, null), mdx(&quot;h2&quot;, null, &quot;TODO:&quot;), mdx(&quot;ul&quot;, null, mdx(&quot;li&quot;, {
-    parentName: &quot;ul&quot;
-  }, &quot;Continue describing what I learnt after using Blokada and AdGuard, and how\nI configured them further.&quot;), mdx(&quot;li&quot;, {
-    parentName: &quot;ul&quot;
-  }, &quot;Android 10, location when app in use permission update.&quot;)));
+  }, &quot;AdGuard&quot;))), mdx(&quot;p&quot;, null, &quot;I used Blokada v3 for a while. It works by creating a local VPN that intercepts\nall your traffic and implements certain rules on them to block any undesirable\nrequests, and it made it easier to manage than a hosts file.&quot;), mdx(&quot;p&quot;, null, &quot;It was not quite sufficient for me, and nor was it cross-platform.&quot;), mdx(&quot;p&quot;, null, &quot;Here comes AdGuard. It did everything Blokada did, and more. It could be used on\nmultiple devices (based on your license), had easy to understand metrics, extremely configurable settings, and an exceptionally functional filtering log.&quot;), mdx(InlineImages, {
+    images: [AdGuardImage],
+    mdxType: &quot;InlineImages&quot;
+  }), mdx(&quot;hr&quot;, null), mdx(&quot;p&quot;, null, &quot;This might seem abrupt, but I\u2019m ending this post here.&quot;), mdx(&quot;p&quot;, null, &quot;I\u2019ve been using AdGuard since a while now, and I\u2019ve been very happy with it. I use it on all of my devices, so it definitely works very well for me.&quot;), mdx(&quot;p&quot;, null, &quot;Depending on the use-case, I often use Tor or Brave browsers for some stuff that may either be region locked, or potentially politically \u201Crisky\u201D. Or sometimes to just search some stuff for which I can expect results completely free from my location or shadow profiling.&quot;), mdx(&quot;p&quot;, null, &quot;I\u2019ve also set every app on my phone (Android 10+) to use location only when it\u2019s actively in use (if it needs location at all).&quot;), mdx(&quot;p&quot;, null, &quot;That\u2019s all! Thanks for staying till the end if you did!&quot;));
 }
 ;
 MDXContent.isMDXComponent = true;</content:encoded></item><item><title><![CDATA[TIL - The HTML Dialog element]]></title><link>https://jayant.dev/til-html-dialog-element/</link><guid isPermaLink="false">https://jayant.dev/til-html-dialog-element/</guid><pubDate>Fri, 28 Feb 2020 00:00:00 GMT</pubDate><content:encoded>function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -176,19 +343,13 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i &lt; sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; target[key] = source[key]; } return target; }
 
+/* @jsxRuntime classic */
+
 /* @jsx mdx */
 var _frontmatter = {
   &quot;title&quot;: &quot;TIL - The HTML Dialog element&quot;,
   &quot;date&quot;: &quot;2020-02-28&quot;
 };
-
-var makeShortcode = function makeShortcode(name) {
-  return function MDXDefaultShortcode(props) {
-    console.warn(&quot;Component &quot; + name + &quot; was not imported, exported, or provided by MDXProvider as global scope&quot;);
-    return mdx(&quot;div&quot;, props);
-  };
-};
-
 var layoutProps = {
   _frontmatter: _frontmatter
 };
@@ -200,25 +361,22 @@ return function MDXContent(_ref) {
   return mdx(MDXLayout, _extends({}, layoutProps, props, {
     components: components,
     mdxType: &quot;MDXLayout&quot;
-  }), mdx(&quot;p&quot;, null, &quot;The &quot;, mdx(&quot;a&quot;, _extends({
-    parentName: &quot;p&quot;
-  }, {
+  }), mdx(&quot;p&quot;, null, &quot;The &quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
     &quot;href&quot;: &quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog&quot;
-  }), &quot;Dialog\nElement&quot;), &quot; is\nbasically a dialog (duh) all with backdrop support and everything, so in many\ncases you may not need a third party lib to make a dialog. It has native JS APIs\ntoo for opening and closing it. &quot;, mdx(&quot;em&quot;, {
+  }, &quot;Dialog\nElement&quot;), &quot; is\nbasically a dialog (duh) all with backdrop support and everything, so in many\ncases you may not need a third party lib to make a dialog. It has native JS APIs\ntoo for opening and closing it. &quot;, mdx(&quot;em&quot;, {
     parentName: &quot;p&quot;
-  }, &quot;Note: Browser Support is a little hairy.&quot;)), mdx(&quot;p&quot;, null, &quot;Here\u2019s a hosted example on glitch.me (though you have an example right on this page too):\n&quot;, mdx(&quot;a&quot;, _extends({
-    parentName: &quot;p&quot;
-  }, {
+  }, &quot;Note: Browser Support is a little hairy.&quot;)), mdx(&quot;p&quot;, null, &quot;Here\u2019s a hosted example on glitch.me (though you have an example right on this page too):\n&quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
     &quot;href&quot;: &quot;https://peaceful-meowing-yogurt.glitch.me/&quot;
-  }), &quot;https://peaceful-meowing-yogurt.glitch.me/&quot;), &quot;.&quot;), mdx(&quot;blockquote&quot;, null, mdx(&quot;p&quot;, {
+  }, &quot;https://peaceful-meowing-yogurt.glitch.me/&quot;), &quot;.&quot;), mdx(&quot;blockquote&quot;, null, mdx(&quot;p&quot;, {
     parentName: &quot;blockquote&quot;
-  }, &quot;NOTE: Check the MDN Docs linked above to see if your browser supports this.&quot;)), mdx(&quot;p&quot;, null, &quot;All you need to do to toggle a dialog is:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
-    parentName: &quot;pre&quot;
-  }, {
+  }, &quot;NOTE: Check the MDN Docs linked above to see if your browser supports this.&quot;)), mdx(&quot;p&quot;, null, &quot;All you need to do to toggle a dialog is:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, {
+    parentName: &quot;pre&quot;,
     &quot;className&quot;: &quot;language-js&quot;,
     &quot;metastring&quot;: &quot;live&quot;,
     &quot;live&quot;: true
-  }), &quot;const toggle = () =&gt; {\n  let dialog = document.querySelector(&apos;dialog#d--1&apos;);\n\n  if (!dialog.hasAttribute(&apos;open&apos;)) {\n    dialog.showModal();\n  } else {\n    dialog.removeAttribute(&apos;open&apos;);\n  }\n}\n\nconst Dialog = styled.dialog`\n  color: red;\n\n  &amp;::backdrop {\n    background: rgba(255, 200, 200, 0.6);\n  }\n`;\n\nrender(\n  &lt;div&gt;\n    &lt;button onClick={toggle}&gt;Toggle Dialog&lt;/button&gt;\n    &lt;Dialog id=&apos;d--1&apos; onClick={toggle}&gt;Default Dialog&lt;/Dialog&gt;\n  &lt;/div&gt;\n)\n&quot;)), mdx(&quot;p&quot;, null, &quot;When the dialog is triggered to be open, the &quot;, mdx(&quot;inlineCode&quot;, {
+  }, &quot;const toggle = () =&gt; {\n  let dialog = document.querySelector(&apos;dialog#d--1&apos;);\n\n  if (!dialog.hasAttribute(&apos;open&apos;)) {\n    dialog.showModal();\n  } else {\n    dialog.removeAttribute(&apos;open&apos;);\n  }\n}\n\nconst Dialog = styled.dialog`\n  color: red;\n\n  &amp;::backdrop {\n    background: rgba(255, 200, 200, 0.6);\n  }\n`;\n\nrender(\n  &lt;div&gt;\n    &lt;button onClick={toggle}&gt;Toggle Dialog&lt;/button&gt;\n    &lt;Dialog id=&apos;d--1&apos; onClick={toggle}&gt;Default Dialog&lt;/Dialog&gt;\n  &lt;/div&gt;\n)\n&quot;)), mdx(&quot;p&quot;, null, &quot;When the dialog is triggered to be open, the &quot;, mdx(&quot;inlineCode&quot;, {
     parentName: &quot;p&quot;
   }, &quot;open&quot;), &quot; attribute is automatically\nadded to it, which can be used to detect if it\u2019s open or not.&quot;), mdx(&quot;p&quot;, null, &quot;And as you see, you can format the backdrop of the dialog using CSS!&quot;), mdx(&quot;hr&quot;, null), mdx(&quot;p&quot;, null, &quot;When I was writing this, I faced an issue that I do not yet know how to solve.\nWhen you open and close the dialog, user selection or text editing on the page\nstops working. If you figure it out, &quot;, mdx(ExternalLink, {
     to: &quot;https://twitter.com/jayantbhawal&quot;,
@@ -232,19 +390,13 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i &lt; sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; target[key] = source[key]; } return target; }
 
+/* @jsxRuntime classic */
+
 /* @jsx mdx */
 var _frontmatter = {
   &quot;title&quot;: &quot;Optional Chaining is ❤&quot;,
   &quot;date&quot;: &quot;2019-12-24&quot;
 };
-
-var makeShortcode = function makeShortcode(name) {
-  return function MDXDefaultShortcode(props) {
-    console.warn(&quot;Component &quot; + name + &quot; was not imported, exported, or provided by MDXProvider as global scope&quot;);
-    return mdx(&quot;div&quot;, props);
-  };
-};
-
 var layoutProps = {
   _frontmatter: _frontmatter
 };
@@ -256,29 +408,24 @@ return function MDXContent(_ref) {
   return mdx(MDXLayout, _extends({}, layoutProps, props, {
     components: components,
     mdxType: &quot;MDXLayout&quot;
-  }), mdx(&quot;p&quot;, null, &quot;Let\u2019s look at a use-case that\u2019s not too uncommon:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
-    parentName: &quot;pre&quot;
-  }, {
+  }), mdx(&quot;p&quot;, null, &quot;Let\u2019s look at a use-case that\u2019s not too uncommon:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, {
+    parentName: &quot;pre&quot;,
     &quot;className&quot;: &quot;language-js&quot;
-  }), &quot;const definition = dictionary.words &amp;&amp;\n                  dictionary.words.apple &amp;&amp;\n                  dictionary.words.apple.definition;\n&quot;)), mdx(&quot;p&quot;, null, &quot;Oh my, that\u2019s an eyeful. All I wanted to get was the definition of apple, if\npresent, in a user-created dictionary, meaning that the initial state of this\ndictionary could possibly be completely empty.&quot;), mdx(&quot;p&quot;, null, &quot;This has been a little painful, and has been a thing since years.&quot;), mdx(&quot;h2&quot;, null, &quot;We\u2019ve had \u201Csolutions\u201D since long too&quot;), mdx(&quot;p&quot;, null, &quot;The fine creators of &quot;, mdx(&quot;a&quot;, _extends({
-    parentName: &quot;p&quot;
-  }, {
+  }, &quot;const definition = dictionary.words &amp;&amp;\n                  dictionary.words.apple &amp;&amp;\n                  dictionary.words.apple.definition;\n&quot;)), mdx(&quot;p&quot;, null, &quot;Oh my, that\u2019s an eyeful. All I wanted to get was the definition of apple, if\npresent, in a user-created dictionary, meaning that the initial state of this\ndictionary could possibly be completely empty.&quot;), mdx(&quot;p&quot;, null, &quot;This has been a little painful, and has been a thing since years.&quot;), mdx(&quot;h2&quot;, null, &quot;We\u2019ve had \u201Csolutions\u201D since long too&quot;), mdx(&quot;p&quot;, null, &quot;The fine creators of &quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
     &quot;href&quot;: &quot;https://coffeescript.org/&quot;
-  }), &quot;coffeescript&quot;), &quot; did indeed solve\nthis issue in a way. They introduced the &quot;, mdx(&quot;a&quot;, _extends({
-    parentName: &quot;p&quot;
-  }, {
+  }, &quot;coffeescript&quot;), &quot; did indeed solve\nthis issue in a way. They introduced the &quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
     &quot;href&quot;: &quot;https://coffeescript.org/#existential-operator&quot;
-  }), mdx(&quot;em&quot;, {
+  }, mdx(&quot;em&quot;, {
     parentName: &quot;a&quot;
-  }, &quot;Existential\nOperator&quot;)), &quot;, and this is how that\nlooked like:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
-    parentName: &quot;pre&quot;
-  }, {
+  }, &quot;Existential\nOperator&quot;)), &quot;, and this is how that\nlooked like:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, {
+    parentName: &quot;pre&quot;,
     &quot;className&quot;: &quot;language-coffeescript&quot;
-  }), &quot;solipsism = true if mind? and not world?\n\nspeed = 0\nspeed ?= 15\n\nfootprints = yeti ? \&quot;bear\&quot;\n\nzip = lottery.drawWinner?().address?.zipcode\n&quot;)), mdx(&quot;p&quot;, null, &quot;Amazing right? Though a lot of this stuff has come into JS, it didn\u2019t make an\nas-is introduction. In fact, many other languages too had the optional chaining\noperator with them, and a lot of discussion was had before they arrived on the\nbest solution that would play nice in JS. A lot of the stuff from the\ncoffeescript example doesn\u2019t exist nicely in JS.&quot;), mdx(&quot;p&quot;, null, &quot;That exact example would look like this in JS:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
-    parentName: &quot;pre&quot;
-  }, {
+  }, &quot;solipsism = true if mind? and not world?\n\nspeed = 0\nspeed ?= 15\n\nfootprints = yeti ? \&quot;bear\&quot;\n\nzip = lottery.drawWinner?().address?.zipcode\n&quot;)), mdx(&quot;p&quot;, null, &quot;Amazing right? Though a lot of this stuff has come into JS, it didn\u2019t make an\nas-is introduction. In fact, many other languages too had the optional chaining\noperator with them, and a lot of discussion was had before they arrived on the\nbest solution that would play nice in JS. A lot of the stuff from the\ncoffeescript example doesn\u2019t exist nicely in JS.&quot;), mdx(&quot;p&quot;, null, &quot;That exact example would look like this in JS:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, {
+    parentName: &quot;pre&quot;,
     &quot;className&quot;: &quot;language-js&quot;
-  }), &quot;// solipsism = true if mind? and not world?\n\n// speed = 0\n// speed ?= 15\n\nfootprints = yeti ?? \&quot;bear\&quot; // nullish coalescing\n\nzip = lottery.drawWinner?().address?.zipcode // optional chaining\n\n// Hence, the first example would look like:\nconst definition = dictionary.words?.apple?.definition;\n&quot;)), mdx(&quot;p&quot;, null, &quot;I am a straight up fan of this thing, and I\u2019ve been tracking progress of this\nsince a year before it released!&quot;), mdx(&quot;p&quot;, null, &quot;Optional Chaining and Nullish Coalescing are now in Stage 4, and released into\nsome major browsers. It was added to TypeScript 3.7 a week after it was moved to\nStage 3. Soon afterwards, it was added to &quot;, mdx(&quot;inlineCode&quot;, {
+  }, &quot;// solipsism = true if mind? and not world?\n\n// speed = 0\n// speed ?= 15\n\nfootprints = yeti ?? \&quot;bear\&quot; // nullish coalescing\n\nzip = lottery.drawWinner?().address?.zipcode // optional chaining\n\n// Hence, the first example would look like:\nconst definition = dictionary.words?.apple?.definition;\n&quot;)), mdx(&quot;p&quot;, null, &quot;I am a straight up fan of this thing, and I\u2019ve been tracking progress of this\nsince a year before it released!&quot;), mdx(&quot;p&quot;, null, &quot;Optional Chaining and Nullish Coalescing are now in Stage 4, and released into\nsome major browsers. It was added to TypeScript 3.7 a week after it was moved to\nStage 3. Soon afterwards, it was added to &quot;, mdx(&quot;inlineCode&quot;, {
     parentName: &quot;p&quot;
   }, &quot;react-scripts 3.3.0-next.62&quot;), &quot; (with\nTS), and was released in the stable 3.3 build of react-scripts.&quot;));
 }
@@ -289,19 +436,13 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i &lt; sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; target[key] = source[key]; } return target; }
 
+/* @jsxRuntime classic */
+
 /* @jsx mdx */
 var _frontmatter = {
   &quot;title&quot;: &quot;Hello World&quot;,
   &quot;date&quot;: &quot;2019-12-19&quot;
 };
-
-var makeShortcode = function makeShortcode(name) {
-  return function MDXDefaultShortcode(props) {
-    console.warn(&quot;Component &quot; + name + &quot; was not imported, exported, or provided by MDXProvider as global scope&quot;);
-    return mdx(&quot;div&quot;, props);
-  };
-};
-
 var layoutProps = {
   _frontmatter: _frontmatter
 };
@@ -313,19 +454,16 @@ return function MDXContent(_ref) {
   return mdx(MDXLayout, _extends({}, layoutProps, props, {
     components: components,
     mdxType: &quot;MDXLayout&quot;
-  }), mdx(&quot;p&quot;, null, &quot;Here we go again\u2026&quot;), mdx(&quot;p&quot;, null, &quot;I\u2019ve made an attempt at a blog over 4 times so far. Twice at\n&quot;, mdx(&quot;a&quot;, _extends({
-    parentName: &quot;p&quot;
-  }, {
+  }), mdx(&quot;p&quot;, null, &quot;Here we go again\u2026&quot;), mdx(&quot;p&quot;, null, &quot;I\u2019ve made an attempt at a blog over 4 times so far. Twice at\n&quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
     &quot;href&quot;: &quot;https://blog.jayantbhawal.in&quot;
-  }), &quot;blog.jayantbhawal.in&quot;), &quot;, twice at\n&quot;, mdx(&quot;a&quot;, _extends({
-    parentName: &quot;p&quot;
-  }, {
+  }, &quot;blog.jayantbhawal.in&quot;), &quot;, twice at\n&quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
     &quot;href&quot;: &quot;https://ideabuster.jayantbhawal.in&quot;
-  }), &quot;ideabuster.jayantbhawal.in&quot;), &quot;.&quot;), mdx(&quot;p&quot;, null, &quot;The first 3 times, it was more for a \u201Clet\u2019s see how this is done\u201D reason. The\n4th or so time, it was that, plus to actually add some content, which is there\non &quot;, mdx(&quot;a&quot;, _extends({
-    parentName: &quot;p&quot;
-  }, {
+  }, &quot;ideabuster.jayantbhawal.in&quot;), &quot;.&quot;), mdx(&quot;p&quot;, null, &quot;The first 3 times, it was more for a \u201Clet\u2019s see how this is done\u201D reason. The\n4th or so time, it was that, plus to actually add some content, which is there\non &quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
     &quot;href&quot;: &quot;https://blog.jayantbhawal.in&quot;
-  }), &quot;blog.jayantbhawal.in&quot;), &quot;.&quot;), mdx(&quot;p&quot;, null, &quot;However, the blog hosted on the current link is\u2026 kinda slow. It\u2019s Wordpress\nbased, so it\u2019s pretty easy to use and publish content from, but it can be\npainfully slow to load on not-excellent networks. Doesn\u2019t look too good for a\nfrontend developer now, does it?&quot;), mdx(&quot;p&quot;, null, &quot;So here\u2019s my\u2026 5th attempt at this?&quot;, mdx(&quot;br&quot;, {
+  }, &quot;blog.jayantbhawal.in&quot;), &quot;.&quot;), mdx(&quot;p&quot;, null, &quot;However, the blog hosted on the current link is\u2026 kinda slow. It\u2019s Wordpress\nbased, so it\u2019s pretty easy to use and publish content from, but it can be\npainfully slow to load on not-excellent networks. Doesn\u2019t look too good for a\nfrontend developer now, does it?&quot;), mdx(&quot;p&quot;, null, &quot;So here\u2019s my\u2026 5th attempt at this?&quot;, mdx(&quot;br&quot;, {
     parentName: &quot;p&quot;
   }), &quot;\n&quot;, &quot;A gatsby based blog site! All the cool kids are doing it!&quot;, mdx(&quot;br&quot;, {
     parentName: &quot;p&quot;
