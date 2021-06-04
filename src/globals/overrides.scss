@@ -1,5 +1,11 @@
 details > summary:first-of-type {
-    display: list-item;
-    counter-increment: list-item 0;
-    list-style: inside disclosure-closed;
+  display: list-item;
+  counter-increment: list-item 0;
+  list-style: inside disclosure-closed;
+}
+
+@supports (text-align: justify) {
+  p {
+    text-align: justify;
+  }
 }
