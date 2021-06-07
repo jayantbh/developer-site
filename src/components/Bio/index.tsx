@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
 
 import { rhythm } from 'utils/typography';
+import ExternalLink from 'components/ExternalLink';
 
 const Bio = () => {
   const data = useStaticQuery(bioQuery);
@@ -26,9 +27,13 @@ const Bio = () => {
         }}
       />
       <p>
-        Built by <strong>{author}</strong>, who does stuff on the Web as a hobby.
+        Built by <strong>{author}</strong>, who does stuff on the Web as a
+        hobby.
         <br />
-        <a href={`https://twitter.com/${social.twitter}`}>You should follow him on Twitter</a>
+        <a href={`https://twitter.com/${social.twitter}`}>
+          You should follow him on Twitter
+        </a>{' '}
+        or <ExternalLink to='https://github.com/jayantbh'>GitHub</ExternalLink>
       </p>
     </div>
   );
