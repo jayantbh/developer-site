@@ -1,33 +1,46 @@
 @import 'globals/variables';
 @import 'globals/mixins';
 
-$code-purple: #4a3c53;
+$code-bg: #728fcb;
 
 %editor-styles {
   position: relative;
   padding: 3em 1em 1.25em;
   border-radius: 0.5em;
   margin: 1.25em 0 2em;
-  box-shadow: 0 $grid-base $grid-base-2x 0 rgba(0, 0, 0, 0.3),
-    0 $grid-base-3x $grid-base-Ax $grid-base rgba(0, 0, 0, 0.5);
-  background-color: $grey-dark-4;
+  // box-shadow: 0 $grid-base $grid-base-4x 0 #8882;
+  background-color: $grey-light-5;
+}
+
+:global(.editor-wrapper) {
+  @extend %editor-styles;
+  padding: 0; // to override externally inserted inline styles
+  max-height: 400px;
+  overflow: auto;
+  box-shadow: 0 12px 20px #8882;
 }
 
 :global(.live-editor) {
-  @extend %editor-styles;
   padding: 1.25em 1em !important; // to override externally inserted inline styles
 
   textarea {
     padding: 2em 1.65em !important; // to override externally inserted inline styles
+    outline: none;
   }
+}
+
+.component-wrapper {
+  margin: $grid-base-4x 0;
 }
 
 .code-container {
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
   flex-direction: column;
+  align-items: flex-end;
   @extend %editor-styles;
+  box-shadow: 0 12px 20px #8882;
+  max-height: 400px;
+  overflow-y: auto;
 }
 
 .line-container {
@@ -54,19 +67,20 @@ $code-purple: #4a3c53;
 
 .preview-window {
   position: relative;
-  border: 1px dashed $code-purple;
+  border: 1px dashed $code-bg;
   border-radius: $grid-base-2x;
-  padding: 19px $grid-base-2x $grid-base-2x;
+  padding: $grid-base-2x $grid-base-2x;
   margin-bottom: 2em;
 }
 
 .live-editor-container {
   position: relative;
+  border-radius: 0.5em;
 }
 
 .language-bar {
   user-select: none;
-  background-color: $code-purple;
+  background-color: $code-bg;
   position: absolute;
   top: 0;
   left: 0;
@@ -74,23 +88,70 @@ $code-purple: #4a3c53;
   padding: $grid-base $grid-base-7x;
 }
 
-.language-bar-live {
-  user-select: none;
-  background-color: $code-purple;
-  position: absolute;
-  border-radius: $border-radius-standard;
-  top: $grid-base;
-  right: $grid-base;
-  width: fit-content;
+.language-bar-container {
+  position: sticky;
   font-size: 0.8em;
-  padding: 0 $grid-base-4x;
   z-index: $z--base;
   font-family: monospace;
   color: white;
+  top: $grid-base-2x;
+  right: $grid-base;
+  display: flex;
+  gap: $grid-base-2x;
+  justify-content: flex-end;
+  margin: 0 $grid-base-2x;
+}
+
+.language-bar-content {
+  user-select: none;
+  border-radius: $border-radius-standard;
+  padding: 0 $grid-base-4x;
+  color: $code-bg;
+  text-transform: inherit;
+  font-weight: inherit;
+  border: 2px $code-bg solid;
+  font-family: inherit;
+  transition: $animation-standard;
+}
+
+button.language-bar-content {
+  color: white;
+  background-color: $code-bg;
+
+  &:hover {
+    background-color: darken($code-bg, 5%);
+  }
 }
 
 .code-content {
   width: 100%;
   overflow: auto;
   padding-bottom: 1em;
+}
+
+.hideable-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  > button {
+    flex-shrink: 0;
+  }
+
+  > div:last-child {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: $grey-dark-4;
+    font-size: $font-small-1;
+  }
+}
+
+.spacer-bar {
+  flex: 1;
+  height: 1px;
+  width: 100%;
+  background-color: $code-bg;
+  opacity: 0.5;
 }

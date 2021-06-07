@@ -1,0 +1,34 @@
+@import 'variables';
+
+@font-face {
+  font-family: 'wotfardregular';
+  src: url('../../content/assets/wotfard-regular-webfont.eot');
+  src: url('../../content/assets/wotfard-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../../content/assets/wotfard-regular-webfont.woff2') format('woff2'),
+    url('../../content/assets/wotfard-regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.blocky-list {
+  > li {
+    list-style-type: none;
+    box-shadow: 0 2px $grid-base-2x #8882;
+    max-width: 400px;
+    border-radius: $grid-base;
+    padding: $grid-base $grid-standard;
+    font-size: 0.8rem;
+    font-weight: $weight-medium;
+
+    background-color: $bluegrey-light-3;
+
+    &:nth-child(odd) {
+      background-color: $red-light-3;
+    }
+  }
+}
+
+pre,
+code {
+  font-family: 'Courier Prime', monospace;
+}

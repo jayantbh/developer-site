@@ -1,3 +1,5 @@
+@import 'mixins';
+
 details > summary:first-of-type {
   display: list-item;
   counter-increment: list-item 0;
@@ -8,4 +10,8 @@ details > summary:first-of-type {
   p {
     text-align: justify;
   }
+}
+
+button {
+  @include bordered-button;
 }

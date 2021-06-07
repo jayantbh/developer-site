@@ -11,163 +11,13 @@
   }
 }
 
-@mixin expanded($max-instead: false) {
-  @if ($max-instead) {
-    max-height: 100%;
-    max-width: 100%;
-  } @else {
-    height: 100%;
-    width: 100%;
-  }
-}
-
-@mixin square($size: $grid-base-2x) {
-  height: $size;
-  width: $size;
-}
-
-@mixin circle($size: $grid-base-2x) {
-  @include square($size);
-  border-radius: 50%;
-}
-
-@mixin text-ellipsis {
-  overflow: hidden;
-  white-space: pre;
-  text-overflow: ellipsis;
-}
-
-@mixin path-fill($color, $has-transition: false) {
-  path:not([fill='none']) {
-    fill: $color;
-
-    @if ($has-transition) {
-      transition: fill $quick-ease-out;
-    }
-  }
-}
-
-@mixin path-stroke($stroke, $stroke-width: false) {
-  path:not([fill='none']) {
-    stroke: $stroke;
-    @if ($stroke-width) {
-      stroke-width: $stroke-width;
-    }
-  }
-}
-
-@mixin common-button-styles {
-  border: none;
-  padding: $grid-base-2x $grid-base-4x;
-  font-size: $font-normal-1;
-  border-radius: $border-radius-standard;
-  letter-spacing: 0.5px;
-  transition: background-color $animation-standard, color $animation-standard;
-}
-
-@mixin common-background-styles {
-  background-position-x: 0;
-  background-size: 300% 100%;
-  filter: grayscale(0);
-  transition: background-position-x $animation-standard, filter $animation-standard;
-
-  &:hover,
-  &:focus {
-    background-position-x: 50%;
-  }
-
-  &:active {
-    background-position-x: 80%;
-  }
-
-  &[disabled] {
-    filter: grayscale(1);
-  }
-}
-
-@mixin tri-color-background-gradient($color1, $color2, $color3) {
-  background: linear-gradient(30deg, $color1, $color2 30%, $color3 80%);
-}
-
-@mixin animated-background-bars($color1: $cyan-light-5, $color2: $cyan-light-4) {
-  background: repeating-linear-gradient(60deg, $color1, $color1 50px, $color2 50px, $color2 100px);
-  background-position-x: 0;
-  background-size: 2000px;
-  animation-name: background-bars;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-duration: 60s;
-  animation-fill-mode: forwards;
-}
-
-@mixin animated-background-bars-primary {
-  @include animated-background-bars($cyan-light-1, $cyan-dark-2);
-}
-
-@mixin animated-background-bars-secondary {
-  @include animated-background-bars($red-light-3, lighten($red-light-2, 5%));
-}
-
-@mixin animated-background-bars-tertiary {
-  @include animated-background-bars($yellow-light-2, $yellow-standard);
-}
-
-@mixin background-primary {
-  color: white;
-  @include tri-color-background-gradient($cyan-light-2, $cyan-light-1, $cyan-dark-2);
-  @include common-background-styles;
-
-  &[data-processing='true'],
-  &:global(.mixin-loader) {
-    @include animated-background-bars-primary;
-  }
-}
-
-@mixin background-secondary {
-  color: darken($red-dark-4, 5%);
-  @include tri-color-background-gradient($red-light-4, $red-light-3, lighten($red-light-2, 5%));
-  @include common-background-styles;
-
-  &[data-processing='true'],
-  &:global(.mixin-loader) {
-    @include animated-background-bars-secondary;
-  }
-}
-
-@mixin background-tertiary {
-  color: darken($yellow-dark-4, 10%);
-  @include tri-color-background-gradient($yellow-light-3, $yellow-light-2, $yellow-standard);
-  @include common-background-styles;
-
-  &[data-processing='true'],
-  &:global(.mixin-loader) {
-    @include animated-background-bars-tertiary;
-  }
-}
-
-@mixin button-primary {
-  @include common-button-styles;
-  @include background-primary;
-}
-
-@mixin button-secondary {
-  @include common-button-styles;
-  @include background-secondary;
-}
-
-@mixin button-tertiary {
-  @include common-button-styles;
-  @include background-tertiary;
-}
-
 @mixin bordered-button {
-  font-family: 'Lato', sans-serif;
   font-size: $font-small-1;
   font-weight: $weight-heavy;
   width: fit-content;
   padding: $grid-base $grid-base-2x;
   border-radius: $border-radius-standard;
-  color: $cyan-dark-4;
+  color: $grey-dark-4;
   border: 1px solid;
   text-transform: uppercase;
   transition: background-color $quick-ease-out, transform $quick-ease-out;
@@ -180,7 +30,7 @@
   }
 
   &:hover {
-    background-color: $cyan-light-5;
+    background-color: $grey-light-3;
   }
 
   &:active {
@@ -189,27 +39,6 @@
 
   &[disabled] {
     filter: grayscale(1);
+    color: $grey-dark-2;
   }
-}
-
-@mixin link($light-mode: false) {
-  color: inherit;
-  text-decoration: none;
-  &:hover {
-    color: $cyan-dark-2;
-  }
-
-  @if ($light-mode) {
-    color: white;
-    text-decoration: none;
-    &:hover {
-      color: $cyan-light-3;
-    }
-  }
-}
-
-@mixin inline-icon($size: 0.5em) {
-  @include square($size);
-  @include path-stroke(currentColor, 0.5px);
-  margin-left: $grid-base;
 }

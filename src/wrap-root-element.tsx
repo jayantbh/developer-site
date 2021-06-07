@@ -5,6 +5,7 @@ import { preToCodeBlock } from 'mdx-utils';
 
 import './globals/prism-theme.scss';
 import './globals/overrides.scss';
+import './globals/global-styles.scss';
 
 const components = {
   pre: (preProps: any) => {
@@ -20,4 +21,6 @@ const components = {
   },
 };
 
-export const wrapRootElement = ({ element }: any) => <MDXProvider components={components}>{element}</MDXProvider>;
+export const wrapRootElement = ({ element }: any) => (
+  <MDXProvider components={components}>{element}</MDXProvider>
+);
