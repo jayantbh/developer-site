@@ -1,6 +1,9 @@
 $code-selector: 'code[class*="language-"], pre[class*="language-"], .live-editor';
 $code-preview-selector: 'code[class*="language-"], pre[class*="language-"]';
 
+$font-size: 0.8rem;
+$line-height: $font-size * 1.5;
+
 #{$code-selector} {
   text-align: left;
   white-space: pre;
@@ -9,13 +12,12 @@ $code-preview-selector: 'code[class*="language-"], pre[class*="language-"]';
   word-wrap: normal;
   color: #eee;
   background: #2f2f2f;
-  font-family: Roboto Mono, monospace;
-  font-size: 1.1rem;
-  line-height: 1.4rem;
+  font-size: $font-size;
+  line-height: $line-height;
 
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
 
   -webkit-hyphens: none;
   -moz-hyphens: none;
@@ -34,8 +36,8 @@ $code-preview-selector: 'code[class*="language-"], pre[class*="language-"]';
 }
 
 #{$code-preview-selector} {
-  font-size: 0.9rem;
-  line-height: 1.4rem;
+  font-size: $font-size;
+  line-height: $line-height;
 }
 
 :not(pre) > code[class*='language-'] {
