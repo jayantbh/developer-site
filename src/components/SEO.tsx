@@ -2,6 +2,9 @@ import React, { FC } from 'react';
 import Helmet from 'react-helmet';
 import { graphql, useStaticQuery } from 'gatsby';
 
+// @ts-ignore
+import metaImage from '../assets/jayant_dev.png';
+
 type Props = {
   description?: string;
   lang?: string;
@@ -10,7 +13,13 @@ type Props = {
   title: string;
 };
 
-const SEO: FC<Props> = ({ description, lang = 'en', meta = [], keywords = [], title }) => {
+const SEO: FC<Props> = ({
+  description,
+  lang = 'en',
+  meta = [],
+  keywords = [],
+  title,
+}) => {
   const data = useStaticQuery(detailsQuery);
   const metaDescription = description || data.site.siteMetadata.description;
   return (
@@ -34,6 +43,10 @@ const SEO: FC<Props> = ({ description, lang = 'en', meta = [], keywords = [], ti
           content: metaDescription,
         },
         {
+          property: `og:image`,
+          content: metaImage,
+        },
+        {
           property: `og:type`,
           content: `website`,
         },
@@ -52,6 +65,10 @@ const SEO: FC<Props> = ({ description, lang = 'en', meta = [], keywords = [], ti
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          name: `twitter:image`,
+          content: metaImage,
         },
       ]
         .concat(
