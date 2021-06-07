@@ -1,0 +1,407 @@
+---
+title: Getting you interested in Framer Motion with the essentials
+date: '2021-06-04'
+---
+
+import { useEffect, useRef, useState, useCallback } from 'react';
+import styled from 'styled-components';
+import { motion, AnimatePresence } from 'framer-motion';
+
+import ExternalLink from '../../src/components/ExternalLink';
+import { StarGraphic } from '../../src/components/content/StarGraphic';
+import { ProgressIndicator } from '../../src/components/content/ProgressIndicator';
+import { scrollPosition } from '../../src/utils/events';
+import { useEvents } from '../../src/hooks/use-events';
+import { usePrevious } from '../../src/hooks/use-previous';
+
+import puzzle from '../../content/assets/puzzle.png';
+
+```js live
+render(<StarGraphic length={1} offset={0} duration={4} />);
+```
+
+<sub className='text-center'>
+  A crude little SVG animation using framer motion
+</sub>
+
+<br />
+<br />
+This animation you see here could be very easily done using plain JS, so maybe
+it doesn't do the best job of showing why you should add 32kBs extra to your
+bundle size delivered over the network. But, look at how easy this was to
+achieve!
+
+<br />
+<br />
+
+Here's how the actual component looks like, roughly
+
+```js hideable hidden
+<svg ...>
+  <g ...>
+    <motion.path
+      initial={{ pathLength: 0, pathOffset: 0 }}
+      animate={{ pathLength: 1, pathOffset: 0 }}
+      transition={{ duration: 4 }}
+      d='...'
+      ...
+    />
+  </g>
+  ...
+</svg>
+```
+
+<br />
+<br />
+
+[Framer Motion](https://www.framer.com/motion/) is a high level UI animations
+library that makes a LOT of animations use-cases extremely simple. It even
+offers a really simple way to even use
+[shared element transitions](https://css-tricks.com/shared-element-transitions/)!
+See my experiment with no libraries,
+[here](http://jayant.tech/experiments/shared-element-transitions#/), and the
+code <ExternalLink
+to='https://github.com/jayantbh/experiments/blob/master/src/components/SharedElementTransitions/index.tsx'>here</ExternalLink>.
+
+Now, **this isn't a tutorial**, this is just something to get you interested
+with examples that you can implement in most apps.
+
+---
+
+Following is a list of things you can do, and remember, for code examples, find
+this file on <ExternalLink
+to='https://github.com/jayantbh/developer-site/tree/master/content/blog'>Github</ExternalLink>
+and look at the relevant imported components.
+
+## 1. Circular progress bars
+
+This is the first one you would have noticed, and it's present only on this page
+because I don't really want it to be a site-wide thing.
+
+Progress bars are a ubiquitous thing, essential to letting a user know how much
+of a certain process has been completed so far. Unlike a loading indicator, a
+progress bar allows a user a sense of how much time is left for a process or
+task to complete. Now, rectangular progress bars are pretty straight forward.
+You can take a `div` inside another `div` and make the inner `div` have X% width
+relative to the outer one. Throw in some styling and you have a basic progress
+bar.
+
+Circular progress bars can offer a nicer experience in some cases, and they
+don't take up as much horizontal space which means more of them can be stacked
+horizontally. But since it could be particularly complex to get a partial
+circle, because regular elements don't allow you to have a specific length on a
+border, you may be able to get 25/50/75/100% indications, but for finer control,
+you neen the SVG `circle` shape.
+
+Here's an example of a circular progress bar to show your scroll progress
+through the page. This progress bar is present on only this page on this site,
+so if this annoys you, click on "Show Editor", then in the Preview section,
+click on "Hide scroll progress".
+
+```ts hideable hidden title=ProgressIndicator component code
+import React, { CSSProperties, FC } from 'react';
+import { motion } from 'framer-motion';
+
+const radius = 10;
+const circumference = Math.ceil(2 * Math.PI * radius);
+
+const progressStyles: CSSProperties = {
+  position: 'fixed',
+  bottom: '2rem',
+  left: '2rem',
+};
+
+export const ProgressIndicator: FC<{ perc: number }> = ({ perc = 0 }) => (
+  <svg height={22} width={22} style={progressStyles}>
+    <motion.circle
+      cx={11}
+      cy={11}
+      r={radius}
+      strokeWidth={2}
+      fill='none'
+      stroke='teal'
+      initial={{
+        strokeDasharray: circumference,
+        strokeDashoffset: 1,
+      }}
+      animate={{
+        strokeDasharray: circumference,
+        strokeDashoffset: circumference - circumference * (perc / 100),
+      }}
+      transition={{ ease: 'linear' }}
+    />
+  </svg>
+);
+```
+
+```ts live hideable hidden title=ProgressIndicator usage code
+const Progress = () => {
+  const frameRef = useRef(-1);
+  const [scrollPerc, setScrollPerc] = useState(scrollPosition());
+  const [hideProgress, setHideProgress] = useState(false);
+
+  const updateScrollPerc = useCallback(() => {
+    setScrollPerc(scrollPosition());
+  }, []);
+
+  // The hook prevents firing the handler more than once per frame
+  useEvents(['scroll', 'resize'], updateScrollPerc, {
+    disabled: hideProgress,
+  });
+
+  return (
+    <>
+      {!hideProgress && <ProgressIndicator perc={scrollPerc} />}
+      <button onClick={() => setHideProgress(!hideProgress)}>
+        {hideProgress ? 'Show' : 'Hide'} scroll progress
+      </button>
+    </>
+  );
+};
+
+render(<Progress />);
+```
+
+## 2. Animated list items
+
+Animating list items isn't a complex feat to achieve in any library, but prepare
+to have your mind blown at how easy it is here. Animating items in a list could
+be a great way to render items in a navbar, products list, users list, etc. It
+ideally shouldn't be used in situations where getting to the data asap is more
+important than fanciness, such as real-time metrics in a logs dashboard.
+
+We have two examples here. The first one is well suited for static lists, such
+as a list of options/settings or menu items, things that are unlikely to change
+during a session. The second one is well suited for larger lists, where you may
+have infinite scrolling in place to fetch even more items.
+
+```ts live hideable hidden title=Simple ListItems implementation code
+const list = [1, 2, 3, 4];
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+};
+
+const listItem = {
+  hidden: { opacity: 0, y: -10 },
+  show: { opacity: 1, y: 0 },
+};
+
+const ListItems = () => {
+  const [visible, setVisible] = useState(false);
+
+  return (
+    <>
+      <div>
+        <button onClick={() => setVisible(!visible)}>Toggle visibility</button>
+      </div>
+      <AnimatePresence>
+        {visible && (
+          <>
+            <br />
+            <motion.ul
+              className='blocky-list'
+              style={{ maxHeight: '400px', overflow: 'auto' }}
+              variants={container}
+              initial='hidden'
+              animate='show'
+              exit='hidden'
+            >
+              {list.map((item, i) => (
+                <motion.li key={i} variants={listItem}>
+                  {item}
+                </motion.li>
+              ))}
+            </motion.ul>
+          </>
+        )}
+      </AnimatePresence>
+    </>
+  );
+};
+
+render(<ListItems />);
+```
+
+```ts live hideable hidden title=Incremental Stagger ListItems implementation code
+const baseList = [1, 2, 3, 4, 5];
+
+const ListItems = () => {
+  const listRef = useRef(null);
+  const [list, setList] = useState(baseList);
+  const [visible, setVisible] = useState(false);
+
+  const prevList = usePrevious(list);
+  const prevLen = (prevList || []).length;
+
+  return (
+    <>
+      <div>
+        <button
+          onClick={() => {
+            setList([...list, ...baseList]);
+            requestAnimationFrame(() => {
+              console.log(listRef.current);
+              listRef.current && listRef.current.scrollIntoViewIfNeeded();
+            });
+          }}
+        >
+          Add {baseList.length} to list (Now {list.length})
+        </button>{' '}
+        <button onClick={() => setList(baseList)}>Reset list</button>{' '}
+        <button onClick={() => setVisible(!visible)}>Toggle visibility</button>
+      </div>
+      <AnimatePresence>
+        {visible && (
+          <>
+            <br />
+            <motion.ul
+              className='blocky-list'
+              style={{ maxHeight: '400px', overflow: 'auto' }}
+              initial='hidden'
+              animate='show'
+              exit='hidden'
+            >
+              {list.map((item, i) => (
+                <motion.li
+                  key={i}
+                  ref={i === list.length - 1 ? listRef : undefined}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, transition: { delay: 0 } }}
+                  transition={{
+                    delay:
+                      i - prevLen >= 0
+                        ? (i - prevLen) * 0.1
+                        : Math.log(i + 1) / 5,
+                  }}
+                >
+                  Item {item} - {i}
+                </motion.li>
+              ))}
+            </motion.ul>
+          </>
+        )}
+      </AnimatePresence>
+    </>
+  );
+};
+
+render(<ListItems />);
+```
+
+## 3. Lightboxing
+
+Did you try out the "maximize" button on the live code editors on this page yet?
+The lightbox functionality is powered by Framer Motion too! To see how exactly
+the code lightbox works, you'll have to check <ExternalLink
+to='https://github.com/jayantbh/developer-site/tree/master/src/components/Code'>Github</ExternalLink>
+again.
+
+Lightboxing is a great way to show specific content by using the entire screen,
+without taking the user to a new page. Now, if you could introduce an animation
+such that the image/content could grow from its current position to fill the
+whole screen and then go back to where it's supposed to be, it offers a really
+great experience of being tethered to the rest of the content on the page.
+
+The below example will cover a lightweight version of a lightbox, using an image
+example.
+
+```ts live hideable hidden title=Image Lightbox example
+const Img = styled(motion.img)`
+  max-height: 90vh;
+  max-width: 90vw;
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 8px;
+`;
+
+const LightboxContent = styled(motion.div)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 100px;
+  overflow: hidden;
+  border-radius: 8px;
+`;
+
+const HelpText = styled(motion.div)`
+  position: absolute;
+  bottom: 2rem;
+  margin: auto;
+  background: #fff8;
+  border-radius: 100vw;
+  padding: 4px 16px;
+`;
+
+const Backdrop = styled(motion.div)`
+  background-color: #8885;
+  backdrop-filter: blur(4px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+`;
+
+const lightboxStyles = {
+  position: 'fixed',
+  top: '0',
+  left: '0',
+  right: '0',
+  bottom: '0',
+  margin: 'auto',
+};
+
+const Lightbox = () => {
+  const [maximized, setMaximized] = useState(false);
+  const [size, setSize] = useState({ height: 'auto', width: 'auto' });
+
+  const toggleMaximized = () => {
+    setMaximized(!maximized);
+  };
+
+  return (
+    <div style={{ height: size.height, width: size.width }}>
+      <LightboxContent
+        layout
+        style={maximized ? lightboxStyles : {}}
+        animate={{
+          zIndex: maximized ? 100 : 0,
+          transition: {
+            delay: maximized ? 0 : 1,
+          },
+        }}
+      >
+        <Backdrop layout />
+        <Img
+          layout
+          onLoad={(e) => {
+            setSize({
+              height: e.target.parentElement.clientHeight,
+              width: e.target.parentElement.clientWidth,
+            });
+          }}
+          src={puzzle}
+          onClick={toggleMaximized}
+        />
+        <HelpText layout='position'>Click on the photo</HelpText>
+      </LightboxContent>
+    </div>
+  );
+};
+
+render(<Lightbox />);
+```
+
+### There will be more stuff here, such as image gallery/carousel, toasts, expanding content cards, maybe more.
+
+To be continued.
