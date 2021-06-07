@@ -1,4 +1,265 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby RSS feed]]></title><description><![CDATA[This is about me, my blog, and what I'm up to.]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 02 May 2021 18:51:46 GMT</lastBuildDate><item><title><![CDATA[How does Windows compare with MacOS or Linux for Dev Experience now?]]></title><link>https://jayant.dev/windows-dev-exp/</link><guid isPermaLink="false">https://jayant.dev/windows-dev-exp/</guid><pubDate>Sat, 17 Apr 2021 00:00:00 GMT</pubDate><content:encoded>function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby RSS feed]]></title><description><![CDATA[This is about me, my blog, and what I'm up to.]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 07 Jun 2021 22:19:49 GMT</lastBuildDate><item><title><![CDATA[Data protection measures that you can employ today easily, and for free!]]></title><link>https://jayant.dev/easy-data-protection-measures/</link><guid isPermaLink="false">https://jayant.dev/easy-data-protection-measures/</guid><pubDate>Sat, 05 Jun 2021 00:00:00 GMT</pubDate><content:encoded>function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i &lt; sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i &lt; sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; target[key] = source[key]; } return target; }
+
+/* @jsxRuntime classic */
+
+/* @jsx mdx */
+var _frontmatter = {
+  &quot;title&quot;: &quot;Data protection measures that you can employ today easily, and for free!&quot;,
+  &quot;date&quot;: &quot;2021-06-05&quot;
+};
+var layoutProps = {
+  _frontmatter: _frontmatter
+};
+var MDXLayout = &quot;wrapper&quot;;
+return function MDXContent(_ref) {
+  var components = _ref.components,
+      props = _objectWithoutProperties(_ref, [&quot;components&quot;]);
+
+  return mdx(MDXLayout, _extends({}, layoutProps, props, {
+    components: components,
+    mdxType: &quot;MDXLayout&quot;
+  }), mdx(&quot;p&quot;, null, &quot;Hello, world!&quot;), mdx(&quot;p&quot;, null, &quot;Recently, my residential society ran a COVID vaccination drive and requested the\nphone numbers from all residents who wanted to get themselves vaccinated. Later,\nthey shared a neat little spreadsheet with everyone in the society so everyone\nhad confirmation about their own statuses regarding confirmation of a\nvaccination slot.&quot;), mdx(&quot;p&quot;, null, &quot;This spreadsheet had the exact apartment number, phone number, and full name of\neveryone who registered.&quot;), mdx(BoxedSection, {
+    mdxType: &quot;BoxedSection&quot;
+  }, mdx(&quot;p&quot;, null, &quot;If this doesn\u2019t seem like an issue to you, I have a post to link you to, and\nplease continue reading the article right after the box.&quot;), mdx(Link, {
+    to: &quot;/blog/my-approach-to-data-privacy/&quot;,
+    mdxType: &quot;Link&quot;
+  }, &quot;My approach to data privacy&quot;), mdx(&quot;br&quot;, null), mdx(&quot;br&quot;, null), mdx(&quot;hr&quot;, null), mdx(&quot;p&quot;, null, &quot;If you already see an issue here, then you\u2019re probably here for the\n&quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
+    &quot;href&quot;: &quot;#measures&quot;
+  }, &quot;tips&quot;), &quot;. In any case, skip to right after the following lecture.&quot;)), mdx(&quot;h2&quot;, null, &quot;Why is this a big deal?&quot;), mdx(&quot;p&quot;, null, &quot;Ever wondered how all kinds of new spammers keep getting your phone numbers? How\ndoes some random person in some call center manage to call you and ask if you\nwant insurance for the car that you wanted but didn\u2019t buy yet? Or how someone\ncalls you asking if you would like to join a weight loss program, even though\nyou aren\u2019t really interested in even joining a gym?&quot;), mdx(&quot;p&quot;, null, &quot;OR, you\u2019ve probably gotten this call.&quot;), mdx(&quot;blockquote&quot;, null, mdx(&quot;p&quot;, {
+    parentName: &quot;blockquote&quot;
+  }, &quot;\u201CSir, would you like a pre-approved credit card?\u201D&quot;)), mdx(&quot;p&quot;, null, &quot;Turns out, when you use a service, be it a restaurant, a shop, or any online\nservice that requires you to provide your email or phone number, you\u2019re not just\npaying with money for those services. You\u2019re also paying with your hours of\npeace of mind, uninterrupted sleep, and just the right to not be disturbed at\nrandom hours. Your data either gets sold, or stolen/hacked sooner or later.&quot;), mdx(&quot;p&quot;, null, &quot;Also, once your data is out there, it\u2019s out there forever. Till you choose to\nchange your number, and email, it will always be out there.&quot;), mdx(&quot;p&quot;, null, &quot;The scary thing about this is most people including myself will gradually keep\nreleasing more and more info about ourselves over time, some of it being private\nand unintentional, and a lot of it completely intentional and often necessary.\nAll this data can be pieced together to build a dataset about you that can\nprobably do a pretty good job at answering questions about you that even you\ndidn\u2019t think of the answers to.&quot;), mdx(&quot;p&quot;, null, &quot;Consider this:&quot;), mdx(&quot;ul&quot;, null, mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, &quot;You ordered something on Dominoes. You used your email. Let\u2019s say your phone\nnumber wasn\u2019t needed.&quot;), mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, mdx(&quot;a&quot;, {
+    parentName: &quot;li&quot;,
+    &quot;href&quot;: &quot;https://www.indiatoday.in/technology/news/story/leaked-data-of-dominos-india-users-now-available-on-search-engine-created-by-hacker-1805595-2021-05-22&quot;
+  }, &quot;Dominoes got hacked.&quot;), mdx(&quot;strong&quot;, {
+    parentName: &quot;li&quot;
+  }, &quot; Your email was leaked.&quot;), &quot; Along with your eating/ordering patterns, and an\nestimate of your spending power.&quot;), mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, &quot;You got a hotel reservation. You had to provide your email and phone number.\nLikely even some form of National ID.&quot;), mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, &quot;Of course, the hotel sells the data of you and everyone else who stayed that\nmonth. The data sold might also include how many people stayed, whether you\nwere married, and how much you could pay for rooms and services.&quot;)), mdx(&quot;p&quot;, null, &quot;Now your email, phone, national ID, eating patterns, spending power, and more\nare out there, with someone interested enough in gathering all this because\nthere are enough of those willing to pay good money for this.&quot;), mdx(&quot;p&quot;, null, &quot;And, there are so many more ways for you to release so much of your info that\nyou\u2019d prefer keep away from the hands of those who should have nothing to do\nwith it.&quot;), mdx(&quot;p&quot;, null, mdx(&quot;strong&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;So, why is this a big deal?&quot;)), mdx(&quot;p&quot;, null, &quot;What if a health insurance provider decides to run a check on you and decides to\ndecline you coverage because you used to eat a lot of pizza a few years ago,\neven though it doesn\u2019t significantly impact your current health conditions? Or,\nmaybe just offer you increased premiums because of the fact?&quot;), mdx(&quot;p&quot;, null, &quot;What if when you try and buy an apartment, the builder/owner runs a check on\nyou, determine that you\u2019re fairly well off compared to the average prospect, and\nraise the prices just for you?&quot;), mdx(&quot;p&quot;, null, &quot;An unintended party having access to your real-life identifiable data has strong\nreal-life consequences.&quot;), mdx(&quot;h2&quot;, null, mdx(Tag, {
+    is: &quot;measures&quot;,
+    mdxType: &quot;Tag&quot;
+  }), &quot;What can I do?&quot;), mdx(&quot;p&quot;, null, &quot;This will only cover things that you can &quot;, mdx(&quot;strong&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;start doing from today&quot;), &quot;, and that\ncost you &quot;, mdx(&quot;strong&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;no money&quot;), &quot; to do, and not require being technologically adept.&quot;), mdx(&quot;p&quot;, null, &quot;Keep in mind that there will be times when it\u2019s too difficult or inconvenient to\nfollow these measures, so, take your best judgement in that case. My own data is\nprobably in a million unintended hands already.&quot;), mdx(&quot;ol&quot;, null, mdx(&quot;li&quot;, {
+    parentName: &quot;ol&quot;
+  }, mdx(Tag, {
+    is: &quot;measure-1&quot;,
+    mdxType: &quot;Tag&quot;
+  }), &quot;Refuse to share phone numbers or emails at shops, restaurants, hospitals, etc.&quot;, mdx(&quot;ol&quot;, {
+    parentName: &quot;li&quot;
+  }, mdx(&quot;li&quot;, {
+    parentName: &quot;ol&quot;
+  }, &quot;If it\u2019s unavoidable, and if you must share a fake number, try and ensure\nthat it is indeed a defunct number. Accidentally sharing a number that you\nbelieve is fake, but does belong to someone else just makes another poor\nperson suffer unwanted spam. &quot;, mdx(&quot;strong&quot;, {
+    parentName: &quot;li&quot;
+  }, &quot;Note, that it\u2019s inadvisable&quot;), &quot; to use a fake\nnumber anyway because sooner or later it could be in use by another\nperson.&quot;), mdx(&quot;li&quot;, {
+    parentName: &quot;ol&quot;
+  }, &quot;If you must share a working number, consider using a single phone number\nevery time that you don\u2019t use often, ideally one that\u2019s not tied to any\nother important services (such as insurance or employment).&quot;))), mdx(&quot;li&quot;, {
+    parentName: &quot;ol&quot;
+  }, mdx(Tag, {
+    is: &quot;measure-2&quot;,
+    mdxType: &quot;Tag&quot;
+  }), &quot;When making a payment, try to operate the POS machine yourself. It&apos;s pretty straight-forward, the instructions are right there on the screen. OR, use a contactless card.&quot;), mdx(&quot;li&quot;, {
+    parentName: &quot;ol&quot;
+  }, mdx(Tag, {
+    is: &quot;measure-3&quot;,
+    mdxType: &quot;Tag&quot;
+  }), &quot;When sharing your national ID, offer an obfuscated copy of your ID if possible.&quot;, mdx(&quot;ol&quot;, {
+    parentName: &quot;li&quot;
+  }, mdx(&quot;li&quot;, {
+    parentName: &quot;ol&quot;
+  }, &quot;In India, the UIDAI website allows you to download a copy of your AADHAR\nCard with the first 8 digits replaced with an &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;li&quot;
+  }, &quot;X&quot;), &quot;. This copy is perfectly\nacceptable for basically any purpose that needs it. Though, there are\nenough issues on the government side of Aadhar anyway.\n&quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;li&quot;,
+    &quot;href&quot;: &quot;https://thewire.in/government/aadhaar-remains-an-unending-security-nightmare-for-a-billion-indians&quot;
+  }, &quot;source 1&quot;), &quot;,\n&quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;li&quot;,
+    &quot;href&quot;: &quot;https://www.businesstoday.in/current/economy-politics/aadhaar-software-hack-uidai-data-ghost-entries/story/282260.html&quot;
+  }, &quot;source 2&quot;), &quot;\n(links from 2018)&quot;), mdx(&quot;li&quot;, {
+    parentName: &quot;ol&quot;
+  }, &quot;If you only have a\nnon-&quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;li&quot;,
+    &quot;href&quot;: &quot;https://www.google.com/search?q=define+obfuscate&quot;
+  }, &quot;obfuscated&quot;), &quot; copy,\nyou can use either a marker to hide the first 8 digits on a print copy, or\na photo editing tool on your device to hide the first 8 digits.&quot;))), mdx(&quot;li&quot;, {
+    parentName: &quot;ol&quot;
+  }, mdx(Tag, {
+    is: &quot;measure-4&quot;,
+    mdxType: &quot;Tag&quot;
+  }), &quot;When using an app that asks for permissions like contacts, location, or camera, think about why this app might need these permissions.&quot;, mdx(&quot;ol&quot;, {
+    parentName: &quot;li&quot;
+  }, mdx(&quot;li&quot;, {
+    parentName: &quot;ol&quot;
+  }, mdx(&quot;p&quot;, {
+    parentName: &quot;li&quot;
+  }, &quot;If you can\u2019t get a good answer by yourself or from someone else,\nreconsider if you really need this app.&quot;)), mdx(&quot;li&quot;, {
+    parentName: &quot;ol&quot;
+  }, mdx(&quot;p&quot;, {
+    parentName: &quot;li&quot;
+  }, &quot;If you do really need this app and you could not use it if you try to deny\npermissions, try this:&quot;), mdx(&quot;ol&quot;, {
+    parentName: &quot;li&quot;
+  }, mdx(&quot;li&quot;, {
+    parentName: &quot;ol&quot;
+  }, mdx(&quot;p&quot;, {
+    parentName: &quot;li&quot;
+  }, &quot;Grant the permission. This should let you past the initial screen that\nprevents you from accessing the rest of the app.&quot;)), mdx(&quot;li&quot;, {
+    parentName: &quot;ol&quot;
+  }, mdx(&quot;p&quot;, {
+    parentName: &quot;li&quot;
+  }, &quot;Open &quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
+    &quot;href&quot;: &quot;https://tunecomp.net/quickly-view-app-info-android-9/&quot;
+  }, &quot;App Info&quot;), &quot;.\nThat should let you review the permissions of the app (along with\nletting you force stop it, or uninstall).&quot;)), mdx(&quot;li&quot;, {
+    parentName: &quot;ol&quot;
+  }, mdx(&quot;p&quot;, {
+    parentName: &quot;li&quot;
+  }, &quot;Disable the allowed permissions.&quot;)), mdx(&quot;li&quot;, {
+    parentName: &quot;ol&quot;
+  }, mdx(&quot;p&quot;, {
+    parentName: &quot;li&quot;
+  }, &quot;Go back to the app. In many cases, this works without issues. And the\napp may not ask for permissions again. But if the app becomes difficult\nto use now, you really have to consider how important this app is to\nyou.&quot;)))))), mdx(&quot;li&quot;, {
+    parentName: &quot;ol&quot;
+  }, mdx(Tag, {
+    is: &quot;measure-5&quot;,
+    mdxType: &quot;Tag&quot;
+  }), &quot;When making an online payment, consider using a credit card.&quot;, mdx(&quot;ol&quot;, {
+    parentName: &quot;li&quot;
+  }, mdx(&quot;li&quot;, {
+    parentName: &quot;ol&quot;
+  }, &quot;A credit card has an upper limit on how much money can be used from it\nevery month, unlike a debit card where there might be a daily limit, but\nif you somehow notice your card after it\u2019s lost for too long, your entire\naccount could be drained.&quot;), mdx(&quot;li&quot;, {
+    parentName: &quot;ol&quot;
+  }, &quot;Plus, credit cards often make it pretty easy to request chargebacks,\nespecially in the case of fraud. Chargebacks are possible on debit cards\ntoo, but it\u2019s generally a much better experience with credit cards.\n&quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;li&quot;,
+    &quot;href&quot;: &quot;https://www.chargebackgurus.com/blog/know-your-chargeback-dispute-types-debit-card-vs.-credit-card&quot;
+  }, &quot;source 1&quot;), &quot;,\n&quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;li&quot;,
+    &quot;href&quot;: &quot;https://chargebacks911.com/debit-card-disputes/&quot;
+  }, &quot;source 2&quot;)), mdx(&quot;li&quot;, {
+    parentName: &quot;ol&quot;
+  }, &quot;I personally think that indirect payment services are a pretty great\noption too. Such as PayPal, or Amazon Pay, if the service accepts it. The\nbenefit being, that if you use these services to make a payment on 10\ndifferent sites instead of your CC, then you don\u2019t have to worry about\nyour card getting leaked when one of those 10 sites eventually gets\nhacked. You only have to worry about PayPal or Amazon screwing something\nup or being malicious. I\u2019d say being at risk from 2 sources is much better\nthan being at risk from 10 sources.&quot;)))), mdx(&quot;hr&quot;, null), mdx(&quot;p&quot;, null, &quot;I\u2019ll keep updating this list with ideas, but you\u2019re welcome to share more with\nme on Twitter (link below).&quot;));
+}
+;
+MDXContent.isMDXComponent = true;</content:encoded></item><item><title><![CDATA[Getting you interested in Framer Motion with the essentials]]></title><link>https://jayant.dev/framer-motion-essentials/</link><guid isPermaLink="false">https://jayant.dev/framer-motion-essentials/</guid><pubDate>Fri, 04 Jun 2021 00:00:00 GMT</pubDate><content:encoded>function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i &lt; sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i &lt; sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; target[key] = source[key]; } return target; }
+
+/* @jsxRuntime classic */
+
+/* @jsx mdx */
+var _frontmatter = {
+  &quot;title&quot;: &quot;Getting you interested in Framer Motion with the essentials&quot;,
+  &quot;date&quot;: &quot;2021-06-04&quot;
+};
+var layoutProps = {
+  _frontmatter: _frontmatter
+};
+var MDXLayout = &quot;wrapper&quot;;
+return function MDXContent(_ref) {
+  var components = _ref.components,
+      props = _objectWithoutProperties(_ref, [&quot;components&quot;]);
+
+  return mdx(MDXLayout, _extends({}, layoutProps, props, {
+    components: components,
+    mdxType: &quot;MDXLayout&quot;
+  }), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, {
+    parentName: &quot;pre&quot;,
+    &quot;className&quot;: &quot;language-js&quot;,
+    &quot;metastring&quot;: &quot;live&quot;,
+    &quot;live&quot;: true
+  }, &quot;render(&lt;StarGraphic length={1} offset={0} duration={4} /&gt;);\n&quot;)), mdx(&quot;sub&quot;, {
+    className: &quot;text-center&quot;
+  }, &quot;A crude little SVG animation using framer motion&quot;), mdx(&quot;br&quot;, null), mdx(&quot;br&quot;, null), &quot;This animation you see here could be very easily done using plain JS, so maybe it doesn&apos;t do the best job of showing why you should add 32kBs extra to your bundle size delivered over the network. But, look at how easy this was to achieve!&quot;, mdx(&quot;br&quot;, null), mdx(&quot;br&quot;, null), mdx(&quot;p&quot;, null, &quot;Here\u2019s how the actual component looks like, roughly&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, {
+    parentName: &quot;pre&quot;,
+    &quot;className&quot;: &quot;language-js&quot;,
+    &quot;metastring&quot;: &quot;hideable hidden&quot;,
+    &quot;hideable&quot;: true,
+    &quot;hidden&quot;: true
+  }, &quot;&lt;svg ...&gt;\n  &lt;g ...&gt;\n    &lt;motion.path\n      initial={{ pathLength: 0, pathOffset: 0 }}\n      animate={{ pathLength: 1, pathOffset: 0 }}\n      transition={{ duration: 4 }}\n      d=&apos;...&apos;\n      ...\n    /&gt;\n  &lt;/g&gt;\n  ...\n&lt;/svg&gt;\n&quot;)), mdx(&quot;br&quot;, null), mdx(&quot;br&quot;, null), mdx(&quot;p&quot;, null, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
+    &quot;href&quot;: &quot;https://www.framer.com/motion/&quot;
+  }, &quot;Framer Motion&quot;), &quot; is a high level UI animations\nlibrary that makes a LOT of animations use-cases extremely simple. It even\noffers a really simple way to even use\n&quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
+    &quot;href&quot;: &quot;https://css-tricks.com/shared-element-transitions/&quot;
+  }, &quot;shared element transitions&quot;), &quot;!\nSee my experiment with no libraries,\n&quot;, mdx(&quot;a&quot;, {
+    parentName: &quot;p&quot;,
+    &quot;href&quot;: &quot;http://jayant.tech/experiments/shared-element-transitions#/&quot;
+  }, &quot;here&quot;), &quot;, and the\ncode &quot;, mdx(ExternalLink, {
+    to: &quot;https://github.com/jayantbh/experiments/blob/master/src/components/SharedElementTransitions/index.tsx&quot;,
+    mdxType: &quot;ExternalLink&quot;
+  }, &quot;here&quot;), &quot;.&quot;), mdx(&quot;p&quot;, null, &quot;Now, &quot;, mdx(&quot;strong&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;this isn\u2019t a tutorial&quot;), &quot;, this is just something to get you interested\nwith examples that you can implement in most apps.&quot;), mdx(&quot;hr&quot;, null), mdx(&quot;p&quot;, null, &quot;Following is a list of things you can do, and remember, for code examples, find\nthis file on &quot;, mdx(ExternalLink, {
+    to: &quot;https://github.com/jayantbh/developer-site/tree/master/content/blog&quot;,
+    mdxType: &quot;ExternalLink&quot;
+  }, &quot;Github&quot;), &quot;\nand look at the relevant imported components.&quot;), mdx(&quot;h2&quot;, null, &quot;1. Circular progress bars&quot;), mdx(&quot;p&quot;, null, &quot;This is the first one you would have noticed, and it\u2019s present only on this page\nbecause I don\u2019t really want it to be a site-wide thing.&quot;), mdx(&quot;p&quot;, null, &quot;Progress bars are a ubiquitous thing, essential to letting a user know how much\nof a certain process has been completed so far. Unlike a loading indicator, a\nprogress bar allows a user a sense of how much time is left for a process or\ntask to complete. Now, rectangular progress bars are pretty straight forward.\nYou can take a &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;div&quot;), &quot; inside another &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;div&quot;), &quot; and make the inner &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;div&quot;), &quot; have X% width\nrelative to the outer one. Throw in some styling and you have a basic progress\nbar.&quot;), mdx(&quot;p&quot;, null, &quot;Circular progress bars can offer a nicer experience in some cases, and they\ndon\u2019t take up as much horizontal space which means more of them can be stacked\nhorizontally. But since it could be particularly complex to get a partial\ncircle, because regular elements don\u2019t allow you to have a specific length on a\nborder, you may be able to get 25/50/75/100% indications, but for finer control,\nyou neen the SVG &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;circle&quot;), &quot; shape.&quot;), mdx(&quot;p&quot;, null, &quot;Here\u2019s an example of a circular progress bar to show your scroll progress\nthrough the page. This progress bar is present on only this page on this site,\nso if this annoys you, click on \u201CShow Editor\u201D, then in the Preview section,\nclick on \u201CHide scroll progress\u201D.&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, {
+    parentName: &quot;pre&quot;,
+    &quot;className&quot;: &quot;language-ts&quot;,
+    &quot;metastring&quot;: &quot;hideable hidden title=ProgressIndicator component code&quot;,
+    &quot;hideable&quot;: true,
+    &quot;hidden&quot;: true,
+    &quot;title&quot;: &quot;ProgressIndicator component code&quot;
+  }, &quot;import React, { CSSProperties, FC } from &apos;react&apos;;\nimport { motion } from &apos;framer-motion&apos;;\n\nconst radius = 10;\nconst circumference = Math.ceil(2 * Math.PI * radius);\n\nconst progressStyles: CSSProperties = {\n  position: &apos;fixed&apos;,\n  bottom: &apos;2rem&apos;,\n  left: &apos;2rem&apos;,\n};\n\nexport const ProgressIndicator: FC&lt;{ perc: number }&gt; = ({ perc = 0 }) =&gt; (\n  &lt;svg height={22} width={22} style={progressStyles}&gt;\n    &lt;motion.circle\n      cx={11}\n      cy={11}\n      r={radius}\n      strokeWidth={2}\n      fill=&apos;none&apos;\n      stroke=&apos;teal&apos;\n      initial={{\n        strokeDasharray: circumference,\n        strokeDashoffset: 1,\n      }}\n      animate={{\n        strokeDasharray: circumference,\n        strokeDashoffset: circumference - circumference * (perc / 100),\n      }}\n      transition={{ ease: &apos;linear&apos; }}\n    /&gt;\n  &lt;/svg&gt;\n);\n&quot;)), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, {
+    parentName: &quot;pre&quot;,
+    &quot;className&quot;: &quot;language-ts&quot;,
+    &quot;metastring&quot;: &quot;live hideable hidden title=ProgressIndicator usage code&quot;,
+    &quot;live&quot;: true,
+    &quot;hideable&quot;: true,
+    &quot;hidden&quot;: true,
+    &quot;title&quot;: &quot;ProgressIndicator usage code&quot;
+  }, &quot;const Progress = () =&gt; {\n  const frameRef = useRef(-1);\n  const [scrollPerc, setScrollPerc] = useState(scrollPosition());\n  const [hideProgress, setHideProgress] = useState(false);\n\n  const updateScrollPerc = useCallback(() =&gt; {\n    setScrollPerc(scrollPosition());\n  }, []);\n\n  // The hook prevents firing the handler more than once per frame\n  useEvents([&apos;scroll&apos;, &apos;resize&apos;], updateScrollPerc, {\n    disabled: hideProgress,\n  });\n\n  return (\n    &lt;&gt;\n      {!hideProgress &amp;&amp; &lt;ProgressIndicator perc={scrollPerc} /&gt;}\n      &lt;button onClick={() =&gt; setHideProgress(!hideProgress)}&gt;\n        {hideProgress ? &apos;Show&apos; : &apos;Hide&apos;} scroll progress\n      &lt;/button&gt;\n    &lt;/&gt;\n  );\n};\n\nrender(&lt;Progress /&gt;);\n&quot;)), mdx(&quot;h2&quot;, null, &quot;2. Animated list items&quot;), mdx(&quot;p&quot;, null, &quot;Animating list items isn\u2019t a complex feat to achieve in any library, but prepare\nto have your mind blown at how easy it is here. Animating items in a list could\nbe a great way to render items in a navbar, products list, users list, etc. It\nideally shouldn\u2019t be used in situations where getting to the data asap is more\nimportant than fanciness, such as real-time metrics in a logs dashboard.&quot;), mdx(&quot;p&quot;, null, &quot;We have two examples here. The first one is well suited for static lists, such\nas a list of options/settings or menu items, things that are unlikely to change\nduring a session. The second one is well suited for larger lists, where you may\nhave infinite scrolling in place to fetch even more items.&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, {
+    parentName: &quot;pre&quot;,
+    &quot;className&quot;: &quot;language-ts&quot;,
+    &quot;metastring&quot;: &quot;live hideable hidden title=Simple ListItems implementation code&quot;,
+    &quot;live&quot;: true,
+    &quot;hideable&quot;: true,
+    &quot;hidden&quot;: true,
+    &quot;title&quot;: &quot;Simple ListItems implementation code&quot;
+  }, &quot;const list = [1, 2, 3, 4];\n\nconst container = {\n  hidden: { opacity: 0 },\n  show: {\n    opacity: 1,\n    transition: {\n      staggerChildren: 0.3,\n    },\n  },\n};\n\nconst listItem = {\n  hidden: { opacity: 0, y: -10 },\n  show: { opacity: 1, y: 0 },\n};\n\nconst ListItems = () =&gt; {\n  const [visible, setVisible] = useState(false);\n\n  return (\n    &lt;&gt;\n      &lt;div&gt;\n        &lt;button onClick={() =&gt; setVisible(!visible)}&gt;Toggle visibility&lt;/button&gt;\n      &lt;/div&gt;\n      &lt;AnimatePresence&gt;\n        {visible &amp;&amp; (\n          &lt;&gt;\n            &lt;br /&gt;\n            &lt;motion.ul\n              className=&apos;blocky-list&apos;\n              style={{ maxHeight: &apos;400px&apos;, overflow: &apos;auto&apos; }}\n              variants={container}\n              initial=&apos;hidden&apos;\n              animate=&apos;show&apos;\n              exit=&apos;hidden&apos;\n            &gt;\n              {list.map((item, i) =&gt; (\n                &lt;motion.li key={i} variants={listItem}&gt;\n                  {item}\n                &lt;/motion.li&gt;\n              ))}\n            &lt;/motion.ul&gt;\n          &lt;/&gt;\n        )}\n      &lt;/AnimatePresence&gt;\n    &lt;/&gt;\n  );\n};\n\nrender(&lt;ListItems /&gt;);\n&quot;)), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, {
+    parentName: &quot;pre&quot;,
+    &quot;className&quot;: &quot;language-ts&quot;,
+    &quot;metastring&quot;: &quot;live hideable hidden title=Incremental Stagger ListItems implementation code&quot;,
+    &quot;live&quot;: true,
+    &quot;hideable&quot;: true,
+    &quot;hidden&quot;: true,
+    &quot;title&quot;: &quot;Incremental Stagger ListItems implementation code&quot;
+  }, &quot;const baseList = [1, 2, 3, 4, 5];\n\nconst ListItems = () =&gt; {\n  const listRef = useRef(null);\n  const [list, setList] = useState(baseList);\n  const [visible, setVisible] = useState(false);\n\n  const prevList = usePrevious(list);\n  const prevLen = (prevList || []).length;\n\n  return (\n    &lt;&gt;\n      &lt;div&gt;\n        &lt;button\n          onClick={() =&gt; {\n            setList([...list, ...baseList]);\n            requestAnimationFrame(() =&gt; {\n              console.log(listRef.current);\n              listRef.current &amp;&amp; listRef.current.scrollIntoViewIfNeeded();\n            });\n          }}\n        &gt;\n          Add {baseList.length} to list (Now {list.length})\n        &lt;/button&gt;{&apos; &apos;}\n        &lt;button onClick={() =&gt; setList(baseList)}&gt;Reset list&lt;/button&gt;{&apos; &apos;}\n        &lt;button onClick={() =&gt; setVisible(!visible)}&gt;Toggle visibility&lt;/button&gt;\n      &lt;/div&gt;\n      &lt;AnimatePresence&gt;\n        {visible &amp;&amp; (\n          &lt;&gt;\n            &lt;br /&gt;\n            &lt;motion.ul\n              className=&apos;blocky-list&apos;\n              style={{ maxHeight: &apos;400px&apos;, overflow: &apos;auto&apos; }}\n              initial=&apos;hidden&apos;\n              animate=&apos;show&apos;\n              exit=&apos;hidden&apos;\n            &gt;\n              {list.map((item, i) =&gt; (\n                &lt;motion.li\n                  key={i}\n                  ref={i === list.length - 1 ? listRef : undefined}\n                  initial={{ opacity: 0, x: -20 }}\n                  animate={{ opacity: 1, x: 0 }}\n                  exit={{ opacity: 0, transition: { delay: 0 } }}\n                  transition={{\n                    delay:\n                      i - prevLen &gt;= 0\n                        ? (i - prevLen) * 0.1\n                        : Math.log(i + 1) / 5,\n                  }}\n                &gt;\n                  Item {item} - {i}\n                &lt;/motion.li&gt;\n              ))}\n            &lt;/motion.ul&gt;\n          &lt;/&gt;\n        )}\n      &lt;/AnimatePresence&gt;\n    &lt;/&gt;\n  );\n};\n\nrender(&lt;ListItems /&gt;);\n&quot;)), mdx(&quot;h2&quot;, null, &quot;3. Lightboxing&quot;), mdx(&quot;p&quot;, null, &quot;Did you try out the \u201Cmaximize\u201D button on the live code editors on this page yet?\nThe lightbox functionality is powered by Framer Motion too! To see how exactly\nthe code lightbox works, you\u2019ll have to check &quot;, mdx(ExternalLink, {
+    to: &quot;https://github.com/jayantbh/developer-site/tree/master/src/components/Code&quot;,
+    mdxType: &quot;ExternalLink&quot;
+  }, &quot;Github&quot;), &quot;\nagain.&quot;), mdx(&quot;p&quot;, null, &quot;Lightboxing is a great way to show specific content by using the entire screen,\nwithout taking the user to a new page. Now, if you could introduce an animation\nsuch that the image/content could grow from its current position to fill the\nwhole screen and then go back to where it\u2019s supposed to be, it offers a really\ngreat experience of being tethered to the rest of the content on the page.&quot;), mdx(&quot;p&quot;, null, &quot;The below example will cover a lightweight version of a lightbox, using an image\nexample.&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, {
+    parentName: &quot;pre&quot;,
+    &quot;className&quot;: &quot;language-ts&quot;,
+    &quot;metastring&quot;: &quot;live hideable hidden title=Image Lightbox example&quot;,
+    &quot;live&quot;: true,
+    &quot;hideable&quot;: true,
+    &quot;hidden&quot;: true,
+    &quot;title&quot;: &quot;Image Lightbox example&quot;
+  }, &quot;const Img = styled(motion.img)`\n  max-height: 90vh;\n  max-width: 90vw;\n  position: relative;\n  margin: 0;\n  overflow: hidden;\n  border-radius: 8px;\n`;\n\nconst LightboxContent = styled(motion.div)`\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n  min-height: 100px;\n  overflow: hidden;\n  border-radius: 8px;\n`;\n\nconst HelpText = styled(motion.div)`\n  position: absolute;\n  bottom: 2rem;\n  margin: auto;\n  background: #fff8;\n  border-radius: 100vw;\n  padding: 4px 16px;\n`;\n\nconst Backdrop = styled(motion.div)`\n  background-color: #8885;\n  backdrop-filter: blur(4px);\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n`;\n\nconst lightboxStyles = {\n  position: &apos;fixed&apos;,\n  top: &apos;0&apos;,\n  left: &apos;0&apos;,\n  right: &apos;0&apos;,\n  bottom: &apos;0&apos;,\n  margin: &apos;auto&apos;,\n};\n\nconst Lightbox = () =&gt; {\n  const [maximized, setMaximized] = useState(false);\n  const [size, setSize] = useState({ height: &apos;auto&apos;, width: &apos;auto&apos; });\n\n  const toggleMaximized = () =&gt; {\n    setMaximized(!maximized);\n  };\n\n  return (\n    &lt;div style={{ height: size.height, width: size.width }}&gt;\n      &lt;LightboxContent\n        layout\n        style={maximized ? lightboxStyles : {}}\n        animate={{\n          zIndex: maximized ? 100 : 0,\n          transition: {\n            delay: maximized ? 0 : 1,\n          },\n        }}\n      &gt;\n        &lt;Backdrop layout /&gt;\n        &lt;Img\n          layout\n          onLoad={(e) =&gt; {\n            setSize({\n              height: e.target.parentElement.clientHeight,\n              width: e.target.parentElement.clientWidth,\n            });\n          }}\n          src={puzzle}\n          onClick={toggleMaximized}\n        /&gt;\n        &lt;HelpText layout=&apos;position&apos;&gt;Click on the photo&lt;/HelpText&gt;\n      &lt;/LightboxContent&gt;\n    &lt;/div&gt;\n  );\n};\n\nrender(&lt;Lightbox /&gt;);\n&quot;)), mdx(&quot;h3&quot;, null, &quot;There will be more stuff here, such as image gallery/carousel, toasts, expanding content cards, maybe more.&quot;), mdx(&quot;p&quot;, null, &quot;To be continued.&quot;));
+}
+;
+MDXContent.isMDXComponent = true;</content:encoded></item><item><title><![CDATA[How does Windows compare with MacOS or Linux for Dev Experience now?]]></title><link>https://jayant.dev/windows-dev-exp/</link><guid isPermaLink="false">https://jayant.dev/windows-dev-exp/</guid><pubDate>Sat, 17 Apr 2021 00:00:00 GMT</pubDate><content:encoded>function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i &lt; sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
