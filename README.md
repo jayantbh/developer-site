@@ -18,3 +18,17 @@ rendering.
 - Styling in Live Code powered by styled-components (if available for the post)
 - Content written in MDX/React
 - Code written in TypeScript and styled using SCSS Modules
+
+## Development Instructions
+
+```
+yarn install
+yarn dev
+
+# To deploy to the specifed domain
+yarn deploy
+# See package.json scripts
+```
+
+Note:
+If using the `title` prop in a code block, use `&nbsp;` to add spaces.

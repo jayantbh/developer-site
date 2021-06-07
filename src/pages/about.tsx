@@ -8,6 +8,19 @@ import ExternalLink from 'components/ExternalLink';
 import Titled from 'components/Titled';
 import BoxedSection from 'components/BoxedSection';
 
+const getExperience = () => {
+  const start = new Date('2017-06-30T18:30:00.000Z');
+  const now = new Date();
+
+  const epoch = new Date(0);
+  const epochDiff = new Date(now.getTime() - start.getTime());
+
+  const years = epochDiff.getFullYear() - epoch.getFullYear();
+  const months = epochDiff.getMonth() - epoch.getMonth();
+
+  return `${years} years, ${months} months`;
+};
+
 const About: FC<{ location: Location }> = ({ location }) => {
   const data = useStaticQuery(pageQuery);
   const siteTitle = data.site.siteMetadata.title;
@@ -23,14 +36,14 @@ const About: FC<{ location: Location }> = ({ location }) => {
       <BoxedSection>
         <h2>tl;dr</h2>
         <p>
-          UI/UX developer. Super passionate. 2.5 years of XP in UI Web and still levelling up. React + Redux + TS +
-          SCSS.
+          UI/UX developer. Super passionate. {getExperience()} years of XP in UI Web and still levelling up. React +
+          Redux + TS + SCSS.
         </p>
       </BoxedSection>
       <section>
         <h2>Work</h2>
         <p>
-          I'm a frontend developer, with <em>full-time</em> experience of a bit over 2.5 years.
+          I'm a frontend developer, with <em>full-time</em> experience of a bit over {getExperience()}.
         </p>
         <p>
           During this time, I've worked with people like{' '}

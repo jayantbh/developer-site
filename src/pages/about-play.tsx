@@ -32,8 +32,8 @@ const AboutPlay: FC<{ location: Location }> = ({ location }) => {
       <BoxedSection>
         <h2>tl;dr</h2>
         <p>
-          2500+ hours on Steam (many more elsewhere). Eat out ~ thrice a week. 4K Gaming PC + Xbox + PS, and PC VR. 15
-          smart lights. 2 smart assistants.
+          4100+ hours on Steam (many more elsewhere). Used to eat out ~ thrice a week. 4K Gaming PC + Xbox + PS, and PC
+          VR. 15 smart lights. 2 smart assistants.
         </p>
         <p>I can rank almost all the best burgers in Gurgaon.</p>
       </BoxedSection>

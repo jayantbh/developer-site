@@ -26,8 +26,8 @@ const Bio = () => {
         }}
       />
       <p>
-        Built by <strong>{author}</strong> who is from India, trying to do funny stuff on the Web.
-        {` `}
+        Built by <strong>{author}</strong>, who does stuff on the Web as a hobby.
+        <br />
         <a href={`https://twitter.com/${social.twitter}`}>You should follow him on Twitter</a>
       </p>
     </div>

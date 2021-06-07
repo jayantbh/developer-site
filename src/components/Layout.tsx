@@ -47,12 +47,7 @@ const Layout: FC<Props> = ({ location, title, children, ...props }) => {
     );
   } else {
     header = (
-      <h3
-        style={{
-          fontFamily: `Nunito, sans-serif`,
-          marginTop: 0,
-        }}
-      >
+      <h3 style={{ marginTop: 0 }}>
         <Link
           style={{
             boxShadow: `none`,
