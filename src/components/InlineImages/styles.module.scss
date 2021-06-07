@@ -16,14 +16,11 @@
   }
 }
 
-.caption {
-  margin-top: 1em;
-}
-
 .caption-img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 1em;
 
   > img {
     margin-bottom: 0;
