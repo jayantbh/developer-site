@@ -1,0 +1,73 @@
+@import 'globals/variables';
+$bg-color: #c3c3c3;
+$shadow-color: #999;
+$rounded: 4px;
+
+.hotkey {
+  color: white;
+  font-weight: bold;
+  border: none;
+  font-family: monospace;
+  font-size: 10px;
+  padding: 0.125rem 0.25rem;
+  bottom: 100%;
+  line-height: 1;
+  transition: all $animation-standard;
+  position: absolute;
+  bottom: -10px;
+  right: -2.5px;
+  background-color: $bg-color;
+  box-shadow: 0 2px 0 $shadow-color;
+  border-radius: $rounded;
+  z-index: 1;
+
+  &:hover .detail {
+    pointer-events: initial;
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+$arrow-size: 4px;
+
+.detail {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  font-weight: 300;
+  line-height: 1;
+  padding: 0.125rem;
+  transition: all $animation-standard;
+  font-family: sans-serif;
+  background: black;
+  font-size: smaller;
+  white-space: nowrap;
+  max-width: 200px;
+  width: max-content;
+  background-color: darken($bg-color, 5%);
+  box-shadow: 0 1px 0 $shadow-color;
+  border-radius: $rounded;
+  pointer-events: none;
+  z-index: 99999;
+
+  transform: translateY(10px);
+  opacity: 0;
+
+  &::before {
+    content: ' ';
+    position: absolute;
+    left: $arrow-size - 0.5px;
+    top: calc(100% - 0px);
+    border-width: $arrow-size $arrow-size 0 $arrow-size;
+    border-color: $shadow-color transparent transparent transparent;
+  }
+
+  &::after {
+    content: ' ';
+    position: absolute;
+    left: $arrow-size - 0.5px;
+    top: calc(100% - 1px);
+    border-width: $arrow-size $arrow-size 0 $arrow-size;
+    border-color: darken($bg-color, 5%) transparent transparent transparent;
+  }
+}
