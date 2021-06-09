@@ -93,20 +93,23 @@ export const Code: FC<Props> = ({
                   },
                 }}
               >
-                <motion.div layout='position'>
-                  <div className={css.languageBarContainer}>
-                    <div className={css.languageBarContent}>
-                      {language} → editable
-                    </div>
-                    <button className={css.languageBarContent} onClick={setMax}>
-                      <div>{isMaximized ? 'minimize' : 'maximize'}</div>
-                      <HotkeyHandler
-                        hotkey='Escape'
-                        disabled={!isMaximized}
-                        onHotkey={setMax}
-                      />
-                    </button>
+                <motion.div
+                  layout='position'
+                  className={css.languageBarContainer}
+                >
+                  <div className={css.languageBarContent}>
+                    {language} → editable
                   </div>
+                  <button className={css.languageBarContent} onClick={setMax}>
+                    <div>{isMaximized ? 'minimize' : 'maximize'}</div>
+                    <HotkeyHandler
+                      hotkey='Escape'
+                      disabled={!isMaximized}
+                      onHotkey={setMax}
+                    />
+                  </button>
+                </motion.div>
+                <motion.div layout='position'>
                   <LiveEditor
                     className='live-editor'
                     style={{ fontFamily: '"Courier Prime", monospace' }}
@@ -151,20 +154,23 @@ export const Code: FC<Props> = ({
                 },
               }}
             >
-              <motion.div layout='position' className={css.codeContent}>
-                <div className={css.languageBarContainer}>
-                  <div className={css.languageBarContent}>
-                    {language} → view-only
-                  </div>
-                  <button className={css.languageBarContent} onClick={setMax}>
-                    <div>{isMaximized ? 'minimize' : 'maximize'}</div>
-                    <HotkeyHandler
-                      hotkey='Escape'
-                      disabled={!isMaximized}
-                      onHotkey={setMax}
-                    />
-                  </button>
+              <motion.div
+                layout='position'
+                className={css.languageBarContainer}
+              >
+                <div className={css.languageBarContent}>
+                  {language} → view-only
                 </div>
+                <button className={css.languageBarContent} onClick={setMax}>
+                  <div>{isMaximized ? 'minimize' : 'maximize'}</div>
+                  <HotkeyHandler
+                    hotkey='Escape'
+                    disabled={!isMaximized}
+                    onHotkey={setMax}
+                  />
+                </button>
+              </motion.div>
+              <motion.div layout='position' className={css.codeContent}>
                 {tokens.map((line, i) => {
                   const lineProps = getLineProps({ line, key: i });
 

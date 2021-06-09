@@ -107,6 +107,7 @@ $code-bg: #728fcb;
   border-radius: $border-radius-standard;
   padding: 0 $grid-base-4x;
   color: $code-bg;
+  background-color: $grey-light-5;
   text-transform: inherit;
   font-weight: inherit;
   border: 2px $code-bg solid;
@@ -125,7 +126,7 @@ button.language-bar-content {
 
 .code-content {
   width: 100%;
-  overflow: auto;
+  padding-top: 2em;
   padding-bottom: 1em;
 }
 
