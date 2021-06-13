@@ -20,6 +20,8 @@ const BlogPostTemplate: FC<Props> = ({ data, pageContext, location }) => {
   const metaImg = data.allFile.nodes[0]?.publicURL;
   const { previous, next } = pageContext;
 
+  console.log(post);
+
   return (
     <Layout location={location} title={`${siteTitle} → Blog → Post`}>
       <SEO
@@ -81,6 +83,7 @@ export const pageQuery = graphql`
       excerpt(pruneLength: 160)
       frontmatter {
         title
+        desc
         date(formatString: "MMMM DD, YYYY")
       }
       body
