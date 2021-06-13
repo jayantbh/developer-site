@@ -50,16 +50,24 @@ const SEO: FC<Props> = ({
           content: metaImage,
         },
         {
+          property: `og:image:alt`,
+          content: metaDescription,
+        },
+        {
           property: `og:type`,
           content: `website`,
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
           content: data.site.siteMetadata.author,
+        },
+        {
+          name: `twitter:site`,
+          content: '@jayantbh',
         },
         {
           name: `twitter:title`,
@@ -71,6 +79,10 @@ const SEO: FC<Props> = ({
         },
         {
           name: `twitter:image`,
+          content: metaImage,
+        },
+        {
+          name: `twitter:image:src`,
           content: metaImage,
         },
       ]
