@@ -20,14 +20,16 @@ const BlogPostTemplate: FC<Props> = ({ data, pageContext, location }) => {
   const metaImg = data.allFile.nodes[0]?.publicURL;
   const { previous, next } = pageContext;
 
-  console.log(post);
-
   return (
     <Layout location={location} title={`${siteTitle} → Blog → Post`}>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.desc || post.excerpt}
         image={metaImg}
+        readingTime={post.timeToRead}
+        publishDate={new Date(
+          parseInt(post.frontmatter.timestamp, 10)
+        ).toISOString()}
       />
       <h1>{post.frontmatter.title}</h1>
       <PageDate>{post.frontmatter.date}</PageDate>
@@ -85,8 +87,10 @@ export const pageQuery = graphql`
         title
         desc
         date(formatString: "MMMM DD, YYYY")
+        timestamp: date(formatString: "x")
       }
       body
+      timeToRead
     }
     allFile(
       filter: {

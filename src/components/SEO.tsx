@@ -12,6 +12,8 @@ type Props = {
   meta?: any[];
   keywords?: string[];
   title: string;
+  readingTime: string;
+  publishDate: string;
 };
 
 const SEO: FC<Props> = ({
@@ -21,10 +23,13 @@ const SEO: FC<Props> = ({
   meta = [],
   keywords = [],
   title,
+  readingTime,
+  publishDate,
 }) => {
   const data = useStaticQuery(detailsQuery);
+  const baseUrl = data.site.siteMetadata.siteUrl;
   const metaDescription = description || data.site.siteMetadata.description;
-  const metaImage = image || staticImage;
+  const metaImage = baseUrl + (image || staticImage);
   return (
     <Helmet
       htmlAttributes={{
@@ -36,6 +41,10 @@ const SEO: FC<Props> = ({
         {
           name: `description`,
           content: metaDescription,
+        },
+        {
+          name: `author`,
+          content: data.site.siteMetadata.author,
         },
         {
           property: `og:title`,
@@ -54,6 +63,14 @@ const SEO: FC<Props> = ({
           content: metaDescription,
         },
         {
+          property: `og:image:width`,
+          content: `1200`,
+        },
+        {
+          property: `og:image:height`,
+          content: `630`,
+        },
+        {
           property: `og:type`,
           content: `website`,
         },
@@ -68,6 +85,10 @@ const SEO: FC<Props> = ({
         {
           name: `twitter:site`,
           content: '@jayantbh',
+        },
+        {
+          name: `twitter:domain`,
+          content: 'https://jayant.dev/blog',
         },
         {
           name: `twitter:title`,
@@ -87,6 +108,28 @@ const SEO: FC<Props> = ({
         },
       ]
         .concat(
+          readingTime
+            ? [
+                {
+                  name: `twitter:label1`,
+                  content: `Written by`,
+                },
+                {
+                  name: `twitter:data1`,
+                  content: `Jayant Bhawal`,
+                },
+                {
+                  name: `twitter:label2`,
+                  content: `Reading time`,
+                },
+                {
+                  name: `twitter:data2`,
+                  content: `${readingTime} min read`,
+                },
+              ]
+            : []
+        )
+        .concat(
           keywords.length > 0
             ? {
                 name: `keywords`,
@@ -94,7 +137,33 @@ const SEO: FC<Props> = ({
               }
             : []
         )
-        .concat(meta)}
+        .concat(meta)
+        .concat([
+          {
+            name: `robots`,
+            content: `INDEX, FOLLOW, MAX-IMAGE-PREVIEW:LARGE, MAX-SNIPPET:-1, MAX-VIDEO-PREVIEW:-1`,
+          },
+          {
+            name: `date`,
+            content: publishDate,
+          },
+          {
+            name: `publish_date`,
+            content: publishDate,
+          },
+          {
+            name: `search_date`,
+            content: publishDate,
+          },
+          {
+            name: `article:publisher`,
+            content: data.site.siteMetadata.author,
+          },
+          {
+            name: `article:published_time`,
+            content: publishDate,
+          },
+        ])}
     />
   );
 };
@@ -105,6 +174,7 @@ const detailsQuery = graphql`
   query DefaultSEOQuery {
     site {
       siteMetadata {
+        siteUrl
         title
         description
         author
