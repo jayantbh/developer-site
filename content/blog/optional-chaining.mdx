@@ -1,14 +1,18 @@
 ---
 title: Optional Chaining is ❤
+desc:
+  Looking up nested properties doesn't need to be painful. It used to be, and
+  now it isn't anymore! Thanks TC39!
 date: '2019-12-24'
 ---
 
 Let's look at a use-case that's not too uncommon:
 
 ```js
-const definition = dictionary.words &&
-                  dictionary.words.apple &&
-                  dictionary.words.apple.definition;
+const definition =
+  dictionary.words &&
+  dictionary.words.apple &&
+  dictionary.words.apple.definition;
 ```
 
 Oh my, that's an eyeful. All I wanted to get was the definition of apple, if
@@ -20,9 +24,9 @@ This has been a little painful, and has been a thing since years.
 ## We've had "solutions" since long too
 
 The fine creators of [coffeescript](https://coffeescript.org/) did indeed solve
-this issue in a way. They introduced the [_Existential
-Operator_](https://coffeescript.org/#existential-operator), and this is how that
-looked like:
+this issue in a way. They introduced the
+[_Existential Operator_](https://coffeescript.org/#existential-operator), and
+this is how that looked like:
 
 ```coffeescript
 solipsism = true if mind? and not world?

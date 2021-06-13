@@ -31,6 +31,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/seo-images`,
+        name: `seo-images`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-sass`,
       options: {
         sassOptions: {

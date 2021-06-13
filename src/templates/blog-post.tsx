@@ -17,11 +17,16 @@ type Props = {
 const BlogPostTemplate: FC<Props> = ({ data, pageContext, location }) => {
   const post = data.mdx;
   const siteTitle = data.site.siteMetadata.title;
+  const metaImg = data.allFile.nodes[0]?.publicURL;
   const { previous, next } = pageContext;
 
   return (
     <Layout location={location} title={`${siteTitle} → Blog → Post`}>
-      <SEO title={post.frontmatter.title} description={post.excerpt} />
+      <SEO
+        title={post.frontmatter.title}
+        description={post.frontmatter.desc || post.excerpt}
+        image={metaImg}
+      />
       <h1>{post.frontmatter.title}</h1>
       <PageDate>{post.frontmatter.date}</PageDate>
       <MDXRenderer>{post.body}</MDXRenderer>
@@ -64,7 +69,7 @@ const BlogPostTemplate: FC<Props> = ({ data, pageContext, location }) => {
 export default BlogPostTemplate;
 
 export const pageQuery = graphql`
-  query($slug: String!) {
+  query($slug: String!, $metaImg: String!) {
     site {
       siteMetadata {
         title
@@ -79,6 +84,16 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
       }
       body
+    }
+    allFile(
+      filter: {
+        sourceInstanceName: { eq: "seo-images" }
+        publicURL: { glob: $metaImg }
+      }
+    ) {
+      nodes {
+        publicURL
+      }
     }
   }
 `;

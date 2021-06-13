@@ -3,10 +3,11 @@ import Helmet from 'react-helmet';
 import { graphql, useStaticQuery } from 'gatsby';
 
 // @ts-ignore
-import metaImage from '../assets/jayant_dev.png';
+import staticImage from '../assets/jayant_dev.png';
 
 type Props = {
   description?: string;
+  image?: string;
   lang?: string;
   meta?: any[];
   keywords?: string[];
@@ -15,6 +16,7 @@ type Props = {
 
 const SEO: FC<Props> = ({
   description,
+  image,
   lang = 'en',
   meta = [],
   keywords = [],
@@ -22,6 +24,7 @@ const SEO: FC<Props> = ({
 }) => {
   const data = useStaticQuery(detailsQuery);
   const metaDescription = description || data.site.siteMetadata.description;
+  const metaImage = image || staticImage;
   return (
     <Helmet
       htmlAttributes={{
