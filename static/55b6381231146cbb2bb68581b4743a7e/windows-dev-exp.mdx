@@ -1,0 +1,183 @@
+---
+title: How does Windows compare with MacOS or Linux for Dev-ex now?
+date: '2021-04-17'
+---
+
+import ExternalLink from '../../src/components/ExternalLink';
+import InlineImages from '../../src/components/InlineImages';
+
+import appleTerm from '../../content/assets/apple-terminal.png';
+import iterm2 from '../../content/assets/iterm-2.png';
+import winTerm from '../../content/assets/windows-terminal.png';
+import prompts from '../../content/assets/prompts.png';
+
+Till pretty recently, if I had to write some code, I wouldn't touch Windows with
+a 6 foot pole. I've written code on MacOS or Ubuntu most of my brief-so-far
+career, but I've given windows a serious shot, and, it's just not worked out for
+me. The Command Prompt, or even Powershell, are just miles and miles away from
+what iTerm 2 on MacOS can offer. Or similar Ubuntu terminals. And then there's
+shells like [Zsh](https://en.wikipedia.org/wiki/Z_shell) (especially with
+[oh-my-zsh](https://ohmyz.sh/)!) or [Fish](https://fishshell.com/) that are just
+so amazing! Not to mention tht Ubuntu's apt, or [snap](https://snapcraft.io/),
+and MacOS's [Homebrew](https://brew.sh/) (also on Ubuntu now) are exceptionally
+loaded package-managers. [Chocolatey](https://chocolatey.org/) on Windows really
+doesn't come close.
+
+But, **what do I exactly mean by that?** Why is CMD or Powershell miles away?
+Why do I like Z-Shell over the Windows shell? And is my mind changed with the
+introduction of the
+[Windows Terminal](https://www.microsoft.com/p/windows-terminal-preview/9n0dx20hk701)?
+
+I'll try to elaborate on that, and you can reach out to me on <ExternalLink
+to={'https://twitter.com/jayantbhawal'}>Twitter</ExternalLink> with questions,
+complaints, or corrections.
+
+---
+
+## First, the terminal
+
+I've used about half a dozen terminals so far. On MacOS, it's been Apple
+Terminal, and then iTerm2 for most of my time.
+
+The level of customization that they offer is incredible, they allow you to
+export/import themes, keybindings, and they support an incredible number of
+settings and tweaks to make the terminal truly your own.
+
+iTerm2 goes far beyond the capabilities of Apple Terminal by introducing
+features like Window Splitting, more powerful theming, built-in
+autocompletion(!!!), open links or files from URLs in the terminal, really solid
+integration with [Z Shell](https://en.wikipedia.org/wiki/Z_shell), etc.
+
+<InlineImages
+  height={250}
+  images={[
+    {
+      url: iterm2,
+      caption: <a href='https://iterm2.com/features.html'>iTerm 2</a>,
+    },
+    {
+      url: appleTerm,
+      caption: (
+        <a href='https://en.wikipedia.org/wiki/Terminal_(macOS)'>
+          Apple Terminal
+        </a>
+      ),
+    },
+  ]}
+/>
+
+Command Prompt does not offer any of that! You have some absolute barebones
+theming with a handful of colours, but, it's extremely barebones!
+
+There's [Cmder](https://cmder.net/), which is honestly quite decent, but, it
+tries to build on top of the existing CMD stuff, which feels very obvious when
+you use it, and, it's just not as smooth an experience.
+
+Now,
+[Windows Terminal](https://www.microsoft.com/p/windows-terminal-preview/9n0dx20hk701)
+is worth talking about. It's quite configurable, works really well with
+[WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10), has many of
+the iTerm2 features, including importable themes, window splitting, and a few
+other things, supports custom fonts or ligatures well enough for me, it's a
+pretty great experience. Never going back to CMD or Cmder after this. And, this
+is probably the biggest difference in recent times that I've experienced
+regarding being able to develop on windows.
+
+It does help that it works really well with WSL, so my zsh profiles that I was
+using on Ubuntu or MacOS, can be used as-is on Windows, and any fancy symbols
+and stuff that I used will work mostly the same way. It really has gotten much
+better.
+
+<InlineImages
+  height={250}
+  images={[
+    {
+      url: winTerm,
+      caption: (
+        <a href='https://www.microsoft.com/p/windows-terminal-preview/9n0dx20hk701'>
+          Windows Terminal
+        </a>
+      ),
+    },
+  ]}
+/>
+
+## Then, the shell
+
+While the bash shell is quite good, the ecosystem of Z Shell is straight-up
+**incredible!**. Have you seen [oh-my-zsh](https://ohmyz.sh/)? It has its own
+plugin and theming system which is just so crazy! Here, take a look at some of
+the [prompt themes](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes) with
+oh-my-zsh that require almost zero configuration.
+
+<InlineImages
+  height={250}
+  images={[
+    {
+      url: prompts,
+      caption: 'Several oh-my-zsh themed prompts',
+    },
+  ]}
+/>
+<br />
+
+This plugin is my favorite:
+[Powerlevel10k](https://github.com/romkatv/powerlevel10k)
+
+Your prompt can change depending on what commands you're running, what project
+directory you are in, etc.
+
+For example: If you were in a node or npm/yarn based project directory, the
+right side of the prompt may show you the current node/npm/yarn version.
+
+There's also [Fish shell](https://fishshell.com/) that has a ton of advanced
+features, a lot of them being present in Zsh too, but I've not used it in a
+while, not since most of the features that I personally cared about were brought
+to Zsh as well.
+
+You can do a very limited version of any of this in CMD. Though, if you're
+running Windows Terminal, a lot more is possible when you're inside WSL, but,
+not so much within Windows itself. CMD inside WSL doesn't handle all the
+fanciness well enough.
+
+## Lastly, the ecosystem
+
+Now, one of the major factors for folks working on any platform is, availability
+and ease-of-install of tools or packages.
+
+You want to be able to install apache, node, or cowsay as painlessly and quickly
+as possible. You want the same ease of install even if your package happens to
+be a bit more obscure, and that's only possible if your desired package is in
+the package registry at all.
+
+Here's a list of the popular package managers for each OS with their package
+counts (May 2021):
+
+- apt: 78406
+- macports: 26381
+- brew: 5700
+- chocolatey: 8459
+
+Here, apt is miles head. MacOS has macports and brew, for a total of ~32k
+packages. Chocolatey used to be the only package manager on Windows, and with
+8.5k packages, it's a bit limited, but honestly, it'll have most packages that
+someone needs.
+
+Windows is already getting a first-party package manager called
+[Winget](https://devblogs.microsoft.com/commandline/windows-package-manager-preview/),
+but it's new, and time will tell how well it flies. I'm hoping pretty well.
+
+As of today, the situation with packages on windows is much better than it used
+to be. There was a time when you had to install things using installers, for
+software that you'd use a package manager for in other systems, it wasn't a very
+uniform experience.
+
+## Final notes
+
+Today, I think that Windows works pretty well for software development as far as
+my use-cases go, which is Web Development. WSL has been a game-changer since it
+came out, and Windows terminal removes the last pain point with achieving the
+Linux experience on Windows to a great extent.
+
+Windows itself needs a little more polish to be as smooth an experience as
+MacOS, but folks who haven't used MacOS won't really be bothered.

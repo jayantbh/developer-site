@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby RSS feed]]></title><description><![CDATA[This is about me, my blog, and what I'm up to.]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 08 Jun 2021 10:00:42 GMT</lastBuildDate><item><title><![CDATA[Data protection measures that you can employ today easily, and for free!]]></title><link>https://jayant.dev/easy-data-protection-measures/</link><guid isPermaLink="false">https://jayant.dev/easy-data-protection-measures/</guid><pubDate>Sat, 05 Jun 2021 00:00:00 GMT</pubDate><content:encoded>function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby RSS feed]]></title><description><![CDATA[This is about me, my blog, and what I'm up to.]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 13 Jun 2021 18:01:02 GMT</lastBuildDate><item><title><![CDATA[Data protection measures that you can employ today easily, and for free!]]></title><link>https://jayant.dev/easy-data-protection-measures/</link><guid isPermaLink="false">https://jayant.dev/easy-data-protection-measures/</guid><pubDate>Sat, 05 Jun 2021 00:00:00 GMT</pubDate><content:encoded>function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i &lt; sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
@@ -163,6 +163,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 /* @jsx mdx */
 var _frontmatter = {
   &quot;title&quot;: &quot;Getting you interested in Framer Motion with the essentials&quot;,
+  &quot;desc&quot;: &quot;Framer Motion is a high level UI animations library that uses mostly CSS transforms to provide complex animation experiences for minimal effort&quot;,
   &quot;date&quot;: &quot;2021-06-04&quot;
 };
 var layoutProps = {
@@ -259,7 +260,7 @@ return function MDXContent(_ref) {
   }, &quot;const Img = styled(motion.img)`\n  max-height: 90vh;\n  max-width: 90vw;\n  position: relative;\n  margin: 0;\n  overflow: hidden;\n  border-radius: 8px;\n`;\n\nconst LightboxContent = styled(motion.div)`\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n  min-height: 100px;\n  overflow: hidden;\n  border-radius: 8px;\n`;\n\nconst HelpText = styled(motion.div)`\n  position: absolute;\n  bottom: 2rem;\n  margin: auto;\n  background: #fff8;\n  border-radius: 100vw;\n  padding: 4px 16px;\n`;\n\nconst Backdrop = styled(motion.div)`\n  background-color: #8885;\n  backdrop-filter: blur(4px);\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n`;\n\nconst lightboxStyles = {\n  position: &apos;fixed&apos;,\n  top: &apos;0&apos;,\n  left: &apos;0&apos;,\n  right: &apos;0&apos;,\n  bottom: &apos;0&apos;,\n  margin: &apos;auto&apos;,\n};\n\nconst Lightbox = () =&gt; {\n  const [maximized, setMaximized] = useState(false);\n  const [size, setSize] = useState({ height: &apos;auto&apos;, width: &apos;auto&apos; });\n\n  const toggleMaximized = () =&gt; {\n    setMaximized(!maximized);\n  };\n\n  return (\n    &lt;div style={{ height: size.height, width: size.width }}&gt;\n      &lt;LightboxContent\n        layout\n        style={maximized ? lightboxStyles : {}}\n        animate={{\n          zIndex: maximized ? 100 : 0,\n          transition: {\n            delay: maximized ? 0 : 1,\n          },\n        }}\n      &gt;\n        &lt;Backdrop layout /&gt;\n        &lt;Img\n          layout\n          onLoad={(e) =&gt; {\n            setSize({\n              height: e.target.parentElement.clientHeight,\n              width: e.target.parentElement.clientWidth,\n            });\n          }}\n          src={puzzle}\n          onClick={toggleMaximized}\n        /&gt;\n        &lt;HelpText layout=&apos;position&apos;&gt;Click on the photo&lt;/HelpText&gt;\n      &lt;/LightboxContent&gt;\n    &lt;/div&gt;\n  );\n};\n\nrender(&lt;Lightbox /&gt;);\n&quot;)), mdx(&quot;h3&quot;, null, &quot;There will be more stuff here, such as image gallery/carousel, toasts, expanding content cards, maybe more.&quot;), mdx(&quot;p&quot;, null, &quot;To be continued.&quot;));
 }
 ;
-MDXContent.isMDXComponent = true;</content:encoded></item><item><title><![CDATA[How does Windows compare with MacOS or Linux for Dev Experience now?]]></title><link>https://jayant.dev/windows-dev-exp/</link><guid isPermaLink="false">https://jayant.dev/windows-dev-exp/</guid><pubDate>Sat, 17 Apr 2021 00:00:00 GMT</pubDate><content:encoded>function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+MDXContent.isMDXComponent = true;</content:encoded></item><item><title><![CDATA[How does Windows compare with MacOS or Linux for Dev-ex now?]]></title><link>https://jayant.dev/windows-dev-exp/</link><guid isPermaLink="false">https://jayant.dev/windows-dev-exp/</guid><pubDate>Sat, 17 Apr 2021 00:00:00 GMT</pubDate><content:encoded>function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i &lt; sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
@@ -269,7 +270,8 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 /* @jsx mdx */
 var _frontmatter = {
-  &quot;title&quot;: &quot;How does Windows compare with MacOS or Linux for Dev Experience now?&quot;,
+  &quot;title&quot;: &quot;How does Windows compare with MacOS or Linux for Dev-ex now?&quot;,
+  &quot;desc&quot;: &quot;A study on how Windows has evolved over time to offer a developer experience that comes pretty close to MacOS or Linux&quot;,
   &quot;date&quot;: &quot;2021-04-17&quot;
 };
 var layoutProps = {
@@ -390,6 +392,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 /* @jsx mdx */
 var _frontmatter = {
   &quot;title&quot;: &quot;Windows Powertoys - Did you know it was a thing?&quot;,
+  &quot;desc&quot;: &quot;Windows Powertoys introduces a bunch of tools that you wish were part of Windows by default since... forever!&quot;,
   &quot;date&quot;: &quot;2021-04-02&quot;
 };
 var layoutProps = {
@@ -656,6 +659,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 /* @jsx mdx */
 var _frontmatter = {
   &quot;title&quot;: &quot;Optional Chaining is ❤&quot;,
+  &quot;desc&quot;: &quot;Looking up nested properties doesn&apos;t need to be painful. It used to be, and now it isn&apos;t anymore! Thanks TC39!&quot;,
   &quot;date&quot;: &quot;2019-12-24&quot;
 };
 var layoutProps = {
@@ -672,15 +676,15 @@ return function MDXContent(_ref) {
   }), mdx(&quot;p&quot;, null, &quot;Let\u2019s look at a use-case that\u2019s not too uncommon:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, {
     parentName: &quot;pre&quot;,
     &quot;className&quot;: &quot;language-js&quot;
-  }, &quot;const definition = dictionary.words &amp;&amp;\n                  dictionary.words.apple &amp;&amp;\n                  dictionary.words.apple.definition;\n&quot;)), mdx(&quot;p&quot;, null, &quot;Oh my, that\u2019s an eyeful. All I wanted to get was the definition of apple, if\npresent, in a user-created dictionary, meaning that the initial state of this\ndictionary could possibly be completely empty.&quot;), mdx(&quot;p&quot;, null, &quot;This has been a little painful, and has been a thing since years.&quot;), mdx(&quot;h2&quot;, null, &quot;We\u2019ve had \u201Csolutions\u201D since long too&quot;), mdx(&quot;p&quot;, null, &quot;The fine creators of &quot;, mdx(&quot;a&quot;, {
+  }, &quot;const definition =\n  dictionary.words &amp;&amp;\n  dictionary.words.apple &amp;&amp;\n  dictionary.words.apple.definition;\n&quot;)), mdx(&quot;p&quot;, null, &quot;Oh my, that\u2019s an eyeful. All I wanted to get was the definition of apple, if\npresent, in a user-created dictionary, meaning that the initial state of this\ndictionary could possibly be completely empty.&quot;), mdx(&quot;p&quot;, null, &quot;This has been a little painful, and has been a thing since years.&quot;), mdx(&quot;h2&quot;, null, &quot;We\u2019ve had \u201Csolutions\u201D since long too&quot;), mdx(&quot;p&quot;, null, &quot;The fine creators of &quot;, mdx(&quot;a&quot;, {
     parentName: &quot;p&quot;,
     &quot;href&quot;: &quot;https://coffeescript.org/&quot;
-  }, &quot;coffeescript&quot;), &quot; did indeed solve\nthis issue in a way. They introduced the &quot;, mdx(&quot;a&quot;, {
+  }, &quot;coffeescript&quot;), &quot; did indeed solve\nthis issue in a way. They introduced the\n&quot;, mdx(&quot;a&quot;, {
     parentName: &quot;p&quot;,
     &quot;href&quot;: &quot;https://coffeescript.org/#existential-operator&quot;
   }, mdx(&quot;em&quot;, {
     parentName: &quot;a&quot;
-  }, &quot;Existential\nOperator&quot;)), &quot;, and this is how that\nlooked like:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, {
+  }, &quot;Existential Operator&quot;)), &quot;, and\nthis is how that looked like:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, {
     parentName: &quot;pre&quot;,
     &quot;className&quot;: &quot;language-coffeescript&quot;
   }, &quot;solipsism = true if mind? and not world?\n\nspeed = 0\nspeed ?= 15\n\nfootprints = yeti ? \&quot;bear\&quot;\n\nzip = lottery.drawWinner?().address?.zipcode\n&quot;)), mdx(&quot;p&quot;, null, &quot;Amazing right? Though a lot of this stuff has come into JS, it didn\u2019t make an\nas-is introduction. In fact, many other languages too had the optional chaining\noperator with them, and a lot of discussion was had before they arrived on the\nbest solution that would play nice in JS. A lot of the stuff from the\ncoffeescript example doesn\u2019t exist nicely in JS.&quot;), mdx(&quot;p&quot;, null, &quot;That exact example would look like this in JS:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, {
