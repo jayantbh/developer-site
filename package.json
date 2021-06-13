@@ -78,8 +78,8 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "test": "jest",
-    "predeploy": "gatsby build && echo \"jayant.dev\" > ./public/CNAME",
-    "deploy": "gh-pages -d public",
+    "predeploy": "gatsby build && echo \"jayant.dev\" > ./public/CNAME && touch ./public/.nojekyll",
+    "deploy": "gh-pages -t -d public",
     "format": "prettier --write \"src/**/*.{ts,tsx,js,scss}\"",
     "format-staged": "pretty-quick --staged",
     "check-format": "prettier --check \"src/**/*.{ts,tsx,js,scss}\""
