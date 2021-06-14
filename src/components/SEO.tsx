@@ -47,6 +47,10 @@ const SEO: FC<Props> = ({
           content: data.site.siteMetadata.author,
         },
         {
+          property: `og:site_name`,
+          content: data.site.siteMetadata.title,
+        },
+        {
           property: `og:title`,
           content: title,
         },
