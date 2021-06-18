@@ -137,10 +137,12 @@ $z--maximum: 2147483647;
   box-shadow: 0 $grid-base $grid-base rgba(0, 0, 0, 0.25);
 }
 @mixin shadow-2 {
-  box-shadow: 0 $grid-base $grid-base-3x rgba(0, 0, 0, 0.25), 0 2px $grid-base rgba(0, 0, 0, 0.25);
+  box-shadow: 0 $grid-base $grid-base-3x rgba(0, 0, 0, 0.25),
+    0 2px $grid-base rgba(0, 0, 0, 0.25);
 }
 @mixin shadow-3 {
-  box-shadow: 0 $grid-base-2x $grid-base-6x rgba(0, 0, 0, 0.2), 0 2px $grid-base-2x rgba(0, 0, 0, 0.12);
+  box-shadow: 0 $grid-base-2x $grid-base-6x rgba(0, 0, 0, 0.2),
+    0 2px $grid-base-2x rgba(0, 0, 0, 0.12);
 }
 
 // Selectors

@@ -5,7 +5,15 @@ export enum REQUEST_STATE {
   DORMANT = 'DORMANT',
 }
 
-export const DAYS_OF_THE_WEEK = ['MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY', 'SUNDAY'];
+export const DAYS_OF_THE_WEEK = [
+  'MONDAY',
+  'TUESDAY',
+  'WEDNESDAY',
+  'THURSDAY',
+  'FRIDAY',
+  'SATURDAY',
+  'SUNDAY',
+];
 
 export const EmptyArray = Object.freeze([]); // to keep an unchanging reference to avoid re-renders
 export const DoNothing = () => {};

@@ -3,7 +3,10 @@ import { useEffect, useRef, DependencyList } from 'react';
 export const useEvents = (
   events: (keyof DocumentEventMap)[],
   handler: (e: Event) => any,
-  { disabled = false, deps = [] }: { disabled?: boolean; deps?: DependencyList } = {}
+  {
+    disabled = false,
+    deps = [],
+  }: { disabled?: boolean; deps?: DependencyList } = {}
 ) => {
   const frameRef = useRef(-1);
 

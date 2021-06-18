@@ -1,13 +1,18 @@
 import React, { FC } from 'react';
 import { motion } from 'framer-motion';
 
-export const StarGraphic: FC<{ length: number; offset: number; duration: number }> = ({
-  length = 1,
-  offset = 0,
-  duration = 4,
-}) => {
+export const StarGraphic: FC<{
+  length: number;
+  offset: number;
+  duration: number;
+}> = ({ length = 1, offset = 0, duration = 4 }) => {
   return (
-    <svg xmlns='http://www.w3.org/2000/svg' width='100%' viewBox='0 0 254 134' fill='none'>
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      width='100%'
+      viewBox='0 0 254 134'
+      fill='none'
+    >
       <g clipPath='url(#clip0)'>
         <motion.path
           initial={{ pathLength: 0, pathOffset: 0 }}

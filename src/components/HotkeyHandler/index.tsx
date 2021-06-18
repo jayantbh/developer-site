@@ -70,7 +70,8 @@ export const HotkeyHandler: FC<HTMLAttributes<HTMLDivElement> & Props> = ({
     return KEY_TEXT_MAP[hotkey] || hotkey;
   };
 
-  if (typeof navigator !== 'undefined' && navigator.maxTouchPoints > 0) return null;
+  if (typeof navigator !== 'undefined' && navigator.maxTouchPoints > 0)
+    return null;
   if (disabled) return null;
 
   return (

@@ -1,11 +1,4 @@
-import React, {
-  DOMAttributes,
-  FC,
-  HTMLAttributes,
-  SVGAttributes,
-  useEffect,
-  useRef,
-} from 'react';
+import React, { FC, SVGAttributes, useEffect, useRef } from 'react';
 
 import HiSvg from 'assets/components/hi.svg';
 import * as css from './styles.module.scss';

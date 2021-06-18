@@ -17,7 +17,10 @@ const BlogIndex: FC<Props> = ({ data, location }) => {
 
   return (
     <Layout location={location} title={`${siteTitle} → Blog`}>
-      <SEO title='All posts' keywords={[`blog`, `gatsby`, `javascript`, `react`, `typescript`]} />
+      <SEO
+        title='All posts'
+        keywords={[`blog`, `gatsby`, `javascript`, `react`, `typescript`]}
+      />
       <Bio />
       {posts.map(({ node }: { node: any }) => {
         const title = node.frontmatter.title || node.fields.slug;
@@ -28,7 +31,10 @@ const BlogIndex: FC<Props> = ({ data, location }) => {
                 marginBottom: rhythm(1 / 4),
               }}
             >
-              <Link style={{ boxShadow: `none` }} to={'/blog' + node.fields.slug}>
+              <Link
+                style={{ boxShadow: `none` }}
+                to={'/blog' + node.fields.slug}
+              >
                 {title}
               </Link>
             </h3>
