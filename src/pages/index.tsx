@@ -23,13 +23,32 @@ const Home: FC<{}> = () => {
 
   return (
     <div className={css.container}>
-      <SEO title='Welcome' keywords={[`jayant bhawal`, `frontend`, `javascript`, `react`, `typescript`, `gatsby`]} />
+      <SEO
+        title='Welcome'
+        keywords={[
+          `jayant bhawal`,
+          `frontend`,
+          `javascript`,
+          `react`,
+          `typescript`,
+          `gatsby`,
+        ]}
+      />
       <div className={css.effectWrapper}>
         <Effect className={cls(css.effect1, css.small)}>
           <AnimatedHi />
         </Effect>
       </div>
-      <h1 className={css.h1}>I'm Jayant Bhawal</h1>
+      <h1 className={css.h1}>
+        I'm{' '}
+        <a
+          rel='author'
+          href='https://jayantbhawal.in'
+          style={{ color: 'unset' }}
+        >
+          Jayant Bhawal
+        </a>
+      </h1>
       <nav className={css.navigation}>
         <Link to={'/about'}>About</Link>
         <Link to={'/blog'}>Blog</Link>

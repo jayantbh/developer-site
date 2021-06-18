@@ -12,8 +12,8 @@ type Props = {
   meta?: any[];
   keywords?: string[];
   title: string;
-  readingTime: string;
-  publishDate: string;
+  readingTime?: string;
+  publishDate?: string;
 };
 
 const SEO: FC<Props> = ({

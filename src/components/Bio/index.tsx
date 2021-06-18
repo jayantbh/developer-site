@@ -27,8 +27,15 @@ const Bio = () => {
         }}
       />
       <p>
-        Built by <strong>{author}</strong>, who does stuff on the Web as a
-        hobby.
+        Built by{' '}
+        <a
+          rel='author'
+          href='https://jayantbhawal.in'
+          style={{ fontWeight: 'bold' }}
+        >
+          {author}
+        </a>
+        , who does stuff on the Web as a hobby.
         <br />
         <a href={`https://twitter.com/${social.twitter}`}>
           You should follow him on Twitter
