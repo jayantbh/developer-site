@@ -1,14 +1,22 @@
-import React, { DOMAttributes, FC, HTMLAttributes, SVGAttributes, useLayoutEffect, useRef } from 'react';
+import React, {
+  DOMAttributes,
+  FC,
+  HTMLAttributes,
+  SVGAttributes,
+  useEffect,
+  useRef,
+} from 'react';
 
 import HiSvg from 'assets/components/hi.svg';
 import * as css from './styles.module.scss';
 
-const getNumAttr = (el: SVGElement, attr: keyof SVGAttributes<any>) => parseInt(el.getAttribute(attr) as string, 10);
+const getNumAttr = (el: SVGElement, attr: keyof SVGAttributes<any>) =>
+  parseInt(el.getAttribute(attr) as string, 10);
 
 const AnimatedHi: FC<{}> = () => {
   const elRef = useRef<null | HTMLDivElement>(null);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     (async () => {
       if (!elRef.current) return;
 
@@ -28,7 +36,9 @@ const AnimatedHi: FC<{}> = () => {
             const atTop = !Number.isInteger(yAttr);
 
             shape.style.transform = 'scaleY(0)';
-            shape.style.transformOrigin = `${xAttr + width / 2}px ${atTop ? 0 : svgHeight}px`;
+            shape.style.transformOrigin = `${xAttr + width / 2}px ${
+              atTop ? 0 : svgHeight
+            }px`;
             break;
           }
           case 'circle': {
@@ -44,10 +54,10 @@ const AnimatedHi: FC<{}> = () => {
             shape.style.transform = 'scale(0)';
         }
 
-        await new Promise(res => setTimeout(res, 200));
+        await new Promise((res) => setTimeout(res, 200));
       }
 
-      await new Promise(res => setTimeout(res, 200));
+      await new Promise((res) => setTimeout(res, 200));
       for (const shape of svgElements) {
         switch (shape.tagName) {
           case 'rect':
@@ -58,7 +68,7 @@ const AnimatedHi: FC<{}> = () => {
             shape.style.transform = 'scale(1)';
         }
 
-        await new Promise(res => setTimeout(res, 200));
+        await new Promise((res) => setTimeout(res, 200));
       }
     })();
   }, [elRef]);
