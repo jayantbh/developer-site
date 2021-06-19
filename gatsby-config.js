@@ -6,6 +6,7 @@ module.exports = {
     siteUrl: `https://jayant.dev`,
     social: {
       twitter: `jayantbhawal`,
+      website: `http://jayantbhawal.in/`,
     },
   },
   plugins: [
@@ -35,6 +36,13 @@ module.exports = {
       options: {
         path: `${__dirname}/seo-images`,
         name: `seo-images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/seo-oembed`,
+        name: `seo-oembed`,
       },
     },
     {
@@ -175,7 +183,7 @@ module.exports = {
         short_name: `GatsbyJS`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#ff9968`,
+        theme_color: `#37bcc8`,
         display: `minimal-ui`,
         icon: `content/assets/favicon.png`,
       },

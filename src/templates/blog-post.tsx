@@ -18,6 +18,7 @@ const BlogPostTemplate: FC<Props> = ({ data, pageContext, location }) => {
   const post = data.mdx;
   const siteTitle = data.site.siteMetadata.title;
   const metaImg = data.allFile.nodes[0]?.publicURL;
+  const oEmbed = data.oEmbed.nodes[0]?.publicURL;
   const { previous, next } = pageContext;
 
   return (
@@ -26,6 +27,7 @@ const BlogPostTemplate: FC<Props> = ({ data, pageContext, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.desc || post.excerpt}
         image={metaImg}
+        oEmbed={oEmbed}
         readingTime={post.timeToRead}
         publishDate={new Date(
           parseInt(post.frontmatter.timestamp, 10)
@@ -73,7 +75,7 @@ const BlogPostTemplate: FC<Props> = ({ data, pageContext, location }) => {
 export default BlogPostTemplate;
 
 export const pageQuery = graphql`
-  query($slug: String!, $metaImg: String!) {
+  query($slug: String!, $metaImg: String!, $oEmbed: String!) {
     site {
       siteMetadata {
         title
@@ -96,6 +98,16 @@ export const pageQuery = graphql`
       filter: {
         sourceInstanceName: { eq: "seo-images" }
         publicURL: { glob: $metaImg }
+      }
+    ) {
+      nodes {
+        publicURL
+      }
+    }
+    oEmbed: allFile(
+      filter: {
+        sourceInstanceName: { eq: "seo-oembed" }
+        publicURL: { glob: $oEmbed }
       }
     ) {
       nodes {

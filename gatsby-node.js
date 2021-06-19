@@ -1,61 +1,28 @@
 const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 const fs = require('fs');
-const puppeteer = require('puppeteer');
-const hbs = require('handlebars');
+
+const { mdxToString } = require('./src/utils/mdx-to-string');
+const {
+  prepareSEOBrowser,
+  renderImage,
+  closeSEOBrowser,
+} = require('./src/utils/seo-images');
+const { createPagesQuery } = require('./src/constants');
+const { siteMetadata } = require('./gatsby-config');
+const { rel } = require('./src/utils/node');
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
-  const rel = (p) => path.join(__dirname, p);
+  const { browser, template, page } = await prepareSEOBrowser();
 
   try {
-    fs.mkdirSync(rel('./seo-images/tmp'), { recursive: true });
+    fs.mkdirSync(rel('./seo-oembed'));
   } catch (e) {}
 
-  const template = hbs.compile(
-    fs.readFileSync(rel('./seo-image-builder/content.html')).toString()
-  );
-
-  const browser = await puppeteer.launch({
-    args: [
-      '--no-sandbox',
-      '--disable-setuid-sandbox',
-      '--window-size=1200,630',
-    ],
-  });
-
-  const page = await browser.newPage();
-  page.setViewport({ width: 1200, height: 630 });
-
   const blogPost = path.resolve(`./src/templates/blog-post.tsx`);
-  return graphql(
-    `
-      {
-        allMdx(
-          sort: { fields: [frontmatter___date], order: DESC }
-          limit: 1000
-        ) {
-          edges {
-            node {
-              id
-              excerpt
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-                date
-                desc
-              }
-              body
-              timeToRead
-            }
-          }
-        }
-      }
-    `
-  ).then(async (result) => {
+  return graphql(createPagesQuery).then(async (result) => {
     if (result.errors) {
       throw result.errors;
     }
@@ -66,38 +33,30 @@ exports.createPages = async ({ graphql, actions }) => {
       const post = posts[index];
       const { id } = post.node;
 
+      const oEmbed = JSON.stringify(
+        {
+          version: '1.0',
+          provider_name: siteMetadata.title,
+          provider_url: siteMetadata.siteUrl,
+          author_name: siteMetadata.author,
+          author_url: siteMetadata.social.website,
+          title: post.node.frontmatter.title,
+          type: 'link',
+          html: mdxToString(post.node.fileAbsolutePath),
+        },
+        null,
+        '  '
+      );
+
+      try {
+        fs.writeFileSync(rel(`./seo-oembed/${id}.json`), oEmbed);
+      } catch (e) {}
+
       const previous =
         index === posts.length - 1 ? null : posts[index + 1].node;
       const next = index === 0 ? null : posts[index - 1].node;
 
-      const liveExamples = [...post.node.body.matchAll('"live": true')].length;
-      const codeExamples = [...post.node.body.matchAll('parentName: "pre"')]
-        .length;
-      const duration = `${Math.round(post.node.timeToRead)} min read`;
-
-      const desc =
-        post.node.frontmatter.desc ||
-        post.node.excerpt.replace(/\n/, ' ').replace(/ (\,|\.|\?|\!)/g, '$1');
-
-      const examples = liveExamples
-        ? `${liveExamples} live code example` + (liveExamples !== 1 ? 's' : '')
-        : codeExamples
-        ? `${codeExamples} code examples` + (codeExamples !== 1 ? 's' : '')
-        : 'Text article';
-
-      const props = {
-        title: post.node.frontmatter.title,
-        desc,
-        duration,
-        examples,
-        date: post.node.frontmatter.date,
-      };
-
-      const result = template(props);
-      fs.writeFileSync(rel(`./seo-images/tmp/${id}.html`), result);
-
-      await page.goto('file:' + rel(`./seo-images/tmp/${id}.html`));
-      await page.screenshot({ path: rel(`./seo-images/${id}.png`) });
+      await renderImage({ page, template, post });
 
       createPage({
         path: '/blog' + post.node.fields.slug,
@@ -105,15 +64,14 @@ exports.createPages = async ({ graphql, actions }) => {
         context: {
           slug: post.node.fields.slug,
           metaImg: `**/${id}.png`,
+          oEmbed: `**/${id}.json`,
           previous,
           next,
         },
       });
     }
 
-    fs.rmSync(rel(`./seo-images/tmp/`), { recursive: true, force: true });
-
-    await browser.close();
+    closeSEOBrowser({ browser });
   });
 };
 

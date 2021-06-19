@@ -8,6 +8,7 @@ import staticImage from '../assets/jayant_dev.png';
 type Props = {
   description?: string;
   image?: string;
+  oEmbed?: string;
   lang?: string;
   meta?: any[];
   keywords?: string[];
@@ -19,6 +20,7 @@ type Props = {
 const SEO: FC<Props> = ({
   description,
   image,
+  oEmbed,
   lang = 'en',
   meta = [],
   keywords = [],
@@ -30,11 +32,19 @@ const SEO: FC<Props> = ({
   const baseUrl = data.site.siteMetadata.siteUrl;
   const metaDescription = description || data.site.siteMetadata.description;
   const metaImage = baseUrl + (image || staticImage);
+
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
+      link={[
+        {
+          rel: 'alternate',
+          type: 'application/json+oembed',
+          href: baseUrl + oEmbed,
+        },
+      ]}
       title={title}
       titleTemplate={`%s | ${data.site.siteMetadata.title}`}
       meta={[
