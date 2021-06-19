@@ -250,7 +250,6 @@ const ListItems = () => {
           onClick={() => {
             setList([...list, ...baseList]);
             requestAnimationFrame(() => {
-              console.log(listRef.current);
               listRef.current && listRef.current.scrollIntoViewIfNeeded();
             });
           }}
