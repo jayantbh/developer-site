@@ -1,0 +1,10 @@
+{
+  "version": "1.0",
+  "provider_name": "Jayant's Clipboard",
+  "provider_url": "https://jayant.dev",
+  "author_name": "Jayant Bhawal",
+  "author_url": "http://jayantbhawal.in/",
+  "title": "TIL - The HTML Dialog element",
+  "type": "link",
+  "html": "<p>The Dialog Element is basically a dialog (duh) all with backdrop support and everything, so in many cases you may not need a third party lib to make a dialog. It has native JS APIs too for opening and closing it. Note: Browser Support is a little hairy.</p><p>Here's a hosted example on glitch.me (though you have an example right on this page too): https://peaceful-meowing-yogurt.glitch.me/.</p><blockquote><p>NOTE: Check the MDN Docs linked above to see if your browser supports this.</p></blockquote><p>All you need to do to toggle a dialog is:</p>\n\n[code snippet, view page to see]\n\n<p>When the dialog is triggered to be open, the open attribute is automatically added to it, which can be used to detect if it's open or not.</p><p>And as you see, you can format the backdrop of the dialog using CSS!</p><hr><p>When I was writing this, I faced an issue that I do not yet know how to solve. When you open and close the dialog, user selection or text editing on the page stops working. If you figure it out, tweet at me.</p>"
+}
