@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style type="text/css">
+      @font-face {
+        font-family: wotfard;
+        src: url('../../seo-image-builder/wotfard-regular-webfont.ttf')
+          format('truetype');
+      }
+
+      html {
+        background: white;
+      }
+
+      html,
+      body {
+        margin: 0;
+        font-family: 'wotfard';
+      }
+
+      body {
+        background: #37bcc8;
+      }
+
+      body,
+      .body {
+        height: 630px;
+        width: 1200px;
+      }
+
+      .body {
+        display: flex;
+        flex-direction: column;
+        background: rgb(255, 255, 255);
+        padding: 3em 4em;
+        gap: 1em;
+        position: relative;
+        box-sizing: border-box;
+        border-bottom-right-radius: 25vw;
+
+        border-top: 2em solid #1870af;
+        border-bottom: 2em solid #37bcc8;
+      }
+
+      .title {
+        font-size: 3.6em;
+      }
+
+      .desc {
+        font-size: 2em;
+        text-align: justify;
+        width: 95%;
+      }
+
+      .duration {
+        font-size: 1.8em;
+        gap: 0.5em;
+        color: #1870af;
+      }
+
+      .title,
+      .desc,
+      .duration {
+        text-align: left;
+      }
+
+      img {
+        height: 32px;
+      }
+
+      .spacer {
+        flex: 1;
+      }
+
+      .row {
+        display: flex;
+        gap: 2em;
+        border-bottom: 2px dotted #37bcc8;
+        width: fit-content;
+        padding-bottom: 1rem;
+        margin: 1rem 0;
+      }
+
+      footer,
+      .info-entity {
+        display: flex;
+        align-items: center;
+        font-size: 1.6em;
+        gap: 0.5em;
+        color: #1870af;
+      }
+
+      footer {
+        gap: 2rem;
+      }
+
+      footer > div,
+      .info-entity > div {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 0.5em;
+      }
+
+      footer b,
+      .info-entity b {
+        color: #37bcc8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="body">
+      <div class="spacer"></div>
+      <div class="title">Hello World</div>
+
+      <div class="row">
+        <div class="info-entity">
+          <svg
+            height="28"
+            width="28"
+            fill="none"
+            stroke="#37bcc8"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+            ></path>
+          </svg>
+          <div>2019-12-19</div>
+        </div>
+        <div class="info-entity">
+          <svg
+            height="28"
+            width="28"
+            fill="none"
+            stroke="#37bcc8"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+            ></path>
+          </svg>
+          <div>Text article</div>
+        </div>
+      </div>
+      <div class="desc">Here we go again... I&#x27;ve made an attempt at a blog over 4 times so far. Twice at  blog.jayantbhawal.in, twice at
+ ideabuster.jayantbhawal…</div>
+      <div class="spacer"></div>
+      <footer>
+        <div>
+          <img src="../../seo-image-builder/favicon.png" />
+          <div>Read on <b>jayant.dev</b></div>
+        </div>
+        <div class="">
+          <svg
+            height="34"
+            width="34"
+            fill="none"
+            stroke="#37bcc8"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+            ></path>
+          </svg>
+          <div>1 min read</div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

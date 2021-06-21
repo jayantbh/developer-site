@@ -1,0 +1,13 @@
+{
+  "version": "1.0",
+  "provider_name": "Jayant's Clipboard",
+  "provider_url": "https://jayant.dev",
+  "author_name": "Jayant Bhawal",
+  "author_url": "http://jayantbhawal.in/",
+  "title": "Optional Chaining is ❤",
+  "type": "link",
+  "html": "<p>Let's look at a use-case that's not too uncommon:</p>\n\n[code snippet, view page to see]\n\n<p>Oh my, that's an eyeful. All I wanted to get was the definition of apple, if present, in a user-created dictionary, meaning that the initial state of this dictionary could possibly be completely empty.</p><p>This has been a little painful, and has been a thing since years.</p><h2>We&#x27;ve had &quot;solutions&quot; since long too</h2><p>The fine creators of coffeescript did indeed solve this issue in a way. They introduced the Existential Operator, and this is how that looked like:</p>\n\n[code snippet, view page to see]\n\n<p>Amazing right? Though a lot of this stuff has come into JS, it didn't make an as-is introduction. In fact, many other languages too had the optional chaining operator with them, and a lot of discussion was had before they arrived on the best solution that would play nice in JS. A lot of the stuff from the coffeescript example doesn't exist nicely in JS.</p><p>That exact example would look like this in JS:</p>\n\n[code snippet, view page to see]\n\n<p>I am a straight up fan of this thing, and I've been tracking progress of this since a year before it released!</p><p>Optional Chaining and Nullish Coalescing are now in Stage 4, and released into some major browsers. It was added to TypeScript 3.7 a week after it was moved to Stage 3. Soon afterwards, it was added to react-scripts 3.3.0-next.62 (with TS), and was released in the stable 3.3 build of react-scripts.</p>",
+  "thumbnail_url": "https://jayant.devundefined",
+  "thumbnail_width": 1200,
+  "thumbnail_height": 630
+}
