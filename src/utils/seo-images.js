@@ -64,8 +64,7 @@ module.exports = {
   },
 
   closeSEOBrowser: async ({ browser }) => {
-    fs.rmSync(rel(`./seo-images/tmp/`), { recursive: true, force: true });
-
     await browser.close();
+    fs.rmSync(rel(`./seo-images/tmp/`), { recursive: true, force: true });
   },
 };

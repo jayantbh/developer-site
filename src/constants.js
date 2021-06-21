@@ -24,6 +24,12 @@ module.exports = {
             }
           }
         }
+        allFile(filter: {sourceInstanceName: {glob: "{seo-oembed,seo-images}"}}) {
+          nodes {
+            publicURL
+            id
+          }
+        }
       }
     `,
 };

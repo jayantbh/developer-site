@@ -42,14 +42,16 @@ const mdxToString = (filePath) => {
 
     const element = fn(React, ...Object.values(scope));
     const components = {
-      // p: ({ children }) => ['\n', children, '\n'],
       a: ({ children }) => children,
       ExternalLink: ({ children }) => children,
+      Link: ({ children }) => children,
       InlineImages: () => `\n\n[images, view page to see]\n\n`,
       code: () => ` [code snippet, view page to see] `,
       pre: () => `\n\n[code snippet, view page to see]\n\n`,
       sub: ({ children }) => [children, '\n\n'],
       br: () => '\n',
+      Tag: () => null,
+      BoxedSection: ({ children }) => children,
     };
 
     const elementWithProvider = React.createElement(
